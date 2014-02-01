@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86250196-1e66-46a9-9165-bfaf99cf9c82" name="Default" comment="- last commit&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp" />
+    <list default="true" id="86250196-1e66-46a9-9165-bfaf99cf9c82" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="01servletsJspIntro.iws" />
@@ -114,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeControllerTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WelcomeControllerTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="954">
+            <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.82363975" vertical-offset="245" max-vertical-offset="954">
               <folding />
             </state>
           </provider>
@@ -159,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displayMsg.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="displayMsg.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="0.6403162" vertical-offset="0" max-vertical-offset="506">
+            <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -936,7 +934,7 @@
       <workItem from="1390837544733" duration="1298000" />
       <workItem from="1390839052758" duration="11132000" />
       <workItem from="1390924505141" duration="433000" />
-      <workItem from="1391246994968" duration="544000" />
+      <workItem from="1391246994968" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="- first commit">
       <created>1390248677541</created>
@@ -954,14 +952,18 @@
       <created>1390847220256</created>
       <updated>1390847220256</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- last commit&#10;">
+      <created>1391247557938</created>
+      <updated>1391247557938</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21133000" />
+    <option name="totallyTimeSpent" value="21185000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1296,13 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
@@ -1319,7 +1314,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="0.6403162" vertical-offset="0" max-vertical-offset="506">
+        <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.82363975" vertical-offset="245" max-vertical-offset="954">
           <folding />
         </state>
       </provider>
