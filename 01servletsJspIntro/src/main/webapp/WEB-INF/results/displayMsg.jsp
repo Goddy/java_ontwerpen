@@ -11,6 +11,9 @@
     <title>Welcome!</title>
 </head>
 <body>
-${message}
+Hallo ${name}
+<br>Welkom bij Ontwerpen met java.
+<br>Mvg
+<br>Je docent
 </body>
 </html>
