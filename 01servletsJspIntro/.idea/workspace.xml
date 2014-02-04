@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86250196-1e66-46a9-9165-bfaf99cf9c82" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
     </list>
     <ignored path="01servletsJspIntro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,21 +79,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp" line="13" class="displayMsg.jsp" package="$PROJECT_DIR$/src/main/webapp/WEB-INF/results">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
@@ -112,10 +98,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeControllerTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WelcomeControllerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.82363975" vertical-offset="245" max-vertical-offset="954">
+            <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="954">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="52" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
               <folding />
             </state>
           </provider>
@@ -130,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="14" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.45405406" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -152,24 +147,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/Messages_en.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="displayMsg.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="432">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/error.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -523,13 +500,14 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="controllers" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="controllers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/results" />
     </key>
@@ -934,7 +912,7 @@
       <workItem from="1390837544733" duration="1298000" />
       <workItem from="1390839052758" duration="11132000" />
       <workItem from="1390924505141" duration="433000" />
-      <workItem from="1391246994968" duration="596000" />
+      <workItem from="1391246994968" duration="2085000" />
     </task>
     <task id="LOCAL-00001" summary="- first commit">
       <created>1390248677541</created>
@@ -960,11 +938,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21185000" />
+    <option name="totallyTimeSpent" value="22674000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="875" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -979,8 +957,8 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20218228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20708446" sideWeight="0.78125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20218228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20708446" sideWeight="0.78125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1143,13 +1121,6 @@
         <state line="94" column="0" selection-start="3956" selection-end="3956" vertical-scroll-proportion="0.0" vertical-offset="443" max-vertical-offset="4245" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runner/notification/Failure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="319" max-vertical-offset="1230" />
@@ -1277,30 +1248,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Messages_en.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="396">
           <folding />
         </state>
       </provider>
@@ -1312,16 +1262,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
+    <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="4" selection-start="353" selection-end="353" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="432">
+        <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="245" max-vertical-offset="954">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/controllers/WelcomeControllerTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="56" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.82363975" vertical-offset="245" max-vertical-offset="954">
+        <state line="21" column="52" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WelcomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="46" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.45405406" vertical-offset="0" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
