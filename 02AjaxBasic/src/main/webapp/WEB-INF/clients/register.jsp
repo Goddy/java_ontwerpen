@@ -14,9 +14,9 @@
 <form action="/registerClient" method="POST">
     <table>
         <tr><td>Naam:</td><td><input type="text" name="name"></td></tr>
-        <tr><td>BTW-nr:</td><td><input type="text" name="btwnr"></td></tr>
+        <tr><td>BTW-nr:</td><td><input type="text" name="vat"></td></tr>
         <tr><td>Straat</td><td><input type="text" name="street"></td></tr>
-        <tr><td>Nummer:</td><td><input type="text" name="nummer"></td></tr>
+        <tr><td>Nummer:</td><td><input type="text" name="number"></td></tr>
         <tr><td>Postcode:</td><td><input type="text" name="postalCode"></td></tr>
         <tr><td>Woonplaats:</td><td><input type="text" name="city"></td></tr>
         <tr><td>Land:</td><td><input type="text" name="country"></td></tr>

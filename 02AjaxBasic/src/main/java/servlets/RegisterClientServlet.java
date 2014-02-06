@@ -1,5 +1,8 @@
 package servlets;
 
+import model.Address;
+import model.Client;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,5 +27,13 @@ public class RegisterClientServlet extends HttpServlet {
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
         dispatcher.forward(request, response);
+    }
+
+    public void getClientFromRequest(HttpServletRequest request) {
+        Client client = new Client();
+        Address address = new Address();
+        address.setCity(request.getParameter("city"));
+        address.setNumber(request.getParameter("number"));
+
     }
 }

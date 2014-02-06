@@ -14,16 +14,24 @@ import javax.validation.constraints.NotNull;
         @NamedQuery(name = "findAddressById", query = "from Address where id = :id")
 })
 @Entity
-@Table(name = "address")
+@Table(name = "Adres")
 public class Address {
     private long id;
     private int postalCode;
-    private String address;
+    private String street;
+    private int number;
     private String city;
+    private String country;
+    private AddressType type;
 
-    public Address(int postalCode, String address, String city) {
+    public Address() {}
+    public Address(int postalCode, String street, int number, String city, String country) {
         this.setPostalCode(postalCode);
-        this.set
+        this.setStreet(street);
+        this.setPostalCode(postalCode);
+        this.setNumber(number);
+        this.setCity(city);
+        this.setCountry(country);
     }
 
     @Id
@@ -38,7 +46,7 @@ public class Address {
     }
 
     @NotNull
-    @Column(name = "postal_code")
+    @Column(name = "Postcode")
     public int getPostalCode() {
         return postalCode;
     }
@@ -48,17 +56,17 @@ public class Address {
     }
 
     @NotNull
-    @Column(name = "address")
-    public String getAddress() {
-        return address;
+    @Column(name = "straat")
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
     @NotNull
-    @Column(name = "city")
+    @Column(name = "Woonplaats")
     public String getCity() {
         return city;
     }
@@ -67,12 +75,34 @@ public class Address {
         this.city = city;
     }
 
-    @Column(name = "google_link")
-    public String getGoogleLink() {
-        return googleLink;
+    @NotNull
+    @Column(name="Nr")
+    public int getNumber() {
+        return number;
     }
 
-    public void setGoogleLink(String googleLink) {
-        this.googleLink = googleLink;
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    @NotNull
+    @Column(name="land")
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    @NotNull
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="AT_id",insertable=true, updatable=true, nullable=false,unique=true)
+    public AddressType getType() {
+        return type;
+    }
+
+    public void setType(AddressType type) {
+        this.type = type;
     }
 }

@@ -8,5 +8,7 @@
     <input type="text" name="name">
     <input type="submit" value="Submit">
 </form>
+
+<a href="/register">Registreer klant</a>
 </body>
 </html>
