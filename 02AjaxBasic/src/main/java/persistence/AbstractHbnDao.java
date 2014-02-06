@@ -16,6 +16,7 @@ import java.util.List;
 public abstract class AbstractHbnDao<T extends Object>
         implements Dao<T> {
 
+
     private SessionFactory sessionFactory;
     private Class<T> domainClass;
 
