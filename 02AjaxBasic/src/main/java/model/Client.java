@@ -2,6 +2,8 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: Tom De Dobbeleer
@@ -22,7 +24,7 @@ public class Client {
     private String vat;
     private String primaryPhone;
     private String primaryEmail;
-    private Address Address;
+    private List<Address> addresses;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,7 +38,7 @@ public class Client {
     }
 
     @NotNull
-    @Column(name="Naam")
+    @Column(name="naam")
     public String getName() {
         return name;
     }
@@ -45,7 +47,7 @@ public class Client {
         this.name = name;
     }
 
-    @Column(name="BTW")
+    @Column(name="btw")
     @NotNull
     public String getVat() {
         return vat;
@@ -55,7 +57,7 @@ public class Client {
         this.vat = vat;
     }
 
-    @Column(name="HfdContactTel")
+    @Column(name="hfdcontacttel")
     public String getPrimaryPhone() {
         return primaryPhone;
     }
@@ -64,7 +66,7 @@ public class Client {
         this.primaryPhone = primaryPhone;
     }
 
-    @Column(name="HfdContactEmail")
+    @Column(name="hfdcontactemail")
     public String getPrimaryEmail() {
         return primaryEmail;
     }
@@ -73,14 +75,10 @@ public class Client {
         this.primaryEmail = primaryEmail;
     }
 
-    @NotNull
-    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="Id", referencedColumnName="K_id", insertable=true, updatable=true, nullable=false,unique=true)
-    public Address getAddress() {
-        return Address;
-    }
+    @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY, mappedBy = "client")
+    public List<Address> getAddresses() { return addresses == null ? new ArrayList<Address>() : this.addresses; }
 
-    public void setAddress(Address address) {
-        Address = address;
+    public void setAddresses(List<Address> adresses) {
+        this.addresses = adresses;
     }
 }

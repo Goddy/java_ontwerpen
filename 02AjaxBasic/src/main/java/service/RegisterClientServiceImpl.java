@@ -1,7 +1,10 @@
 package service;
 
+import model.Address;
+import model.AddressType;
 import model.Client;
 import persistence.ClientDao;
+import persistence.DaoFactory;
 
 /**
  * User: Tom De Dobbeleer
@@ -13,13 +16,18 @@ public class RegisterClientServiceImpl implements RegisterClientService {
 
     private ClientDao clientDao;
 
-    public RegisterClientServiceImpl ( ClientDao dao) {
-        this.clientDao = dao;
+    public RegisterClientServiceImpl () {
+        this.clientDao = DaoFactory.getHbnClientDao();
 
     }
 
     @Override
-    public void registerClient(Client client) {
-        clientDao.registerClient(client);
+    public void registerClient(Client client, Address address) {
+        clientDao.registerClient(client, address);
+    }
+
+
+    public AddressType getAddressType(long id) {
+        return clientDao.findAddressTypeById(id);
     }
 }

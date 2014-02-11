@@ -1,5 +1,7 @@
 package persistence;
 
+import model.Address;
+import model.AddressType;
 import model.Client;
 
 /**
@@ -9,5 +11,6 @@ import model.Client;
  * Remarks: none
  */
 public interface ClientDao {
-    void registerClient(Client client);
+    void registerClient(Client client, Address address);
+    AddressType findAddressTypeById(Long id);
 }

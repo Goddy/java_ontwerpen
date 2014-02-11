@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86250196-1e66-46a9-9165-bfaf99cf9c82" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controllers/RegisterClientServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/02AjaxBasic.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/02AjaxBasic/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/02AjaxBasic/index.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/webapp/js/ajaxUtils.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/WEB-INF/clients/register.jsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../02AjaxBasic/src/main/webapp/WEB-INF/clients/register.jsp" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/webapp/jsp/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro.war" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/WEB-INF/classes/servlets/RegisterClientServlet.class" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/WEB-INF/classes/servlets/RegisterClientServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/classes/servlets/RegisterClientServlet.class" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/classes/servlets/RegisterClientServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/model/Address.java" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/model/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/model/AddressType.java" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/model/AddressType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/java/servlets/RegisterClientServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../02AjaxBasic/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/index.jsp" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../02AjaxBasic/target/01servletIntro/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../02AjaxBasic/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../02AjaxBasic/.idea/workspace.xml" />
     </list>
@@ -120,25 +121,25 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="52" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1386">
+            <state line="21" column="44" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1386">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="10" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="360">
+            <state line="11" column="10" selection-start="203" selection-end="203" vertical-scroll-proportion="0.31987077" vertical-offset="0" max-vertical-offset="619">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="48" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.7446505" vertical-offset="0" max-vertical-offset="701">
+            <state line="29" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -147,7 +148,7 @@
       <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RegisterClientServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="35" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="594">
+            <state line="20" column="4" selection-start="478" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
               <folding />
             </state>
           </provider>
@@ -156,7 +157,7 @@
       <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="360">
+            <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -165,7 +166,7 @@
       <file leaf-file-name="WelcomeController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WelcomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="21" selection-start="431" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="828">
+            <state line="19" column="21" selection-start="431" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -174,7 +175,7 @@
       <file leaf-file-name="displayMsg.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+            <state line="13" column="6" selection-start="275" selection-end="283" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -284,8 +285,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1922" />
-    <option name="height" value="935" />
+    <option name="width" value="1602" />
+    <option name="height" value="853" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -315,7 +316,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -544,6 +544,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -990,6 +991,8 @@
       <workItem from="1391246994968" duration="2085000" />
       <workItem from="1391613863127" duration="401000" />
       <workItem from="1391699832944" duration="14000" />
+      <workItem from="1391791555533" duration="518000" />
+      <workItem from="1391794170908" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="- first commit">
       <created>1390248677541</created>
@@ -1015,11 +1018,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23089000" />
+    <option name="totallyTimeSpent" value="24007000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1922" height="935" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="24" width="1602" height="853" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1044,7 +1047,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33848134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20170757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2014157" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20684735" sideWeight="0.78125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33870968" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1334,49 +1337,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="52" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1386">
+        <state line="21" column="44" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1386">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="21" selection-start="431" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="501">
+        <state line="14" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/RegisterClientServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="35" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="10" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="360">
+        <state line="20" column="4" selection-start="478" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="48" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.7446505" vertical-offset="0" max-vertical-offset="701">
+        <state line="29" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="-19.333334" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/results/displayMsg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="275" selection-end="283" vertical-scroll-proportion="-8.666667" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/WelcomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="431" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="203" selection-end="203" vertical-scroll-proportion="0.31987077" vertical-offset="0" max-vertical-offset="619">
           <folding />
         </state>
       </provider>

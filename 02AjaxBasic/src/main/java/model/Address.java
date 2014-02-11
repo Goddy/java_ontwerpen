@@ -17,6 +17,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "Adres")
 public class Address {
     private long id;
+    private Client client;
     private int postalCode;
     private String street;
     private int number;
@@ -46,7 +47,7 @@ public class Address {
     }
 
     @NotNull
-    @Column(name = "Postcode")
+    @Column(name = "postcode")
     public int getPostalCode() {
         return postalCode;
     }
@@ -66,7 +67,7 @@ public class Address {
     }
 
     @NotNull
-    @Column(name = "Woonplaats")
+    @Column(name = "woonplaats")
     public String getCity() {
         return city;
     }
@@ -76,7 +77,7 @@ public class Address {
     }
 
     @NotNull
-    @Column(name="Nr")
+    @Column(name="nr")
     public int getNumber() {
         return number;
     }
@@ -95,14 +96,23 @@ public class Address {
         this.country = country;
     }
 
-    @NotNull
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="AT_id",insertable=true, updatable=true, nullable=false,unique=true)
+    @JoinColumn(name="at_id",insertable=true, updatable=true, nullable=false,unique=true)
     public AddressType getType() {
         return type;
     }
 
     public void setType(AddressType type) {
         this.type = type;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "k_id", nullable = false)
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 }

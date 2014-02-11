@@ -2,14 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- Added classes, form, dao">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/AddressType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../01servletsJspIntro/src/main/java/controllers/RegisterClientServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../01servletsJspIntro/src/main/webapp/WEB-INF/clients/register.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_28.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_6_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/persistence/SessionFactoryHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02AjaxBasic.iml" afterPath="$PROJECT_DIR$/02AjaxBasic.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Address.java" afterPath="$PROJECT_DIR$/src/main/java/model/Address.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/AddressType.java" afterPath="$PROJECT_DIR$/src/main/java/model/AddressType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Client.java" afterPath="$PROJECT_DIR$/src/main/java/model/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/ClientDao.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/ClientDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/RegisterClientService.java" afterPath="$PROJECT_DIR$/src/main/java/service/RegisterClientService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../01servletsJspIntro/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../01servletsJspIntro/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../01servletsJspIntro/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../01servletsJspIntro/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -67,7 +83,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" line="23" class="servlets.RegisterClientServlet" package="servlets">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" line="36" class="servlets.RegisterClientServlet" package="servlets">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -92,48 +108,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MODULES/mdl-02AjaxBasic" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://MODULES/mdl-02AjaxBasic">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>MODULES</ID>
-              <OriginalElement>mdl-02AjaxBasic</OriginalElement>
-              <nodes>
-                <node x="0.0" y="0.0">mdl-02AjaxBasic</node>
-              </nodes>
-              <notes />
-              <edges />
-              <settings layout="Hierarchic Group" zoom="1.0" x="88.0" y="15.5" />
-              <SelectedNodes>
-                <node>mdl-02AjaxBasic</node>
-              </SelectedNodes>
-              <Categories />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="252">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HbnClientDao.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HbnClientDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="27" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+            <state line="12" column="29" selection-start="253" selection-end="253" vertical-scroll-proportion="0.05232558" vertical-offset="108" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractHbnDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
+      <file leaf-file-name="ClientDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/persistence/ClientDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="1350">
+            <state line="13" column="54" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="0" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="1469" max-vertical-offset="1710">
+              <folding>
+                <element signature="e#2405#2406#0" expanded="true" />
+                <element signature="e#2434#2435#0" expanded="true" />
+                <element signature="e#2478#2479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SessionFactoryHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/persistence/SessionFactoryHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="35" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxUtils.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="56" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1044">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterClientService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="43" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterClientServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DaoFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="106" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -142,66 +187,16 @@
       <file leaf-file-name="AddressType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/AddressType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="810">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Address.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="27" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1548">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterClientServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="5" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="216">
+            <state line="17" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="756">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="26" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.6149803" vertical-offset="0" max-vertical-offset="761">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="63" selection-start="602" selection-end="602" vertical-scroll-proportion="-8.666667" vertical-offset="90" max-vertical-offset="630">
+            <state line="69" column="29" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
@@ -220,22 +215,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/reagisterClient.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/clientDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/persistence/ClientDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerClient.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/persistence/SessionFactoryHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/model/AddressType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/RegisterClientService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/persistence/ClientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" />
       </list>
     </option>
   </component>
@@ -255,6 +255,20 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="02AjaxBasic Maven Webapp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -289,8 +303,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1032" />
+    <option name="width" value="1600" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -409,11 +423,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02AjaxBasic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02AjaxBasic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="clients" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -572,6 +608,9 @@
       <recent name="model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/jsp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/clients" />
     </key>
   </component>
@@ -936,6 +975,8 @@
       <workItem from="1391612278695" duration="4999000" />
       <workItem from="1391675421815" duration="530000" />
       <workItem from="1391702315694" duration="3039000" />
+      <workItem from="1391789328991" duration="17132000" />
+      <workItem from="1392139434859" duration="3190000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -949,10 +990,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12747000" />
+    <option name="totallyTimeSpent" value="33069000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1032" extended-state="6" />
+    <frame x="0" y="24" width="1600" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -961,7 +1002,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0737798" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3195435" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -969,23 +1010,23 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2171825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26426798" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17976804" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3372093" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50927246" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50830567" sideWeight="0.6261261" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16061899" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13273196" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1013,66 +1054,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/ClientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="756">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#760#761#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-            <element signature="e#827#828#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#952#953#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1093#1094#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="false" />
-            <element signature="e#1184#1185#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1307#1308#0" expanded="false" />
-            <element signature="e#1342#1343#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#1446#1447#0" expanded="false" />
-            <element signature="e#1672#1673#0" expanded="false" />
-            <element signature="e#1702#1703#0" expanded="false" />
-            <element signature="e#1749#1750#0" expanded="false" />
-            <element signature="e#1782#1783#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1134">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="306">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +1096,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="54" selection-start="359" selection-end="359" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="486">
           <folding />
@@ -1121,7 +1106,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="0" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0" vertical-offset="883" max-vertical-offset="1440">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,7 +1143,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1422">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,7 +1180,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1422">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1226,7 +1217,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1422">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1261,7 +1254,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="1422">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1275,27 +1270,6 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="43" selection-start="486" selection-end="486" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="216">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="30" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0" vertical-offset="1047" max-vertical-offset="1494">
           <folding />
         </state>
       </provider>
@@ -1315,18 +1289,12 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="88.0" y="15.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="88.0" y="16.0" />
           <SelectedNodes>
             <node>mdl-02AjaxBasic</node>
           </SelectedNodes>
           <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <folding />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -1337,110 +1305,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/AddressType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="810">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-          </folding>
+        <state line="8" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#760#761#0" expanded="false" />
-            <element signature="e#787#788#0" expanded="false" />
-            <element signature="e#827#828#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#926#927#0" expanded="false" />
-            <element signature="e#952#953#0" expanded="false" />
-            <element signature="e#990#991#0" expanded="false" />
-            <element signature="e#1020#1021#0" expanded="false" />
-            <element signature="e#1093#1094#0" expanded="false" />
-            <element signature="e#1128#1129#0" expanded="false" />
-            <element signature="e#1184#1185#0" expanded="false" />
-            <element signature="e#1232#1233#0" expanded="false" />
-            <element signature="e#1307#1308#0" expanded="false" />
-            <element signature="e#1342#1343#0" expanded="false" />
-            <element signature="e#1398#1399#0" expanded="false" />
-            <element signature="e#1446#1447#0" expanded="false" />
-            <element signature="e#1672#1673#0" expanded="false" />
-            <element signature="e#1702#1703#0" expanded="false" />
-            <element signature="e#1749#1750#0" expanded="false" />
-            <element signature="e#1782#1783#0" expanded="false" />
-          </folding>
+        <state line="6" column="25" selection-start="100" selection-end="100" vertical-scroll-proportion="-4.0" vertical-offset="0" max-vertical-offset="216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02AjaxBasic.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1206" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="43" selection-start="3563" selection-end="3563" vertical-scroll-proportion="0.899654" vertical-offset="1432" max-vertical-offset="2412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="56" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1044">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="22" selection-start="673" selection-end="679" vertical-scroll-proportion="-8.777778" vertical-offset="123" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="37" selection-start="821" selection-end="821" vertical-scroll-proportion="0.63981044" vertical-offset="0" max-vertical-offset="432">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="1350">
+        <state line="45" column="29" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1512">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/SessionFactoryHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="106" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/persistence/ClientDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="194" selection-end="194" vertical-scroll-proportion="0.4323144" vertical-offset="0" max-vertical-offset="458">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+        <state line="13" column="54" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+        <state line="13" column="43" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/AddressType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/clients/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="63" selection-start="602" selection-end="602" vertical-scroll-proportion="-8.666667" vertical-offset="90" max-vertical-offset="630">
+        <state line="17" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="756">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="27" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1548">
+        <state line="116" column="0" selection-start="2510" selection-end="2510" vertical-scroll-proportion="0.0" vertical-offset="1469" max-vertical-offset="1710">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2405#2406#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+            <element signature="e#2478#2479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="1121" selection-end="1121" vertical-scroll-proportion="0.6149803" vertical-offset="0" max-vertical-offset="761">
+        <state line="40" column="0" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.33195022" vertical-offset="388" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="29" selection-start="1359" selection-end="1359" vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="253" selection-end="253" vertical-scroll-proportion="0.05232558" vertical-offset="108" max-vertical-offset="1170">
           <folding />
         </state>
       </provider>

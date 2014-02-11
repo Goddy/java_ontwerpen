@@ -10,11 +10,17 @@ import javax.validation.constraints.NotNull;
  * Remarks: none
  */
 
+@NamedQueries({
+        @NamedQuery(name = "findAddressTypeById", query = "from AddressType where id = :id")
+})
 @Entity
-@Table(name="AdresType")
+@Table(name="adrestype")
 public class AddressType {
     private Long id;
     private String type;
+
+    public AddressType() {
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +34,7 @@ public class AddressType {
     }
 
     @NotNull
-    @Column(name="Type")
+    @Column(name="type")
     public String getType() {
         return type;
     }

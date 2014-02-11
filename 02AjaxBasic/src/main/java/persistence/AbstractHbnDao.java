@@ -8,6 +8,7 @@ package persistence;
  */
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -16,9 +17,12 @@ import java.util.List;
 public abstract class AbstractHbnDao<T extends Object>
         implements Dao<T> {
 
-
     private SessionFactory sessionFactory;
     private Class<T> domainClass;
+
+    public AbstractHbnDao(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     protected Session getSession() {
         return sessionFactory.getCurrentSession();
@@ -39,7 +43,7 @@ public abstract class AbstractHbnDao<T extends Object>
         return getDomainClass().getName();
     }
     public void create(T t) {
-         getSession().save(t);
+        getSession().save(t);
     }
 
     @SuppressWarnings("unchecked")

@@ -1,6 +1,6 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<a href="/register">Registreer klant</a>
+<a href="jsp/register.jsp">Registreer klant</a>
 </body>
 </html>
