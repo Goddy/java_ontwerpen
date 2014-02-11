@@ -1,10 +1,10 @@
 package servlets;
 
-import model.Address;
-import model.AddressType;
-import model.Client;
-import service.RegisterClientService;
-import service.RegisterClientServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import service.ClientService;
+import service.ClientServiceImpl;
+import service.ServiceFactory;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * User: Tom De Dobbeleer
@@ -27,38 +25,22 @@ import java.util.List;
 public class RegisterClientServlet extends HttpServlet {
 
     private static final String LANDING_REGISTER_CLIENT = "jsp/register.jsp";
-    private RegisterClientService registerClientService;
+    private ClientService registerClientService;
+    private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        logger.debug("Get operation on RegisterClient");
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
-
-        registerClientService = new RegisterClientServiceImpl();
-        registerClientService.registerClient(getClientFromRequest(request), getAddressFromRequest(request));
-
-        request.setAttribute("result", "success");
         dispatcher.forward(request, response);
     }
 
-    public Client getClientFromRequest(HttpServletRequest request) {
-        Client client = new Client();
-        client.setName(request.getParameter("name"));
-        client.setPrimaryEmail(request.getParameter("email"));
-        client.setPrimaryPhone(request.getParameter("telNr"));
-        client.setVat(request.getParameter("vat"));
-
-        return client;
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        logger.debug(request.toString());
+        registerClientService = ServiceFactory.getClientService();
+        registerClientService.registerClient(request);
+        request.setAttribute("result", "success");
     }
 
-    public Address getAddressFromRequest(HttpServletRequest request) {
-        Address address = new Address();
-        AddressType addressType = registerClientService.getAddressType(Long.parseLong("1"));
-        address.setType(addressType);
-        address.setCity(request.getParameter("city"));
-        address.setNumber(Integer.parseInt(request.getParameter("number")));
-        address.setStreet(request.getParameter("street"));
-        address.setCountry(request.getParameter("country"));
-        address.setPostalCode(Integer.parseInt(request.getParameter("postalCode")));
-        return address;
-    }
+
 }

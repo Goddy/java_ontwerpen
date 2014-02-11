@@ -13,7 +13,7 @@
 </head>
 <body>
 <div id="result">${result}</div>
-<form action="/registerClient" method="GET">
+<form action="/registerClient" method="POST">
     <table>
         <tr><td>Naam:</td><td><input type="text" name="name"></td></tr>
         <tr><td>BTW-nr:</td><td><input type="text" name="vat"></td></tr>
@@ -24,7 +24,7 @@
         <tr><td>Land:</td><td><input type="text" name="country"></td></tr>
         <tr><td>TelefoonNr:</td><td><input type="text" name="telNr"></td></tr>
         <tr><td>Email:</td><td><input type="text" name="email"></td></tr>
-        <tr><td><input type="submit" value="Registreer"/></td></tr>
+        <tr><td><input type="submit" value="Registreer" onclick="ajaxResult('/registerClient', 'result' )"/></td></tr>
     </table>
 </form>
 

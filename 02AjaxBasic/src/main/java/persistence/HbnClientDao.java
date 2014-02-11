@@ -7,6 +7,8 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 /**
  * User: Tom De Dobbeleer
  * Date: 2/5/14
@@ -60,5 +62,26 @@ public class HbnClientDao extends AbstractHbnDao implements ClientDao {
         }
 
 
+    }
+
+    @Override
+    public List<Client> findClient(String searchTerm) {
+        Transaction tx = null;
+        try {
+            tx = getSession().beginTransaction();
+            Query q = getSession().getNamedQuery("findClientBySearchTerm");
+            q.setParameter("term", searchTerm);
+            List<Client> clients = (List<Client>) q.list();
+            tx.commit();
+
+            return clients;
+        }
+        catch (RuntimeException e) {
+            if (tx != null) tx.rollback();
+            throw e; // or display error message
+        }
+        finally {
+            getSession().close();
+        }
     }
 }
