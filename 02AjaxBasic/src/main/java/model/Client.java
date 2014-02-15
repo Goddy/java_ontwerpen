@@ -14,8 +14,8 @@ import java.util.List;
 
 
 @NamedQueries({
-        @NamedQuery(name = "findClientId", query = "from Client where id = :id"),
-        @NamedQuery(name="findClientBySearchTerm", query = "from Client where name = :term")
+        @NamedQuery(name = "findClientById", query = "from Client where id = :id"),
+        @NamedQuery(name = "findClientByName", query = "from Client where name like :name")
 })
 @Entity
 @Table(name = "klant")
@@ -23,8 +23,8 @@ public class Client {
     private long id;
     private String name;
     private String vat;
-    private String primaryPhone;
-    private String primaryEmail;
+    private Contact primaryPhone;
+    private Contact primaryEmail;
     private List<Address> addresses;
 
     @Id
@@ -48,8 +48,8 @@ public class Client {
         this.name = name;
     }
 
-    @Column(name="btw")
     @NotNull
+    @Column(name="btw")
     public String getVat() {
         return vat;
     }
@@ -58,28 +58,45 @@ public class Client {
         this.vat = vat;
     }
 
-    @Column(name="hfdcontacttel")
-    public String getPrimaryPhone() {
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="hfdcontacttel",insertable=true, updatable=true, nullable=false,unique=true)
+    public Contact getPrimaryPhone() {
         return primaryPhone;
     }
 
-    public void setPrimaryPhone(String primaryPhone) {
+    public void setPrimaryPhone(Contact primaryPhone) {
         this.primaryPhone = primaryPhone;
     }
 
-    @Column(name="hfdcontactemail")
-    public String getPrimaryEmail() {
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="hfdcontactemail",insertable=true, updatable=true, nullable=false,unique=true)
+    public Contact getPrimaryEmail() {
         return primaryEmail;
     }
 
-    public void setPrimaryEmail(String primaryEmail) {
+    public void setPrimaryEmail(Contact primaryEmail) {
         this.primaryEmail = primaryEmail;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.LAZY, mappedBy = "client")
+    @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "client")
     public List<Address> getAddresses() { return addresses == null ? new ArrayList<Address>() : this.addresses; }
 
     public void setAddresses(List<Address> adresses) {
         this.addresses = adresses;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder =  new StringBuilder("Id: ").append(getId())
+                     .append(" name: ").append(getName())
+                     .append(" vat: ").append(getVat())
+                     .append(" primary phone: ").append(getPrimaryPhone().getContactData())
+                     .append(" primary email: ").append(getPrimaryEmail().getContactData());
+        for (Address address:getAddresses()) {
+            stringBuilder.append(" address: " + address.toString());
+        }
+
+        return  stringBuilder.toString();
+
     }
 }

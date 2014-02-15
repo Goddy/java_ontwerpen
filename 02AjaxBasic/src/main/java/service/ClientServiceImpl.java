@@ -1,10 +1,9 @@
 package service;
 
-import model.Address;
-import model.AddressType;
-import model.Client;
+import model.*;
 import persistence.ClientDao;
 import persistence.DaoFactory;
+import static utils.Constants.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -29,24 +28,38 @@ public class ClientServiceImpl implements ClientService {
         clientDao.registerClient(getClientFromRequest(request), getAddressFromRequest(request));
     }
 
-
+    @Override
     public AddressType getAddressType(long id) {
         return clientDao.findAddressTypeById(id);
     }
 
     @Override
-    public List<Client> searchForClient(String searchTerm) {
-        return null;
+    public List<Client> searchForClient(String searchTerm, String type) {
+        switch (type) {
+            case SEARCH_TYPE_ID:
+                return clientDao.findClientById(Long.parseLong(searchTerm));
+            case SEARCH_TYPE_NAME:
+                return clientDao.findClientByName(searchTerm);
+            default:
+                return null;
+        }
     }
 
     public Client getClientFromRequest(HttpServletRequest request) {
         Client client = new Client();
         client.setName(request.getParameter("name"));
-        client.setPrimaryEmail(request.getParameter("email"));
-        client.setPrimaryPhone(request.getParameter("telNr"));
+        client.setPrimaryEmail(getContactFromRequest(request, CONTACTTYPE_EMAIL));
+        client.setPrimaryPhone(getContactFromRequest(request, CONTACTTYPE_PHONE));
         client.setVat(request.getParameter("vat"));
 
         return client;
+    }
+
+    public Contact getContactFromRequest(HttpServletRequest request, String type) {
+        Contact contact = new Contact();
+        contact.setContactType(clientDao.findContactTypeByName(type));
+        contact.setContactData(request.getParameter(type));
+        return contact;
     }
 
     public Address getAddressFromRequest(HttpServletRequest request) {
@@ -58,6 +71,8 @@ public class ClientServiceImpl implements ClientService {
         address.setStreet(request.getParameter("street"));
         address.setCountry(request.getParameter("country"));
         address.setPostalCode(Integer.parseInt(request.getParameter("postalCode")));
+        address.setActive(true);
+
         return address;
     }
 }

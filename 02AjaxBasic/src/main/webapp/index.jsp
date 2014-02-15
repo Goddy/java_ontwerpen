@@ -1,7 +1,4 @@
-<html>
-<body>
-<h2>Hello World!</h2>
-<a href="jsp/register.jsp">Registreer klant</a>
-<a href="jsp/searchClient.jsp">Zoek klant</a>
-</body>
-</html>
+<%@ include file="jspf/header.jspf" %>
+<h2>Welcome jolly tutor!</h2>
+<p>Give me good grades by testing the links above :)</p>
+<%@ include file="jspf/footer.jspf" %>

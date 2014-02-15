@@ -24,6 +24,7 @@ public class Address {
     private String city;
     private String country;
     private AddressType type;
+    private boolean active;
 
     public Address() {}
     public Address(int postalCode, String street, int number, String city, String country) {
@@ -106,7 +107,7 @@ public class Address {
         this.type = type;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "k_id", nullable = false)
     public Client getClient() {
         return client;
@@ -114,5 +115,27 @@ public class Address {
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    @NotNull
+    @Column(name="actief")
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    @Override
+    public String toString() {
+       return new StringBuilder().append("id: ").append(getId())
+                .append(" postalCode: ").append(getPostalCode())
+                .append(" street: ").append(getStreet())
+                .append(" number: ").append(getNumber())
+                .append(" city: ").append(getCity())
+                .append(" country: ").append(getCountry())
+                .append(" type: ").append(getType().getType())
+                .append(" active: ").append(isActive()).toString();
     }
 }

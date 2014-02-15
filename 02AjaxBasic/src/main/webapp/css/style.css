@@ -1,0 +1,14 @@
+#main_wrapper {
+    margin:0 auto;
+    position:relative;
+    top: 20px;
+    left:20px;
+    width:600px;
+    text-align:left;
+}
+
+#header {
+    background:url("../images/logo.gif") no-repeat right top;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

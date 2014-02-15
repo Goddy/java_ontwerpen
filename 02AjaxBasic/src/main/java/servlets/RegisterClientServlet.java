@@ -40,6 +40,9 @@ public class RegisterClientServlet extends HttpServlet {
         registerClientService = ServiceFactory.getClientService();
         registerClientService.registerClient(request);
         request.setAttribute("result", "success");
+        RequestDispatcher dispatcher;
+        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
+        dispatcher.forward(request, response);
     }
 
 

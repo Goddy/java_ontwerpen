@@ -16,5 +16,5 @@ import java.util.List;
 public interface ClientService {
     void registerClient(HttpServletRequest request);
     AddressType getAddressType(long id);
-    List<Client> searchForClient(String searchTerm);
+    List<Client> searchForClient(String searchTerm, String type);
 }

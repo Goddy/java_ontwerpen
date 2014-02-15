@@ -14,6 +14,8 @@
     <mapping class="model.Client" />
     <mapping class="model.Address" />
     <mapping class="model.AddressType" />
+    <mapping class="model.Contact" />
+    <mapping class="model.ContactType" />
   </session-factory>
 
 </hibernate-configuration>

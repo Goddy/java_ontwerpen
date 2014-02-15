@@ -22,7 +22,7 @@ function ajaxResult(address, resultRegion) {
     request.onreadystatechange =
         function() { showResponseText(request,
             resultRegion); };
-    request.open("POST", address, true);
+    request.open("GET", address, true);
     request.send(null);
 }
 

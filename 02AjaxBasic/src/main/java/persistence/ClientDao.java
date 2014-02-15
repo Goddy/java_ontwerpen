@@ -3,6 +3,7 @@ package persistence;
 import model.Address;
 import model.AddressType;
 import model.Client;
+import model.ContactType;
 
 import java.util.List;
 
@@ -15,5 +16,8 @@ import java.util.List;
 public interface ClientDao {
     void registerClient(Client client, Address address);
     AddressType findAddressTypeById(Long id);
-    List<Client> findClient(String searchTerm);
+    List<Client> findClientByName(String name);
+    List<Client> findClientById(Long id);
+    ContactType findContactTypeByName(String type);
+
 }
