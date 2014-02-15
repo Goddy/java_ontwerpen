@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/clientSearch.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02AjaxBasic.iml" afterPath="$PROJECT_DIR$/02AjaxBasic.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -159,18 +159,7 @@
       <file leaf-file-name="registerClient.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1944">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajaxUtils.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="21" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1044">
+            <state line="92" column="50" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.0" vertical-offset="1495" max-vertical-offset="1926">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -181,25 +170,16 @@
       <file leaf-file-name="header.jspf" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="54" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-9.814815" vertical-offset="221" max-vertical-offset="846">
+            <state line="36" column="20" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-7.148148" vertical-offset="455" max-vertical-offset="846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchClient.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="searchClient.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="0.641196" vertical-offset="59" max-vertical-offset="432">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowTime.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ShowTime.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="864" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="450">
+            <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.148148" vertical-offset="59" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -208,10 +188,28 @@
       <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="27" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="972">
+            <state line="47" column="14" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="990">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="91" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="486">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-8.566667" vertical-offset="229" max-vertical-offset="2736">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -239,16 +237,16 @@
       <file leaf-file-name="registerClient.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="78" selection-start="2851" selection-end="2851" vertical-scroll-proportion="-9.62963" vertical-offset="982" max-vertical-offset="1476">
+            <state line="5" column="48" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.0" vertical-offset="36" max-vertical-offset="1512">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="558">
+            <state line="48" column="28" selection-start="937" selection-end="937" vertical-scroll-proportion="0.89442813" vertical-offset="559" max-vertical-offset="972">
               <folding />
             </state>
           </provider>
@@ -277,7 +275,6 @@
         <option value="$PROJECT_DIR$/src/main/java/model/AddressType.java" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/AbstractHbnDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/logback.xml.tld" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/service/RegisterClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/RegisterClientService.java" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java" />
@@ -303,15 +300,16 @@
         <option value="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       </list>
     </option>
   </component>
@@ -1172,7 +1170,7 @@
       <workItem from="1392147144448" duration="4925000" />
       <workItem from="1392152624080" duration="8980000" />
       <workItem from="1392170646068" duration="5227000" />
-      <workItem from="1392451459796" duration="28725000" />
+      <workItem from="1392451459796" duration="32214000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -1198,7 +1196,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85367000" />
+    <option name="totallyTimeSpent" value="88856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1586" height="739" extended-state="6" />
@@ -1219,7 +1217,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27373213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253833" sideWeight="0.6573472" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253833" sideWeight="0.6573472" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5672913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1270,13 +1268,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="35226" />
@@ -1570,25 +1561,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="80" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ShowTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="864" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="27" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="972">
+        <state line="23" column="17" selection-start="864" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="450">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1596,36 +1573,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="21" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1044">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="54" selection-start="1127" selection-end="1127" vertical-scroll-proportion="-9.814815" vertical-offset="221" max-vertical-offset="846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="78" selection-start="2851" selection-end="2851" vertical-scroll-proportion="-9.62963" vertical-offset="982" max-vertical-offset="1476">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1944">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -1650,7 +1597,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="0.641196" vertical-offset="59" max-vertical-offset="432">
+        <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.148148" vertical-offset="59" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="20" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-7.148148" vertical-offset="455" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-8.566667" vertical-offset="229" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="48" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.0" vertical-offset="36" max-vertical-offset="1512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="91" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="14" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="990">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="50" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.0" vertical-offset="1495" max-vertical-offset="1926">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="28" selection-start="937" selection-end="937" vertical-scroll-proportion="0.89442813" vertical-offset="559" max-vertical-offset="972">
           <folding />
         </state>
       </provider>

@@ -7,9 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="../jspf/header.jspf" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script src="../js/registerClient.js"></script>
 <script src="../js/jquery.validate.min.js"></script>
-
+<c:if test="${not empty result}">
+<div class="${resultDiv}">${result}</div>
+</c:if>
 <form class="form-horizontal" role="form" id="form-register" action="/registerClient" method="post">
     <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Naam</label>
@@ -71,6 +74,5 @@
         </div>
     </div>
 </form>
-<div id="result">${result}</div>
 
 <%@ include file="../jspf/footer.jspf" %>

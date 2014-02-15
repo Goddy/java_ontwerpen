@@ -16,4 +16,6 @@ public class Constants {
 
     public static final String RESULT_NO_RESULTS = "Geen resultaten gevonden";
     public static final String RESULT_CLIENT_ADDED = "Klant succesvol toegevoegd";
+
+    public  static final String RESULT_UNKNOWN_ERROR = "Er is een onbekende fout opgetreden";
 }

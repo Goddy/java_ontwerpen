@@ -89,7 +89,6 @@ $(document).ready(function(){
         },
 
         highlight: function(element) {
-            errorFound = true;
             $(element).closest('.control-group').addClass('error');
         },
         success: function(element) {

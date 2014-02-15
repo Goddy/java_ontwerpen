@@ -24,26 +24,27 @@ import java.io.IOException;
 @WebServlet("/registerClient")
 public class RegisterClientServlet extends HttpServlet {
 
-    private static final String LANDING_REGISTER_CLIENT = "jsp/register.jsp";
+    private static final String LANDING_REGISTER_CLIENT = "jsp/registerClient.jsp";
     private ClientService registerClientService;
     private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        logger.debug("Get operation on RegisterClient");
-        RequestDispatcher dispatcher;
-        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
-        dispatcher.forward(request, response);
-    }
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());
-        registerClientService = ServiceFactory.getClientService();
-        registerClientService.registerClient(request);
-        request.setAttribute("result", RESULT_CLIENT_ADDED );
+        try {
+            //registerClientService = ServiceFactory.getClientService();
+            //registerClientService.registerClient(request);
+            request.setAttribute("resultDiv", "successBox");
+            request.setAttribute("result", RESULT_CLIENT_ADDED );
+            throw new Exception("error") ;
+        }
+        //todo: Specific exception handling
+        catch (Exception e) {
+            request.setAttribute("resultDiv", "errorBox");
+            request.setAttribute("result", RESULT_UNKNOWN_ERROR );
+        }
+
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
         dispatcher.forward(request, response);
     }
-
-
 }

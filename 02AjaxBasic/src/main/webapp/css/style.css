@@ -3,7 +3,8 @@
     position:relative;
     top: 20px;
     left:20px;
-    width:600px;
+    padding-right: 25px;
+    max-width:600px;
     text-align:left;
 }
 
@@ -14,7 +15,7 @@
 }
 
 /**
-Error labels from http://alittlecode.com/files/jQuery-Validate-Demo/index.html
+Error label from http://alittlecode.com/files/jQuery-Validate-Demo/index.html
 **/
 
 label.error {
@@ -22,4 +23,26 @@ label.error {
     color: red;
     padding: 2px 8px;
     margin-top: 2px;
+}
+
+/* Boxes */
+
+.errorBox, .successBox {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 60px;
+    min-height: 45px;
+    display: block;
+}
+
+.errorBox {
+    background: #E6E6E6  url(../images/error-icon.png) no-repeat 5px 5px;
+    background-size: 30px 30px;
+    border: 1px solid  #8A5858;
+}
+
+.successBox {
+    background:  #dfffdf url(../images/success-icon.png) no-repeat 5px 5px;
+    border: 1px solid  #9fcf9f;
+    background-size: 30px 30px;
 }
