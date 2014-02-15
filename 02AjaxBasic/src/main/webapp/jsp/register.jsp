@@ -13,54 +13,60 @@
     <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Naam</label>
         <div class="col-sm-10">
-            <input class="form-control" id="name" placeholder="Naam">
+            <input class="form-control" id="name" name="name" placeholder="Naam">
         </div>
     </div>
     <div class="form-group">
         <label for="vat" class="col-sm-2 control-label">Btw-nr</label>
         <div class="col-sm-10">
-            <input class="form-control" id="vat" placeholder="BTW-nr">
+            <input class="form-control" name="vat" id="vat" placeholder="BTW-nr">
         </div>
     </div>
     <div class="form-group">
         <label for="street" class="col-sm-2 control-label">Straat</label>
         <div class="col-sm-10">
-            <input class="form-control" id="street" placeholder="Straat">
+            <input class="form-control" name="street" id="street" placeholder="Straat">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="number" class="col-sm-2 control-label">Nummer</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="number" id="number" placeholder="Nummer">
         </div>
     </div>
     <div class="form-group">
         <label for="postalCode" class="col-sm-2 control-label">Postcode</label>
         <div class="col-sm-10">
-            <input class="form-control" id="postalCode" placeholder="Postcode">
+            <input class="form-control" name="postalCode" id="postalCode" placeholder="Postcode">
         </div>
     </div>
     <div class="form-group">
         <label for="city" class="col-sm-2 control-label">Woonplaats</label>
         <div class="col-sm-10">
-            <input class="form-control" id="city" placeholder="Woonplaats">
+            <input class="form-control" id="city" name="city" placeholder="Woonplaats">
         </div>
     </div>
     <div class="form-group">
         <label for="country" class="col-sm-2 control-label">Land</label>
         <div class="col-sm-10">
-            <input class="form-control" id="country" placeholder="Land">
+            <input class="form-control" id="country" name="country" placeholder="Land">
         </div>
     </div>
     <div class="form-group">
         <label for="phone" class="col-sm-2 control-label">TelefoonNr</label>
         <div class="col-sm-10">
-            <input class="form-control" id="phone" placeholder="TelefoonNr">
+            <input class="form-control" id="phone" name="phone" placeholder="TelefoonNr">
         </div>
     </div>
     <div class="form-group">
         <label for="email" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-            <input class="form-control" id="email" placeholder="Email">
+            <input class="form-control" id="email" name="email" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit"  class="btn btn-default" value="Registreer" onclick="ajaxResult('/registerClient', 'result' )"/>
+            <input type="submit"  class="btn btn-default" value="Registreer"/>
         </div>
     </div>
 </form>
