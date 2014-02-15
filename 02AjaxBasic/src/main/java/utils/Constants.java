@@ -15,4 +15,5 @@ public class Constants {
     public static final String SEARCH_TYPE_NAME = "name";
 
     public static final String RESULT_NO_RESULTS = "Geen resultaten gevonden";
+    public static final String RESULT_CLIENT_ADDED = "Klant succesvol toegevoegd";
 }

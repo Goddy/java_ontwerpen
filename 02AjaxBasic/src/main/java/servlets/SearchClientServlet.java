@@ -36,7 +36,7 @@ public class SearchClientServlet extends HttpServlet {
 
         List<Client> clientList = clientService.searchForClient(search, type);
 
-        if (clientList != null) {
+        if (clientList != null && !clientList.isEmpty()) {
             message = HtmlHelper.ClientListToTable(clientList);
         }
         else {

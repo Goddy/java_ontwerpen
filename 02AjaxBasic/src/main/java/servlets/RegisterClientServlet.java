@@ -3,9 +3,9 @@ package servlets;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import service.ClientService;
-import service.ClientServiceImpl;
 import service.ServiceFactory;
 
+import static utils.Constants.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +39,7 @@ public class RegisterClientServlet extends HttpServlet {
         logger.debug(request.toString());
         registerClientService = ServiceFactory.getClientService();
         registerClientService.registerClient(request);
-        request.setAttribute("result", "success");
+        request.setAttribute("result", RESULT_CLIENT_ADDED );
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
         dispatcher.forward(request, response);

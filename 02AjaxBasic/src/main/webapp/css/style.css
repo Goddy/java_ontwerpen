@@ -12,3 +12,14 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+/**
+Error labels from http://alittlecode.com/files/jQuery-Validate-Demo/index.html
+**/
+
+label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+}
