@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- perfectionism">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_adres.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_adrestype.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_contact.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_contacttype.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_klant.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
+    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/servlets/ShowTime.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="02AjaxBasic.iws" />
@@ -157,10 +149,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="registerClient.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="registerClient.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="64" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="1962">
+            <state line="90" column="43" selection-start="2719" selection-end="2719" vertical-scroll-proportion="0.49202126" vertical-offset="1435" max-vertical-offset="1980">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -177,10 +169,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="56" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.1487603" vertical-offset="339" max-vertical-offset="972">
+            <state line="32" column="49" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="972">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -303,10 +295,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
       </list>
     </option>
   </component>
@@ -1167,7 +1159,7 @@
       <workItem from="1392147144448" duration="4925000" />
       <workItem from="1392152624080" duration="8980000" />
       <workItem from="1392170646068" duration="5227000" />
-      <workItem from="1392451459796" duration="40429000" />
+      <workItem from="1392451459796" duration="40510000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -1189,15 +1181,19 @@
       <created>1392468151884</created>
       <updated>1392468151884</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- added dumps, fixed mobile compat bug">
+      <created>1392653169371</created>
+      <updated>1392653169371</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97071000" />
+    <option name="totallyTimeSpent" value="97152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1602" height="796" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1213,7 +1209,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27091378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27091378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33074534" sideWeight="0.65637064" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1251,7 +1247,8 @@
     <MESSAGE value="- Dao works" />
     <MESSAGE value="- Added bootstrap&#10;" />
     <MESSAGE value="- fixed registerClient&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- fixed registerClient&#10;" />
+    <MESSAGE value="- added dumps, fixed mobile compat bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added dumps, fixed mobile compat bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1533,15 +1530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ShowTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="864" selection-end="869" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="450">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
@@ -1615,15 +1603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="64" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="1962">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="56" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
@@ -1649,9 +1628,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="56" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.1487603" vertical-offset="339" max-vertical-offset="972">
+        <state line="32" column="49" selection-start="1025" selection-end="1025" vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="972">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="43" selection-start="2719" selection-end="2719" vertical-scroll-proportion="0.49202126" vertical-offset="1435" max-vertical-offset="1980">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

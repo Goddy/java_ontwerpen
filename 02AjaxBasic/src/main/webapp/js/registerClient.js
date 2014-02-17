@@ -88,6 +88,7 @@ $(document).ready(function(){
 
         },
 
+        //Todo: fix bug (label not removed)
         highlight: function(element) {
             element
                 .closest('.form-group').addClass('error');
