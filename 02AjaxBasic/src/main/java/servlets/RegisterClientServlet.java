@@ -31,11 +31,10 @@ public class RegisterClientServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());
         try {
-            //registerClientService = ServiceFactory.getClientService();
-            //registerClientService.registerClient(request);
+            registerClientService = ServiceFactory.getClientService();
+            registerClientService.registerClient(request);
             request.setAttribute("resultDiv", "successBox");
             request.setAttribute("result", RESULT_CLIENT_ADDED );
-            throw new Exception("error") ;
         }
         //todo: Specific exception handling
         catch (Exception e) {

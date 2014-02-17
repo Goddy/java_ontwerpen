@@ -10,6 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <script src="../js/registerClient.js"></script>
 <script src="../js/jquery.validate.min.js"></script>
+
 <c:if test="${not empty result}">
 <div class="${resultDiv}">${result}</div>
 </c:if>

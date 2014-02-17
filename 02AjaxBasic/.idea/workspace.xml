@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/02AjaxBasic.iml" afterPath="$PROJECT_DIR$/02AjaxBasic.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/02AjaxBasic_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
+    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- perfectionism">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_adres.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_adrestype.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_contact.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_contacttype.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140217/omj2014_klant.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
@@ -159,7 +160,7 @@
       <file leaf-file-name="registerClient.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="50" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.0" vertical-offset="1495" max-vertical-offset="1926">
+            <state line="94" column="64" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="1962">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -167,66 +168,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jspf" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
+      <file leaf-file-name="bootstrap-theme.css.map" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="20" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-7.148148" vertical-offset="455" max-vertical-offset="846">
+            <state line="0" column="4027" selection-start="4027" selection-end="4027" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="108">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchClient.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.148148" vertical-offset="59" max-vertical-offset="432">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="14" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="990">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="91" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="486">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-8.566667" vertical-offset="229" max-vertical-offset="2736">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchClient.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchClientServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="9" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="990">
+            <state line="42" column="56" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.1487603" vertical-offset="339" max-vertical-offset="972">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -237,16 +191,59 @@
       <file leaf-file-name="registerClient.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="48" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.0" vertical-offset="36" max-vertical-offset="1512">
+            <state line="17" column="12" selection-start="618" selection-end="618" vertical-scroll-proportion="-5.3333335" vertical-offset="162" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SearchClientServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="9" selection-start="1346" selection-end="1346" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="990">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxUtils.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="21" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1044">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="success-icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/images/success-icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error-icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/images/error-icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logo.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/images/logo.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="937" selection-end="937" vertical-scroll-proportion="0.89442813" vertical-offset="559" max-vertical-offset="972">
+            <state line="16" column="56" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
               <folding />
             </state>
           </provider>
@@ -299,17 +296,17 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Contact.java" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/HbnClientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ClientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
       </list>
     </option>
   </component>
@@ -378,8 +375,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
     <option name="y" value="24" />
-    <option name="width" value="1586" />
-    <option name="height" value="739" />
+    <option name="width" value="1602" />
+    <option name="height" value="796" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1170,7 +1167,7 @@
       <workItem from="1392147144448" duration="4925000" />
       <workItem from="1392152624080" duration="8980000" />
       <workItem from="1392170646068" duration="5227000" />
-      <workItem from="1392451459796" duration="32214000" />
+      <workItem from="1392451459796" duration="40429000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -1196,11 +1193,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88856000" />
+    <option name="totallyTimeSpent" value="97071000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1586" height="739" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="24" width="1602" height="796" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1208,7 +1205,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253833" sideWeight="0.3426528" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33074534" sideWeight="0.34362933" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1216,19 +1213,19 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27373213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3253833" sideWeight="0.6573472" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27091378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33074534" sideWeight="0.65637064" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5672913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33730835" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2658228" sideWeight="0.6267696" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32196453" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26552796" sideWeight="0.6261261" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32367972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11183355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11068211" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1268,16 +1265,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="35226" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105066" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="271" />
@@ -1295,11 +1282,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6354" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="271" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="271" />
@@ -1310,11 +1292,6 @@
         <state line="17" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="756">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="271" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
@@ -1371,11 +1348,6 @@
             <element signature="imports" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/logo.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
@@ -1570,6 +1542,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.148148" vertical-offset="59" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-8.566667" vertical-offset="229" max-vertical-offset="2736">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="91" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="426" selection-end="426" vertical-scroll-proportion="-4.037037" vertical-offset="161" max-vertical-offset="936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="271">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="21" selection-start="870" selection-end="870" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1044">
@@ -1579,9 +1593,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/logo.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/success-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/images/error-icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+        <state line="0" column="4027" selection-start="4027" selection-end="4027" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="64" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1327" max-vertical-offset="1962">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="56" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="12" selection-start="618" selection-end="618" vertical-scroll-proportion="-5.3333335" vertical-offset="162" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
@@ -1595,63 +1647,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="70" selection-start="658" selection-end="658" vertical-scroll-proportion="-7.148148" vertical-offset="59" max-vertical-offset="432">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="20" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-7.148148" vertical-offset="455" max-vertical-offset="846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-8.566667" vertical-offset="229" max-vertical-offset="2736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="48" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.0" vertical-offset="36" max-vertical-offset="1512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="91" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="14" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="990">
+        <state line="42" column="56" selection-start="1502" selection-end="1502" vertical-scroll-proportion="1.1487603" vertical-offset="339" max-vertical-offset="972">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="50" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.0" vertical-offset="1495" max-vertical-offset="1926">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="937" selection-end="937" vertical-scroll-proportion="0.89442813" vertical-offset="559" max-vertical-offset="972">
-          <folding />
         </state>
       </provider>
     </entry>

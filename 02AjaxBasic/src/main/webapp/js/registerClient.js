@@ -89,11 +89,13 @@ $(document).ready(function(){
         },
 
         highlight: function(element) {
-            $(element).closest('.control-group').addClass('error');
+            element
+                .closest('.form-group').addClass('error');
         },
         success: function(element) {
             element
-                .closest('.control-group').removeClass('error');
+                .addClass('valid')
+                .closest('.form-group').removeClass('error');
         }
     });
 

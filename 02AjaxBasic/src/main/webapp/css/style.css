@@ -25,6 +25,13 @@ label.error {
     margin-top: 2px;
 }
 
+label.valid {
+    background: url(../images/success-icon.png) no-repeat 5px 5px;
+    display: inline-block;
+    text-indent: -9999px;
+    text-align: right;
+}
+
 /* Boxes */
 
 .errorBox, .successBox {
