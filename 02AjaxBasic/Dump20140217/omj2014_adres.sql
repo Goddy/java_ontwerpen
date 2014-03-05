@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `omj2014` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `omj2014`;
+CREATE DATABASE  IF NOT EXISTS `OMJ2014` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `OMJ2014`;
 -- MySQL dump 10.13  Distrib 5.5.32, for debian-linux-gnu (i686)
 --
--- Host: localhost    Database: omj2014
+-- Host: localhost    Database: OMJ2014
 -- ------------------------------------------------------
 -- Server version	5.5.32-0ubuntu0.12.04.1
 

@@ -1,9 +1,6 @@
 package persistence;
 
-import model.Address;
-import model.AddressType;
-import model.Client;
-import model.ContactType;
+import model.*;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -23,15 +20,18 @@ public class HbnClientDao extends AbstractHbnDao implements ClientDao {
     }
 
     @Override
-    public void registerClient(Client client, Address address) {
+    public void registerClient(Client client, Address address, List<Contact> contacts) {
         Transaction tx = null;
 
         try {
             tx = getSession().beginTransaction();
-            address.setClient(client);
-            client.getAddresses().add(address);
+
             super.create(client);
             super.create(address);
+
+            for (Contact contact : contacts) {
+                super.create(contact);
+            }
 
             tx.commit(); // Flush happens automatically
         }
@@ -55,29 +55,6 @@ public class HbnClientDao extends AbstractHbnDao implements ClientDao {
             tx.commit();
 
             return contactType;
-        }
-        catch (RuntimeException e) {
-            if (tx != null) tx.rollback();
-            throw e; // or display error message
-        }
-        finally {
-            getSession().close();
-        }
-
-
-    }
-
-    @Override
-    public AddressType findAddressTypeById(Long id) {
-        Transaction tx = null;
-        try {
-            tx = getSession().beginTransaction();
-            Query q = getSession().getNamedQuery("findAddressTypeById");
-            q.setParameter("id", id);
-            AddressType addressType = (AddressType) q.uniqueResult();
-            tx.commit();
-
-            return addressType;
         }
         catch (RuntimeException e) {
             if (tx != null) tx.rollback();

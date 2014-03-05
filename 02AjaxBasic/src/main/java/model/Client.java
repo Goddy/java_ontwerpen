@@ -23,9 +23,10 @@ public class Client {
     private long id;
     private String name;
     private String vat;
-    private Contact primaryPhone;
-    private Contact primaryEmail;
-    private List<Address> addresses;
+
+    private Address invoiceAddress;
+    private Address deliveryAddress;
+    private List<Contact> contacts;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -58,45 +59,41 @@ public class Client {
         this.vat = vat;
     }
 
-    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="hfdcontacttel",insertable=true, updatable=true, nullable=false,unique=true)
-    public Contact getPrimaryPhone() {
-        return primaryPhone;
-    }
-
-    public void setPrimaryPhone(Contact primaryPhone) {
-        this.primaryPhone = primaryPhone;
-    }
-
-    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="hfdcontactemail",insertable=true, updatable=true, nullable=false,unique=true)
-    public Contact getPrimaryEmail() {
-        return primaryEmail;
-    }
-
-    public void setPrimaryEmail(Contact primaryEmail) {
-        this.primaryEmail = primaryEmail;
-    }
-
     @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "client")
-    public List<Address> getAddresses() { return addresses == null ? new ArrayList<Address>() : this.addresses; }
+    public List<Contact> getContacts() { return contacts == null ? new ArrayList<Contact>() : this.contacts; }
 
-    public void setAddresses(List<Address> adresses) {
-        this.addresses = adresses;
+    public void setContacts(List<Contact> contacts) {
+        this.contacts = contacts;
     }
 
+    @NotNull
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="FacturatieAdr",insertable=true, updatable=true, nullable=false,unique=true)
+    public Address getInvoiceAddress() { return this.invoiceAddress; }
+
+    public void setInvoiceAddress(Address address) {
+        this.invoiceAddress = address;
+    }
+
+    @NotNull
+    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="AfleverAdr",insertable=true, updatable=true, nullable=false,unique=true)
+    public Address getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
+    public void setDeliveryAddress(Address deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
+    }
     @Override
     public String toString() {
         StringBuilder stringBuilder =  new StringBuilder("Id: ").append(getId())
                      .append(" name: ").append(getName())
-                     .append(" vat: ").append(getVat())
-                     .append(" primary phone: ").append(getPrimaryPhone().getContactData())
-                     .append(" primary email: ").append(getPrimaryEmail().getContactData());
-        for (Address address:getAddresses()) {
-            stringBuilder.append(" address: " + address.toString());
-        }
+                     .append(" vat: ").append(getVat());
 
         return  stringBuilder.toString();
 
     }
+
+
 }

@@ -16,6 +16,7 @@ public class Contact {
     private Long id;
     private String contactData;
     private ContactType contactType;
+    private Client client;
 
     public Contact() {}
 
@@ -48,5 +49,15 @@ public class Contact {
 
     public void setContactType(ContactType contactType) {
         this.contactType = contactType;
+    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "k_id", nullable = false)
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 }

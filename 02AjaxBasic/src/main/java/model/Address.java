@@ -14,16 +14,14 @@ import javax.validation.constraints.NotNull;
         @NamedQuery(name = "findAddressById", query = "from Address where id = :id")
 })
 @Entity
-@Table(name = "Adres")
+@Table(name = "adres")
 public class Address {
     private long id;
-    private Client client;
     private int postalCode;
     private String street;
     private int number;
     private String city;
     private String country;
-    private AddressType type;
     private boolean active;
 
     public Address() {}
@@ -97,26 +95,6 @@ public class Address {
         this.country = country;
     }
 
-    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="at_id",insertable=true, updatable=true, nullable=false,unique=true)
-    public AddressType getType() {
-        return type;
-    }
-
-    public void setType(AddressType type) {
-        this.type = type;
-    }
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "k_id", nullable = false)
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
     @NotNull
     @Column(name="actief")
     public boolean isActive() {
@@ -135,7 +113,6 @@ public class Address {
                 .append(" number: ").append(getNumber())
                 .append(" city: ").append(getCity())
                 .append(" country: ").append(getCountry())
-                .append(" type: ").append(getType().getType())
                 .append(" active: ").append(isActive()).toString();
     }
 }

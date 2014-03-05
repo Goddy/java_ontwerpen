@@ -4,8 +4,14 @@
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="75740ddd-320c-4aa5-865e-b25f8a576f6e">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>localhost</jdbc-url>
-      <libraries />
+      <jdbc-url>jdbc:mysql://localhost:3306/OMJ2014</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc0dfcbdfdcdfcb</user-password>
+      <libraries>
+        <library>
+          <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.28/mysql-connector-java-5.1.28.jar</url>
+        </library>
+      </libraries>
     </data-source>
   </component>
 </project>
