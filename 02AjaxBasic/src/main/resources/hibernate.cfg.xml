@@ -10,11 +10,12 @@
     <property name="connection.password">java</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hbm2ddl.auto">update</property>
-    <mapping class="model.Client" />
+      <mapping class="model.Client" />
     <mapping class="model.Address" />
     <mapping class="model.Contact" />
     <mapping class="model.ContactType" />
     <mapping class="model.Employee" />
+      <mapping class="model.ServiceCall"/>
   </session-factory>
 
 </hibernate-configuration>
