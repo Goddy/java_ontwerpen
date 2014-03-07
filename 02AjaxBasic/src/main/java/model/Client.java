@@ -1,5 +1,7 @@
 package model;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -59,6 +61,7 @@ public class Client {
         this.vat = vat;
     }
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "client")
     public List<Contact> getContacts() { return contacts == null ? new ArrayList<Contact>() : this.contacts; }
 

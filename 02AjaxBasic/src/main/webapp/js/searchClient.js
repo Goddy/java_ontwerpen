@@ -1,9 +1,9 @@
-function submitSearch(address, resultRegion) {
-    var loader = $('#loader');
-    loader.show();
-
+function submitSearch(address, form, resultRegion, type ) {
     var name = document.getElementById("name").value;
     var id = document.getElementById("id").value;
+    var headings = new Array("Id", "Naam");
+    var dataFields = new Array("id", "name");
+    var data = "";
 
     if (name != "" && id !="") {
         htmlInsert(resultRegion, "Naam en id mogen niet beiden ingevuld zijn");
@@ -13,19 +13,17 @@ function submitSearch(address, resultRegion) {
         htmlInsert(resultRegion, "Geen waarden ingevuld");
     }
     else if (name != "") {
-        var transformedAddress = address + "?search=" +name +"&type=name";
-        ajaxResult(transformedAddress, resultRegion)
+        address += "?search=" +name +"&type=name";
+        jsonTableRequest(address, data, resultRegion, headings, dataFields, type );
     }
     else {
         if (!isNaN(id)) {
-            var transformedAddress = address + "?search="+id +"&type=id";
-            ajaxResult(transformedAddress, resultRegion)
+            address +="?search="+id +"&type=id";
+            jsonTableRequest(address, data, resultRegion, headings, dataFields, type );
         }
         else {
             htmlInsert(resultRegion, "id is geen getal");
         }
     }
-
-    loader.hide();
 
 }
