@@ -10,10 +10,10 @@ import java.util.List;
  * Time: 4:58 PM
  * Remarks: none
  */
-public interface ClientDao {
+public interface ClientDao extends Dao<Object> {
     void registerClient(Client client, Address address, List<Contact> contacts);
     List<Client> findClientByName(String name);
-    List<Client> findClientById(Long id);
+    Client findClientById(String id);
+    List<Client> getClients();
     ContactType findContactTypeByName(String type);
-
 }

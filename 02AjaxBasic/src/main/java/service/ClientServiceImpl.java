@@ -1,6 +1,8 @@
 package service;
 
 import model.*;
+import org.hibernate.Query;
+import org.hibernate.Transaction;
 import persistence.ClientDao;
 import persistence.DaoFactory;
 import static utils.Constants.*;
@@ -51,11 +53,36 @@ public class ClientServiceImpl implements ClientService {
     public List<Client> searchForClient(String searchTerm, String type) {
         switch (type) {
             case SEARCH_TYPE_ID:
-                return clientDao.findClientById(Long.parseLong(searchTerm));
+                List<Client> clients = new ArrayList<>();
+                clients.add(clientDao.findClientById(searchTerm));
+                return clients;
             case SEARCH_TYPE_NAME:
                 return clientDao.findClientByName(searchTerm);
             default:
                 return null;
+        }
+    }
+
+    @Override
+    public List<Client> getAll() {
+        return clientDao.getClients();
+    }
+
+    @Override
+    public Client getClientById(String id) {
+        Transaction tx = null;
+        try {
+            tx = clientDao.getSession().beginTransaction();
+            Client client = clientDao.findClientById(id);
+            tx.commit();
+            return client;
+        }
+        catch (RuntimeException e) {
+            if (tx != null) tx.rollback();
+            throw e; // or display error message
+        }
+        finally {
+            clientDao.getSession().close();
         }
     }
 

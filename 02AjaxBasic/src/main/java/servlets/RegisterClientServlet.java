@@ -25,14 +25,14 @@ import java.io.IOException;
 public class RegisterClientServlet extends HttpServlet {
 
     private static final String LANDING_REGISTER_CLIENT = "jsp/registerClient.jsp";
-    private ClientService registerClientService;
+    private ClientService clientService;
     private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());
         try {
-            registerClientService = ServiceFactory.getClientService();
-            registerClientService.registerClient(request);
+            clientService = ServiceFactory.getClientService();
+            clientService.registerClient(request);
             request.setAttribute("resultDiv", "successBox");
             request.setAttribute("result", RESULT_CLIENT_ADDED );
         }

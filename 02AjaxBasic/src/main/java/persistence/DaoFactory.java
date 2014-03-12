@@ -11,4 +11,6 @@ import org.hibernate.SessionFactory;
 public class DaoFactory {
     private DaoFactory() {}
     public static HbnClientDao getClientDao() { return new HbnClientDao(SessionFactoryHelper.getSessionFactory()); }
+    public static HbnEmployeeDao getEmployeeDao() { return new HbnEmployeeDao(SessionFactoryHelper.getSessionFactory()); }
+    public static HbnServiceCallDao getServiceCallDao() { return new HbnServiceCallDao(SessionFactoryHelper.getSessionFactory()); }
 }

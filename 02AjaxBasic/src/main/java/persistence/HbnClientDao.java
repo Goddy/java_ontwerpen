@@ -13,7 +13,7 @@ import java.util.List;
  * Time: 4:54 PM
  * Remarks: none
  */
-public class HbnClientDao extends AbstractHbnDao implements ClientDao {
+public class HbnClientDao extends AbstractHbnDao<Object> implements ClientDao {
 
     public HbnClientDao(SessionFactory sessionFactory) {
         super(sessionFactory);
@@ -68,12 +68,19 @@ public class HbnClientDao extends AbstractHbnDao implements ClientDao {
     }
 
     @Override
-    public List<Client> findClientById(Long id) {
+    public Client findClientById(String id) {
+            Query q = getSession().getNamedQuery("findClientById");
+            q.setParameter("id", id);
+            Client client = (Client)q.uniqueResult();
+            return client;
+    }
+
+    @Override
+    public List<Client> getClients() {
         Transaction tx = null;
         try {
             tx = getSession().beginTransaction();
-            Query q = getSession().getNamedQuery("findClientById");
-            q.setParameter("id", id);
+            Query q = getSession().getNamedQuery("getClients");
             List<Client> clients = (List<Client>) q.list();
             tx.commit();
 

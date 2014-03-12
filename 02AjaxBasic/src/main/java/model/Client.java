@@ -17,7 +17,8 @@ import java.util.List;
 
 @NamedQueries({
         @NamedQuery(name = "findClientById", query = "from Client where id = :id"),
-        @NamedQuery(name = "findClientByName", query = "from Client where name like :name")
+        @NamedQuery(name = "findClientByName", query = "from Client where name like :name"),
+        @NamedQuery(name = "getClients", query = "from Client")
 })
 @Entity
 @Table(name = "klant")

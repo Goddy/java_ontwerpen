@@ -2,7 +2,7 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by u0090265 on 3/6/14.
@@ -18,6 +18,10 @@ public class ServiceCall {
     private Date closed;
     private Employee employee;
     private Client client;
+
+    public ServiceCall() {
+        setOpened(new Date());
+    }
 
     @Id
     @Column(name = "id")

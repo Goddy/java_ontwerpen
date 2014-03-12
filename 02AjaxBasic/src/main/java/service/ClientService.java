@@ -14,4 +14,6 @@ import java.util.List;
 public interface ClientService {
     void registerClient(HttpServletRequest request);
     List<Client> searchForClient(String searchTerm, String type);
+    List<Client> getAll();
+    Client getClientById(String id);
 }

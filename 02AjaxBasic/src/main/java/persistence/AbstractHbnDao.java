@@ -24,7 +24,8 @@ public abstract class AbstractHbnDao<T extends Object>
         this.sessionFactory = sessionFactory;
     }
 
-    protected Session getSession() {
+    @Override
+    public Session getSession() {
         return sessionFactory.getCurrentSession();
     }
 
@@ -56,9 +57,22 @@ public abstract class AbstractHbnDao<T extends Object>
     }
     @SuppressWarnings("unchecked")
     public List<T> getAll() {
-        return getSession()
+        Transaction tx = null;
+        try {
+        tx = getSession().beginTransaction();
+        List <T> list = getSession()
                 .createQuery("from " + getDomainClassName())
                 .list();
+        tx.commit();
+        return list;
+        }
+        catch (Exception e) {
+            if (tx != null) tx.rollback();
+            return null;
+        }
+        finally {
+            getSession().close();
+        }
     }
 
     public void update(T t) { getSession().update(t); }

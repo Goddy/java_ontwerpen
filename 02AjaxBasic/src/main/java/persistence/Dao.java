@@ -6,10 +6,13 @@ package persistence;
  * Time: 7:48 PM
  * Remarks: none
  */
+import org.hibernate.Session;
+
 import java.io.Serializable;
 import java.util.List;
 
 public interface Dao<T extends Object> {
+    Session getSession();
     void create(T t);
     T get(Serializable id);
     T load(Serializable id);
