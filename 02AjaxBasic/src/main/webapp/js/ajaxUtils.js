@@ -60,6 +60,25 @@ function jsonTableRequest(address, data, resultRegion, headings, fields, type)
     });
 }
 
+function jsonTableRequest_test(address, data, resultRegion, type, tableFunction)
+{
+    address += "&format=json";
+    ajaxPost(address, data, type, function(request) {
+        showJsonTable_test(request, resultRegion, tableFunction);
+    });
+}
+
+function showJsonTable_test(request, resultRegion, tableFunction)
+{
+    if ((request.readyState == 4) &&
+        (request.status == 200)) {
+        var rawData = request.responseText;
+        var data = eval("(" + rawData + ")");
+        //use [ ] in order to be able to provide a dynamic key value
+        tableFunction(data, resultRegion);
+    }
+}
+
 function showJsonTable(request, resultRegion, headings, fields)
 {
     if ((request.readyState == 4) &&
@@ -71,7 +90,8 @@ function showJsonTable(request, resultRegion, headings, fields)
     }
 }
 
-//****************Table functions**************************************************************************************************************
+//****************Table functions***************************************************************************************************************
+
 function getTable(headings, fields, rows)
 {
     var table = "<table class='table'>\n" +

@@ -14,7 +14,7 @@
     <div class="${resultDiv}">${result}</div>
 </c:if>
 <form class="form-horizontal" role="form" id="form-register" action="/registerClient" method="post">
-    <input type="hidden" name="client">
+    <input type="hidden" name="client" value="${clientId}">
     <div class="form-group">
         <label for="sDescription" class="col-sm-2 control-label">Btw-nr</label>
         <div class="col-sm-10">

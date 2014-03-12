@@ -24,7 +24,7 @@ import static utils.Constants.*;
 @WebServlet("/registerServiceRequest")
 public class RegisterServiceCall extends HttpServlet {
 
-    private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceRequest.jsp";
+    private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
     private ClientService clientService;
     private EmployeeService employeeService;
     private ServiceCallService serviceCallService;
@@ -48,7 +48,7 @@ public class RegisterServiceCall extends HttpServlet {
         dispatcher.forward(request, response);
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String id = request.getAttribute("id").toString();
+        String id = request.getAttribute("clientId").toString();
         if (id == "" || id == null) {
             request.setAttribute("resultDiv", "errorBox");
             request.setAttribute("result", RESULT_ID_NOT_SPECIFIED );
@@ -58,7 +58,7 @@ public class RegisterServiceCall extends HttpServlet {
             Client client = clientService.getClientById(id);
             employeeService = ServiceFactory.getEmployeeService();
             request.setAttribute("employees", employeeService.getAll());
-            request.setAttribute("client", client);
+            request.setAttribute("clientId", client);
         }
 
         RequestDispatcher dispatcher;
