@@ -21,14 +21,14 @@ import static utils.Constants.*;
 /**
  * Created by u0090265 on 3/9/14.
  */
-@WebServlet("/registerServiceRequest")
+@WebServlet("/registerServiceCall")
 public class RegisterServiceCall extends HttpServlet {
 
     private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
     private ClientService clientService;
     private EmployeeService employeeService;
     private ServiceCallService serviceCallService;
-    private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
+    private static final Logger logger = LoggerFactory.getLogger(RegisterServiceCall.class);
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());
@@ -48,7 +48,7 @@ public class RegisterServiceCall extends HttpServlet {
         dispatcher.forward(request, response);
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String id = request.getAttribute("clientId").toString();
+        String id = request.getParameter("clientId");
         if (id == "" || id == null) {
             request.setAttribute("resultDiv", "errorBox");
             request.setAttribute("result", RESULT_ID_NOT_SPECIFIED );
@@ -58,7 +58,7 @@ public class RegisterServiceCall extends HttpServlet {
             Client client = clientService.getClientById(id);
             employeeService = ServiceFactory.getEmployeeService();
             request.setAttribute("employees", employeeService.getAll());
-            request.setAttribute("clientId", client);
+            request.setAttribute("clientId", client.getId());
         }
 
         RequestDispatcher dispatcher;

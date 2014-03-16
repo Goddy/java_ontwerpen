@@ -13,25 +13,25 @@
 <c:if test="${not empty result}">
     <div class="${resultDiv}">${result}</div>
 </c:if>
-<form class="form-horizontal" role="form" id="form-register" action="/registerClient" method="post">
-    <input type="hidden" name="client" value="${clientId}">
+<form class="form-horizontal" role="form" id="form-register" action="/registerServiceCall" method="post">
+    <input type="hidden" name="clientId" value="${clientId}">
     <div class="form-group">
-        <label for="sDescription" class="col-sm-2 control-label">Btw-nr</label>
+        <label for="description" class="col-sm-2 control-label">Uitgebreide omschrijving</label>
         <div class="col-sm-10">
-            <textarea class="form-control" name="sDescription" id="sDescription" placeholder="Korte omschrijving"></textarea>
+            <textarea class="form-control" name="description" id="description" placeholder="Omschrijving"></textarea>
         </div>
     </div>
     <div class="form-group">
-        <label for="lDescription" class="col-sm-2 control-label">Btw-nr</label>
+        <label for="shortDescription" class="col-sm-2 control-label">Korte beschrijving</label>
         <div class="col-sm-10">
-            <textarea class="form-control" name="lDescription" id="lDescription" placeholder="Volledige omschrijving"></textarea>
+            <textarea class="form-control" name="shortDescription" id="shortDescription" placeholder="Omschrijving"></textarea>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="employee" class="col-sm-2 control-label">Naam</label>
+        <label for="employeeId" class="col-sm-2 control-label">Naam</label>
         <div class="col-sm-10">
-            <select class="form-control" id="employee" name="employee" placeholder="Verantwoordelijke">
+            <select class="form-control" id="employeeId" name="employeeId" placeholder="Verantwoordelijke">
                 <c:forEach var="employee" items="${employees}">
                     <option value="${employee.id}">${employee.name}</option>
                 </c:forEach>

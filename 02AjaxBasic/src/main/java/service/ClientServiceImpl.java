@@ -50,11 +50,11 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public List<Client> searchForClient(String searchTerm, String type) {
+    public List<Client> searchForClients(String searchTerm, String type) {
         switch (type) {
             case SEARCH_TYPE_ID:
                 List<Client> clients = new ArrayList<>();
-                clients.add(clientDao.findClientById(searchTerm));
+                clients.add(clientDao.findClientById(Long.parseLong(searchTerm)));
                 return clients;
             case SEARCH_TYPE_NAME:
                 return clientDao.findClientByName(searchTerm);
@@ -70,20 +70,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public Client getClientById(String id) {
-        Transaction tx = null;
-        try {
-            tx = clientDao.getSession().beginTransaction();
-            Client client = clientDao.findClientById(id);
-            tx.commit();
-            return client;
-        }
-        catch (RuntimeException e) {
-            if (tx != null) tx.rollback();
-            throw e; // or display error message
-        }
-        finally {
-            clientDao.getSession().close();
-        }
+            return clientDao.findClientById(Long.parseLong(id));
     }
 
     public Client getClientFromRequest(HttpServletRequest request) {

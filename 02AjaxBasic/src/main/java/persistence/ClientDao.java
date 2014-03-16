@@ -13,7 +13,7 @@ import java.util.List;
 public interface ClientDao extends Dao<Object> {
     void registerClient(Client client, Address address, List<Contact> contacts);
     List<Client> findClientByName(String name);
-    Client findClientById(String id);
+    Client findClientById(Long id);
     List<Client> getClients();
     ContactType findContactTypeByName(String type);
 }

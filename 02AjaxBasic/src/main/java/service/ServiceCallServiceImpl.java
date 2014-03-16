@@ -1,13 +1,11 @@
 package service;
 
-import model.Employee;
+import model.Client;
 import model.ServiceCall;
-import persistence.ClientDao;
-import persistence.DaoFactory;
-import persistence.EmployeeDao;
-import persistence.ServiceCallDao;
+import persistence.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created by u0090265 on 3/12/14.
@@ -16,11 +14,14 @@ public class ServiceCallServiceImpl implements ServiceCallService {
     ServiceCallDao serviceCallDao;
     ClientDao clientDao;
     EmployeeDao employeeDao;
+    HbnDaoImpl hbnDao; ;
 
     public ServiceCallServiceImpl() {
         serviceCallDao = DaoFactory.getServiceCallDao();
         clientDao = DaoFactory.getClientDao();
         employeeDao = DaoFactory.getEmployeeDao();
+        hbnDao = DaoFactory.getHbnDao();
+
     }
 
     @Override
@@ -28,12 +29,18 @@ public class ServiceCallServiceImpl implements ServiceCallService {
         serviceCallDao.registerServiceCall(getServiceCallFromRequest(request));
     }
 
+    @Override
+    public List<ServiceCall> getServiceCallForClient(Client client) {
+        return serviceCallDao.getServiceCalls(client);
+    }
+
+
     private ServiceCall getServiceCallFromRequest(HttpServletRequest request) {
         ServiceCall serviceCall = new ServiceCall();
-        serviceCall.setDescription(request.getAttribute("description").toString());
-        serviceCall.setClient(clientDao.findClientById(request.getAttribute("clientId").toString()));
-        serviceCall.setShortDescription(request.getAttribute("shortDescription").toString());
-        serviceCall.setEmployee(employeeDao.get(request.getAttribute("employeeId").toString()));
+        serviceCall.setDescription(request.getParameter("description"));
+        serviceCall.setClient(clientDao.findClientById(Long.parseLong(request.getParameter("clientId"))));
+        serviceCall.setShortDescription(request.getParameter("shortDescription"));
+        serviceCall.setEmployee(employeeDao.getEmployee(Long.parseLong(request.getParameter("employeeId"))));
         return serviceCall;
     }
 }

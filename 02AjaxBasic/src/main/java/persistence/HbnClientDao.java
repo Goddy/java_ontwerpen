@@ -5,6 +5,7 @@ import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
@@ -13,6 +14,7 @@ import java.util.List;
  * Time: 4:54 PM
  * Remarks: none
  */
+@Transactional
 public class HbnClientDao extends AbstractHbnDao<Object> implements ClientDao {
 
     public HbnClientDao(SessionFactory sessionFactory) {
@@ -68,11 +70,22 @@ public class HbnClientDao extends AbstractHbnDao<Object> implements ClientDao {
     }
 
     @Override
-    public Client findClientById(String id) {
+    public Client findClientById(Long id) {
+        Transaction tx = null;
+        try {
+            tx = getSession().beginTransaction();
             Query q = getSession().getNamedQuery("findClientById");
             q.setParameter("id", id);
             Client client = (Client)q.uniqueResult();
             return client;
+        }
+        catch (RuntimeException e) {
+            if (tx != null) tx.rollback();
+            throw e; // or display error message
+        }
+        finally {
+            getSession().close();
+        }
     }
 
     @Override

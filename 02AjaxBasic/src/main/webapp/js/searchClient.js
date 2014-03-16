@@ -1,4 +1,4 @@
-function submitSearch(address, form, displayRegion, type ) {
+function submitSearch(address, displayRegion, type ) {
     var name = document.getElementById("name").value;
     var id = document.getElementById("id").value;
     var data = "";
@@ -11,13 +11,13 @@ function submitSearch(address, form, displayRegion, type ) {
         htmlInsert(displayRegion, "Geen waarden ingevuld");
     }
     else if (name != "") {
-        address += "?search=" +name +"&type=name";
+        address += "&search=" +name +"&type=name";
         //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
         jsonTableRequest_test(address, data, displayRegion, type, createClientDataTable)
     }
     else {
         if (!isNaN(id)) {
-            address +="?search="+id +"&type=id";
+            address +="&search="+id +"&type=id";
             //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
             jsonTableRequest_test(address, data, displayRegion, type, createClientDataTable)
         }

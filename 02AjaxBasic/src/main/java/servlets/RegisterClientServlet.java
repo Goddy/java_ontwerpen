@@ -26,7 +26,7 @@ public class RegisterClientServlet extends HttpServlet {
 
     private static final String LANDING_REGISTER_CLIENT = "jsp/registerClient.jsp";
     private ClientService clientService;
-    private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
+    private static final Logger logger = LoggerFactory.getLogger(RegisterClientServlet.class);
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());

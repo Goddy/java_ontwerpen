@@ -1,22 +1,32 @@
 package model;
 
+import persistence.*;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 
 /**
  * Created by u0090265 on 3/6/14.
  */
+@NamedQueries({
+        @NamedQuery(name = "findServiceCallsForClient", query = "from ServiceCall where client = :client")
+})
 @Entity
 @Table(name = "serviceoproep")
-public class ServiceCall {
+@XmlRootElement(name = "ServiceCall")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class ServiceCall implements persistence.Entity {
     private long id;
-
     private String shortDescription;
     private String description;
     private Date opened;
     private Date closed;
+    @XmlTransient
     private Employee employee;
+    @XmlTransient
     private Client client;
 
     public ServiceCall() {

@@ -10,7 +10,7 @@
         <label for="name">Zoek op naam</label>
         <input class="form-control" id="name" name="name" placeholder="naam">
     </div>
-    <button type="button" class="btn btn-default" onclick='submitSearch("/searchClient",this.form, "result", "GET")'>Zoeken</button>
+    <button type="button" class="btn btn-default" onclick='submitSearch("/getObjects?op=allClients", "result", "GET")'>Zoeken</button>
     <img id="loader" src="../images/loading.gif" height="20" width="20" style="display: none;">
 </form>
 <div id="result">
