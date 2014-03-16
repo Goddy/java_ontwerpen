@@ -1,7 +1,5 @@
 package model;
 
-import persistence.*;
-
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
@@ -24,9 +22,7 @@ public class ServiceCall implements persistence.Entity {
     private String description;
     private Date opened;
     private Date closed;
-    @XmlTransient
     private Employee employee;
-    @XmlTransient
     private Client client;
 
     public ServiceCall() {

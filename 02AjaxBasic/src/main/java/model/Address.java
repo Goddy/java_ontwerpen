@@ -2,6 +2,9 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * User: Tom De Dobbeleer
@@ -15,6 +18,8 @@ import javax.validation.constraints.NotNull;
 })
 @Entity
 @Table(name = "adres")
+@XmlRootElement(name = "ServiceCall")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
     private long id;
     private int postalCode;

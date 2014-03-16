@@ -45,6 +45,7 @@
         </td>
     </tr>
 </table>
-<a class="btn btn-primary" href="../getServiceCalls?id=${client.id}" >Service Oproepen</a>
-<a class="btn btn-primary" href="../getObjects?op=serviceCalls&id=${client.id}" >Service Oproepen</a>
+<button type="button" class="btn button-primary"  onclick="xmlRequest('/getObjects?op=serviceCallsForClient&clientId=${client.id}', 'sc-xml', 'serviceCall', 'get')">Service Oproepen</button></br>
+<div id="sc-xml"></div>
+<script src="../js/ajaxUtils.js" type="text/javascript"></script>
 <%@ include file="../jspf/footer.jspf" %>

@@ -9,9 +9,10 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
-          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.1" />
-          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
-          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-core:2.2.8-b01" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.9" />
+          <element id="library" level="project" name="Maven: com.sun.istack:istack-commons-runtime:2.16" />
+          <element id="library" level="project" name="Maven: com.sun.xml.bind:jaxb-impl:2.2-promoted-b65" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.28" />

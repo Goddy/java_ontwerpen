@@ -11,4 +11,5 @@ import java.util.List;
 public interface ServiceCallDao extends Dao<ServiceCall> {
     void registerServiceCall(ServiceCall serviceCall);
     List<ServiceCall> getServiceCalls(Client client);
+    ServiceCall getServiceCallById(Long id);
 }

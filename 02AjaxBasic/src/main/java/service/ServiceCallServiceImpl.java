@@ -23,6 +23,10 @@ public class ServiceCallServiceImpl implements ServiceCallService {
         hbnDao = DaoFactory.getHbnDao();
 
     }
+    @Override
+    public ServiceCall getServiceCallById(String id) {
+        return serviceCallDao.getServiceCallById(Long.parseLong(id));
+    }
 
     @Override
     public void registerServiceCall(HttpServletRequest request) {
@@ -32,6 +36,11 @@ public class ServiceCallServiceImpl implements ServiceCallService {
     @Override
     public List<ServiceCall> getServiceCallForClient(Client client) {
         return serviceCallDao.getServiceCalls(client);
+    }
+
+    @Override
+    public List<ServiceCall> getAllServiceCalls() {
+        return serviceCallDao.getAll();
     }
 
 

@@ -22,7 +22,7 @@ import static utils.Constants.*;
  * Created by u0090265 on 3/9/14.
  */
 @WebServlet("/registerServiceCall")
-public class RegisterServiceCall extends HttpServlet {
+public class RegisterServiceCall extends MainServlet {
 
     private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
     private ClientService clientService;
@@ -50,8 +50,7 @@ public class RegisterServiceCall extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String id = request.getParameter("clientId");
         if (id == "" || id == null) {
-            request.setAttribute("resultDiv", "errorBox");
-            request.setAttribute("result", RESULT_ID_NOT_SPECIFIED );
+            errorPage(request, response, RESULT_ID_NOT_SPECIFIED);
         }
         else {
             clientService = ServiceFactory.getClientService();
@@ -59,10 +58,10 @@ public class RegisterServiceCall extends HttpServlet {
             employeeService = ServiceFactory.getEmployeeService();
             request.setAttribute("employees", employeeService.getAll());
             request.setAttribute("clientId", client.getId());
-        }
+            request.setAttribute("buttonAction" , "/changeServiceCall");
 
-        RequestDispatcher dispatcher;
-        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
-        dispatcher.forward(request, response);
-    }
+            RequestDispatcher dispatcher;
+            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
+            dispatcher.forward(request, response);
+        }     }
 }

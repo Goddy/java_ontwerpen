@@ -53,4 +53,22 @@ public class HbnServiceCallDao extends AbstractHbnDao<ServiceCall> implements Se
             getSession().close();
         }
     }
+
+    @Override
+    public ServiceCall getServiceCallById(Long id) {
+        Transaction tx = null;
+        try {
+            tx = getSession().beginTransaction();
+            ServiceCall serviceCall = super.get(id);
+            tx.commit();
+            return serviceCall;
+        }
+        catch (RuntimeException e) {
+            if (tx != null) tx.rollback();
+            throw e; // or display error message
+        }
+        finally {
+            getSession().close();
+        }
+    }
 }

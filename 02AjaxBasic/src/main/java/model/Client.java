@@ -4,6 +4,10 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +26,8 @@ import java.util.List;
 })
 @Entity
 @Table(name = "klant")
+@XmlRootElement(name = "client")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Client {
     private long id;
     private String name;
@@ -63,6 +69,7 @@ public class Client {
     }
 
     @JsonIgnore
+    @XmlTransient
     @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER, mappedBy = "client")
     public List<Contact> getContacts() { return contacts == null ? new ArrayList<Contact>() : this.contacts; }
 

@@ -11,6 +11,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,10 +37,14 @@ public abstract class MainServlet extends HttpServlet {
             StringWriter sw = new StringWriter();
             JAXBContext context = JAXBContext.newInstance(ServiceCall.class);
             Marshaller m = context.createMarshaller();
+
             //for pretty-print XML in JAXB
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
             // Write to File
-            m.marshal(serviceCalls, sw);
+            for (ServiceCall serviceCall: serviceCalls) {
+                m.marshal(serviceCall, sw);
+            }
+
             return sw.toString();
         } catch (JAXBException e) {
             e.printStackTrace();

@@ -2,6 +2,10 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * User: Tom De Dobbeleer
@@ -12,10 +16,13 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="contact")
+@XmlRootElement(name = "client")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Contact {
     private Long id;
     private String contactData;
     private ContactType contactType;
+    @XmlTransient
     private Client client;
 
     public Contact() {}

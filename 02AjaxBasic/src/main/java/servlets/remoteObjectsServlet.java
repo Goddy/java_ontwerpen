@@ -12,13 +12,13 @@ import service.ServiceFactory;
 import utils.HtmlHelper;
 //import com.google.gson.Gson;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import static utils.Constants.*;
 
@@ -33,51 +33,81 @@ public class remoteObjectsServlet extends MainServlet {
 
     ClientService clientService = ServiceFactory.getClientService();
     ServiceCallService serviceCallService =  ServiceFactory.getSerViceCallService();
+    private static final String SC_RESULT = "jsp/serviceCallXml.jsp";
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setHeader("Cache-Control", "no-cache");
         response.setHeader("Pragma", "no-cache");
-        String result;
         switch (request.getParameter("op")) {
+            case "getClient":
+                returnClients(request, response);
+                break;
             case "allClients":
-                result = returnClients(request);
+                returnAllClients(request, response);
                 break;
             case "serviceCallsForClient":
-                result = returnServiceCalls(request);
+                returnServiceCall(request, response);
+                break;
+            case "serviceCalls":
+                returnAllServiceCalls(request, response);
                 break;
             default:
-                result= "Wrong request";
+                print(response, "Wrong request");
         }
-
-        PrintWriter out = response.getWriter();
-        out.print(result);
     }
 
-    private String returnClients(HttpServletRequest request) {
+    private void returnAllClients(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<Client> clientList = clientService.getAll();
+
+        if (clientList != null && !clientList.isEmpty()) {
+            print(response, toJsonObject(clientList));
+        }
+        else {
+            print(response, RESULT_NO_RESULTS);
+        }
+    }
+
+    private void returnAllServiceCalls(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List<ServiceCall> serviceCallList = serviceCallService.getAllServiceCalls();
+        if (serviceCallList != null && !serviceCallList.isEmpty()) {
+            response.setContentType("text/xml");
+            request.setAttribute("serviceCalls", serviceCallList);
+            RequestDispatcher dispatcher;
+            dispatcher = request.getRequestDispatcher(SC_RESULT);
+            dispatcher.include(request, response);
+        }
+    }
+
+    private void print(HttpServletResponse response, String input) throws IOException {
+        PrintWriter out = response.getWriter();
+        out.print(input);
+    }
+
+    private void returnClients(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String type = request.getParameter("type");
         String search = request.getParameter("search");
         List<Client> clientList = clientService.searchForClients(search, type);
 
         if (clientList != null && !clientList.isEmpty()) {
-            return toJsonObject(clientList);
+            print(response, toJsonObject(clientList));
         }
         else {
-            return RESULT_NO_RESULTS;
+            print(response, RESULT_NO_RESULTS);
         }
     }
 
-    private String returnServiceCalls (HttpServletRequest request) {
+    private void returnServiceCall(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String id = request.getParameter("clientId");
         Client client = clientService.getClientById(id);
         List<ServiceCall> serviceCallList = serviceCallService.getServiceCallForClient(client);
         if (serviceCallList != null && !serviceCallList.isEmpty()) {
-            return toXmlObject(serviceCallList);
+            response.setContentType("text/xml");
+            request.setAttribute("serviceCalls", serviceCallList);
+            RequestDispatcher dispatcher;
+            dispatcher = request.getRequestDispatcher(SC_RESULT);
+            dispatcher.include(request, response);
         }
-        else {
-            return RESULT_NO_RESULTS;
-        }
-
     }
 
     private String toJsonObject(List<Client> clientList) {

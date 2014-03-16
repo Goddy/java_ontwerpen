@@ -2,6 +2,7 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "medewerker")
+@XmlRootElement(name = "employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
     private long id;
     private String name;

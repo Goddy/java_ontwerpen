@@ -13,18 +13,18 @@
 <c:if test="${not empty result}">
     <div class="${resultDiv}">${result}</div>
 </c:if>
-<form class="form-horizontal" role="form" id="form-register" action="/registerServiceCall" method="post">
+<form class="form-horizontal" role="form" id="form-register" action="${buttonAction}" method="post">
     <input type="hidden" name="clientId" value="${clientId}">
     <div class="form-group">
         <label for="description" class="col-sm-2 control-label">Uitgebreide omschrijving</label>
         <div class="col-sm-10">
-            <textarea class="form-control" name="description" id="description" placeholder="Omschrijving"></textarea>
+            <textarea class="form-control" name="description" id="description" placeholder="Omschrijving">${description}</textarea>
         </div>
     </div>
     <div class="form-group">
-        <label for="shortDescription" class="col-sm-2 control-label">Korte beschrijving</label>
+        <label for="shortDescription" class="col-sm-2 control-label" >Korte beschrijving</label>
         <div class="col-sm-10">
-            <textarea class="form-control" name="shortDescription" id="shortDescription" placeholder="Omschrijving"></textarea>
+            <textarea class="form-control" name="shortDescription" id="shortDescription" placeholder="Omschrijving">${shortDescription}</textarea>
         </div>
     </div>
 
@@ -32,8 +32,8 @@
         <label for="employeeId" class="col-sm-2 control-label">Naam</label>
         <div class="col-sm-10">
             <select class="form-control" id="employeeId" name="employeeId" placeholder="Verantwoordelijke">
-                <c:forEach var="employee" items="${employees}">
-                    <option value="${employee.id}">${employee.name}</option>
+                <c:forEach var="singleEmployee" items="${employees}">
+                    <option value="${singleEmployee.id}" ${singleEmployee.id == employee.id ? 'selected' : ''}>${singleEmployee.name}</option>
                 </c:forEach>
             </select>
         </div>
