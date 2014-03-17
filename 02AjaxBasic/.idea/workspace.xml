@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/persistence/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/persistence/Entity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- added breadcrumbs, finishing&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_adres.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_contact.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_contacttype.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_klant.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_medewerker.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dump20140317/OMJ2014_serviceoproep.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="02AjaxBasic.iws" />
@@ -1121,7 +1118,7 @@
       <workItem from="1394731512411" duration="3431000" />
       <workItem from="1394956072627" duration="18334000" />
       <workItem from="1394976287655" duration="6710000" />
-      <workItem from="1394983377763" duration="21980000" />
+      <workItem from="1394983377763" duration="22118000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -1183,11 +1180,15 @@
       <created>1394998819969</created>
       <updated>1394998819969</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="- added breadcrumbs, finishing&#10;">
+      <created>1395049035826</created>
+      <updated>1395049035827</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209939000" />
+    <option name="totallyTimeSpent" value="210077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
@@ -1289,7 +1290,8 @@
     <MESSAGE value="- added actions to table&#10;" />
     <MESSAGE value="- added registerSc&#10;" />
     <MESSAGE value="- added xml&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- added xml&#10;" />
+    <MESSAGE value="- added breadcrumbs, finishing&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added breadcrumbs, finishing&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
