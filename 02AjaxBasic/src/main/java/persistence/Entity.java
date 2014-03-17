@@ -5,4 +5,5 @@ package persistence;
  */
 public interface Entity {
     //Interface created to mark hibernate entities as entities
+    //Todo: revisit dao structure
 }

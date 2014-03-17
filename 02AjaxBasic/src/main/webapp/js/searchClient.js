@@ -48,8 +48,11 @@ function getClientDataTableBody(rows, fields)
             var fieldName=fields[j];
 
             if (fieldName == 'actions') {
-                body +='<td><a href="/registerServiceCall?clientId='+ row['id'] + '" class="glyphicon glyphicon-phone-alt"</td>';
+                body += '<td>'
+                body +='<a href="/registerServiceCall?clientId='+ row['id'] + '" class="glyphicon glyphicon-phone-alt padding3"/>';
+                body +='<a href="/clientOverview?id='+ row['id'] + '" class="glyphicon glyphicon-th-list padding3"/></td>';
             }
+
             else {
                 body += "<td>" + row[fieldName] + "</td>";
             }
@@ -57,4 +60,17 @@ function getClientDataTableBody(rows, fields)
         body += "</tr>\n";
     }
     return(body);
+}
+
+function selectChanged() {
+    var myselect = document.getElementById("operationSelect");
+    var selectedValue=(myselect.options[myselect.selectedIndex].value);
+    if (selectedValue == 1) {
+        document.getElementById("searchForm").style.display = 'block';
+    }
+    else {
+        jsonTableRequest_test('/getObjects?op=allClients', '', 'result', 'get', createClientDataTable);
+        document.getElementById("searchForm").style.display = 'none';
+    }
+
 }

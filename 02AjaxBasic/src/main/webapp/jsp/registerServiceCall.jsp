@@ -9,7 +9,9 @@
 <%@ include file="../jspf/header.jspf" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-
+<ol class="breadcrumb">
+    <li><a href="#">Registreer service oproep</a></li>
+</ol>
 <c:if test="${not empty result}">
     <div class="${resultDiv}">${result}</div>
 </c:if>

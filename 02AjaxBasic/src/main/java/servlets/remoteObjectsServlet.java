@@ -39,8 +39,9 @@ public class remoteObjectsServlet extends MainServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setHeader("Cache-Control", "no-cache");
         response.setHeader("Pragma", "no-cache");
+        String op = request.getParameter("op");
         switch (request.getParameter("op")) {
-            case "getClient":
+            case "searchClients":
                 returnClients(request, response);
                 break;
             case "allClients":

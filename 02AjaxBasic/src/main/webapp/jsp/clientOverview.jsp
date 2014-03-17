@@ -3,6 +3,10 @@
 <%@taglib prefix="tag" tagdir="/WEB-INF/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../jspf/header.jspf" %>
+<ol class="breadcrumb">
+    <li><a href="../jsp/searchClient.jsp">Klant zoeken</a></li>
+    <li><a href="#" class="active">Overzicht klant</a></li>
+</ol>
 <table class="table">
     <tr>
         <td>Id</td>
@@ -45,7 +49,7 @@
         </td>
     </tr>
 </table>
-<button type="button" class="btn button-primary"  onclick="xmlRequest('/getObjects?op=serviceCallsForClient&clientId=${client.id}', 'sc-xml', 'serviceCall', 'get')">Service Oproepen</button></br>
+<button type="button" class="btn button-primary"  onclick="xmlRequest('/getObjects?op=serviceCallsForClient&clientId=${client.id}', 'sc-xml', 'serviceCall', 'get')">Service Oproepen</button><br><br>
 <div id="sc-xml"></div>
 <script src="../js/ajaxUtils.js" type="text/javascript"></script>
 <%@ include file="../jspf/footer.jspf" %>
