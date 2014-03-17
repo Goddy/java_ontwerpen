@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static utils.Constants.RESULT_ID_NOT_SPECIFIED;
+import static utils.Constants.*;
 
 /**
  * Created by u0090265 on 3/16/14.
@@ -26,18 +26,38 @@ import static utils.Constants.RESULT_ID_NOT_SPECIFIED;
 public class ChangeServiceCallServlet extends MainServlet {
 
     private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
-    private ClientService clientService = ServiceFactory.getClientService();
     private EmployeeService employeeService = ServiceFactory.getEmployeeService();
     private ServiceCallService serviceCallService = ServiceFactory.getSerViceCallService();
     private static final Logger logger = LoggerFactory.getLogger(ChangeServiceCallServlet.class);
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String id = request.getParameter("id");
+        getForm(id, request, response);
+    }
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        logger.debug(request.toString());
+        try {
+            serviceCallService.changeServiceCall(request);
+            request.setAttribute("resultDiv", "successBox");
+            request.setAttribute("result", RESULT_SC_CHANGED);
+
+        }
+        catch (Exception e) {
+            request.setAttribute("resultDiv", "errorBox");
+            request.setAttribute("result", RESULT_UNKNOWN_ERROR );
+        }
+
+        getForm(request.getParameter("serviceCallId"), request, response);
+    }
+
+    private void getForm(String id, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         if (id == "" || id == null) {
             errorPage(request, response, RESULT_ID_NOT_SPECIFIED);
         }
         else {
             ServiceCall serviceCall = serviceCallService.getServiceCallById(id);
+            request.setAttribute("serviceCallId", id);
             request.setAttribute("description", serviceCall.getDescription());
             request.setAttribute("shortDescription", serviceCall.getShortDescription());
             request.setAttribute("employee", serviceCall.getEmployee());

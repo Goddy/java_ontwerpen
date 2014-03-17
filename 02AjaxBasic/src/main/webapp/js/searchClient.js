@@ -13,13 +13,13 @@ function submitSearch(address, displayRegion, type ) {
     else if (name != "") {
         address += "&search=" +name +"&type=name";
         //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
-        jsonTableRequest_test(address, data, displayRegion, type, createClientDataTable)
+        jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
     }
     else {
         if (!isNaN(id)) {
             address +="&search="+id +"&type=id";
             //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
-            jsonTableRequest_test(address, data, displayRegion, type, createClientDataTable)
+            jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
         }
         else {
             htmlInsert(displayRegion, "id is geen getal");
@@ -69,7 +69,7 @@ function selectChanged() {
         document.getElementById("searchForm").style.display = 'block';
     }
     else {
-        jsonTableRequest_test('/getObjects?op=allClients', '', 'result', 'get', createClientDataTable);
+        jsonTableRequest('/getObjects?op=allClients', '', 'result', 'get', createClientDataTable);
         document.getElementById("searchForm").style.display = 'none';
     }
 

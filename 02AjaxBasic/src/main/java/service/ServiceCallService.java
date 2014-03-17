@@ -17,4 +17,6 @@ public interface ServiceCallService {
     List<ServiceCall> getServiceCallForClient(Client client);
 
     List<ServiceCall> getAllServiceCalls();
+
+    void changeServiceCall(HttpServletRequest request);
 }

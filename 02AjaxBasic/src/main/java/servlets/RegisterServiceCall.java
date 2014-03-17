@@ -58,7 +58,7 @@ public class RegisterServiceCall extends MainServlet {
             employeeService = ServiceFactory.getEmployeeService();
             request.setAttribute("employees", employeeService.getAll());
             request.setAttribute("clientId", client.getId());
-            request.setAttribute("buttonAction" , "/changeServiceCall");
+            request.setAttribute("buttonAction" , "/registerServiceCall");
 
             RequestDispatcher dispatcher;
             dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);

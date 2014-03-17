@@ -16,6 +16,7 @@
     <div class="${resultDiv}">${result}</div>
 </c:if>
 <form class="form-horizontal" role="form" id="form-register" action="${buttonAction}" method="post">
+    <input type="hidden" name="serviceCallId" value="${serviceCallId}">
     <input type="hidden" name="clientId" value="${clientId}">
     <div class="form-group">
         <label for="description" class="col-sm-2 control-label">Uitgebreide omschrijving</label>

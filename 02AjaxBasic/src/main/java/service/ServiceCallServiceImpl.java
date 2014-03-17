@@ -43,6 +43,13 @@ public class ServiceCallServiceImpl implements ServiceCallService {
         return serviceCallDao.getAll();
     }
 
+    @Override
+    public void changeServiceCall(HttpServletRequest request) {
+        ServiceCall serviceCall = getServiceCallFromRequest(request);
+        serviceCall.setId(Long.parseLong(request.getParameter("serviceCallId")));
+        serviceCallDao.update(serviceCall);
+    }
+
 
     private ServiceCall getServiceCallFromRequest(HttpServletRequest request) {
         ServiceCall serviceCall = new ServiceCall();

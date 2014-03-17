@@ -75,7 +75,20 @@ public abstract class AbstractHbnDao<T extends Object>
         }
     }
 
-    public void update(T t) { getSession().update(t); }
+    public void update(T t) {
+        Transaction tx = null;
+        try {
+            tx = getSession().beginTransaction();
+            getSession().update(t);
+            tx.commit();
+        }
+        catch (Exception e) {
+            if (tx != null) tx.rollback();
+        }
+        finally {
+            getSession().close();
+        }
+    }
     public void delete(T t) { getSession().delete(t); }
     public void deleteById(Serializable id) { delete(load(id)); }
     public void deleteAll() {

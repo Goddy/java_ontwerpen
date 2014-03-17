@@ -52,23 +52,16 @@ function htmlInsert(id, htmlData) {
 }
 
 //****************JSON functions**************************************************************************************************************
-function jsonTableRequest(address, data, resultRegion, headings, fields, type)
+
+function jsonTableRequest(address, data, resultRegion, type, tableFunction)
 {
     address += "&format=json";
     ajaxPost(address, data, type, function(request) {
-        showJsonTable(request, resultRegion, headings, fields);
+        showJsonTable(request, resultRegion, tableFunction);
     });
 }
 
-function jsonTableRequest_test(address, data, resultRegion, type, tableFunction)
-{
-    address += "&format=json";
-    ajaxPost(address, data, type, function(request) {
-        showJsonTable_test(request, resultRegion, tableFunction);
-    });
-}
-
-function showJsonTable_test(request, resultRegion, tableFunction)
+function showJsonTable(request, resultRegion, tableFunction)
 {
     if ((request.readyState == 4) &&
         (request.status == 200)) {
@@ -76,17 +69,6 @@ function showJsonTable_test(request, resultRegion, tableFunction)
         var data = eval("(" + rawData + ")");
         //use [ ] in order to be able to provide a dynamic key value
         tableFunction(data, resultRegion);
-    }
-}
-
-function showJsonTable(request, resultRegion, headings, fields)
-{
-    if ((request.readyState == 4) &&
-        (request.status == 200)) {
-        var rawData = request.responseText;
-        var data = eval("(" + rawData + ")");
-        //use [ ] in order to be able to provide a dynamic key value
-        createTable(headings, fields, data, resultRegion);
     }
 }
 
