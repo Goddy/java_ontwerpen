@@ -26,6 +26,11 @@ public class Contact {
     private Client client;
 
     public Contact() {}
+    public Contact(String contactData, ContactType contactType, Client client) {
+        setClient(client);
+        setContactData(contactData);
+        setContactType(contactType);
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -38,6 +38,12 @@
               <artifactId>jaxb-impl</artifactId>
               <version>2.2-promoted-b65</version>
           </dependency>
+      <!-- Embedded DB -->
+          <dependency>
+              <groupId>org.apache.derby</groupId>
+              <artifactId>derby</artifactId>
+              <version>10.10.1.1</version>
+          </dependency>
       <!-- JSON -->
           <dependency>
               <groupId>org.codehaus.jackson</groupId>

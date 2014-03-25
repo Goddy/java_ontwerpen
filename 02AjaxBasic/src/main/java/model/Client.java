@@ -37,6 +37,17 @@ public class Client {
     private Address deliveryAddress;
     private List<Contact> contacts;
 
+    public Client(String name, String vat, Address iAddress, Address dAddress, List<Contact> contacts) {
+        setName(name);
+        setVat(vat);
+        setInvoiceAddress(iAddress);
+        setDeliveryAddress(dAddress);
+        setContacts(contacts);
+    }
+
+    //Empty constructor
+    public Client() {}
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

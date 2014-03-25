@@ -21,6 +21,10 @@ public class ContactType {
 
     public ContactType() {}
 
+    public ContactType(String type) {
+        setType(type);
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
