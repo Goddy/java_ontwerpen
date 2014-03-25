@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
  * Remarks: none
  */
 @NamedQueries({
-        @NamedQuery(name="findContactTypeByType", query = "from ContactType where type = :type")
+        @NamedQuery(name="findContactTypeByType", query = "select c from ContactType c where c.type = :type")
 })
 @Table(name = "contacttype")
 @Entity

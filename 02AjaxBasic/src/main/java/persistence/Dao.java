@@ -6,21 +6,22 @@ package persistence;
  * Time: 7:48 PM
  * Remarks: none
  */
-import org.hibernate.Session;
 
+import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 public interface Dao<T extends Object> {
-    Session getSession();
+    EntityManager getEntityManager();
     void create(T t);
     T get(Serializable id);
-    T load(Serializable id);
     List<T> getAll();
-    void update(T t);
     void delete(T t);
     void deleteById(Serializable id);
     void deleteAll();
     long count();
+    List<T> getMultipleResultQuery(String query, Map<String, ? extends Object> parameterMap);
+    T getSingleResultQuery(String query, Map<String, ? extends Object> parameterMap);
     boolean exists(Serializable id);
 }

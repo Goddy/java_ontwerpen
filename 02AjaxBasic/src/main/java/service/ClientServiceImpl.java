@@ -1,15 +1,16 @@
 package service;
 
-import model.*;
-import org.hibernate.Query;
-import org.hibernate.Transaction;
+import model.Address;
+import model.Client;
+import model.Contact;
 import persistence.ClientDao;
 import persistence.DaoFactory;
-import static utils.Constants.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+
+import static utils.Constants.*;
 
 /**
  * User: Tom De Dobbeleer
@@ -40,7 +41,7 @@ public class ClientServiceImpl implements ClientService {
         addClientToContacts(client, contacts);
 
         //register all
-        clientDao.registerClient(client, address, contacts);
+        clientDao.registerClient(client);
     }
 
     private void addClientToContacts(Client client, List<Contact> contacts) {

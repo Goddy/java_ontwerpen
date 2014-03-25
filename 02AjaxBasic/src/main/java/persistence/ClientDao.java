@@ -1,6 +1,7 @@
 package persistence;
 
-import model.*;
+import model.Client;
+import model.ContactType;
 
 import java.util.List;
 
@@ -10,8 +11,8 @@ import java.util.List;
  * Time: 4:58 PM
  * Remarks: none
  */
-public interface ClientDao extends Dao<Object> {
-    void registerClient(Client client, Address address, List<Contact> contacts);
+public interface ClientDao extends Dao<Client> {
+    void registerClient(Client client);
     List<Client> findClientByName(String name);
     Client findClientById(Long id);
     List<Client> getClients();

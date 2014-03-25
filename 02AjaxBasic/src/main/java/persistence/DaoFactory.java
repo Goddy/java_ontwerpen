@@ -1,7 +1,5 @@
 package persistence;
 
-import org.hibernate.SessionFactory;
-
 /**
  * User: Tom De Dobbeleer
  * Date: 2/7/14
@@ -10,8 +8,8 @@ import org.hibernate.SessionFactory;
  */
 public class DaoFactory {
     private DaoFactory() {}
-    public static HbnClientDao getClientDao() { return new HbnClientDao(SessionFactoryHelper.getSessionFactory()); }
-    public static HbnEmployeeDao getEmployeeDao() { return new HbnEmployeeDao(SessionFactoryHelper.getSessionFactory()); }
-    public static HbnServiceCallDao getServiceCallDao() { return new HbnServiceCallDao(SessionFactoryHelper.getSessionFactory()); }
-    public static HbnDaoImpl getHbnDao() { return new HbnDaoImpl(SessionFactoryHelper.getSessionFactory()); }
+    public static JpaClientDao getClientDao() { return new JpaClientDao(PersistenceManager.getEntityManager()); }
+    public static JpaEmployeeDao getEmployeeDao() { return new JpaEmployeeDao(PersistenceManager.getEntityManager()); }
+    public static JpaServiceCallDao getServiceCallDao() { return new JpaServiceCallDao(PersistenceManager.getEntityManager()); }
+    public static JpaDaoImpl getHbnDao() { return new JpaDaoImpl(PersistenceManager.getEntityManager()); }
 }

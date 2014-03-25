@@ -14,7 +14,7 @@ public class ServiceCallServiceImpl implements ServiceCallService {
     ServiceCallDao serviceCallDao;
     ClientDao clientDao;
     EmployeeDao employeeDao;
-    HbnDaoImpl hbnDao; ;
+    JpaDaoImpl hbnDao;
 
     public ServiceCallServiceImpl() {
         serviceCallDao = DaoFactory.getServiceCallDao();
@@ -30,7 +30,7 @@ public class ServiceCallServiceImpl implements ServiceCallService {
 
     @Override
     public void registerServiceCall(HttpServletRequest request) {
-        serviceCallDao.registerServiceCall(getServiceCallFromRequest(request));
+        serviceCallDao.registerServiceCall(createServiceCallFromRequest(request));
     }
 
     @Override
@@ -45,14 +45,20 @@ public class ServiceCallServiceImpl implements ServiceCallService {
 
     @Override
     public void changeServiceCall(HttpServletRequest request) {
-        ServiceCall serviceCall = getServiceCallFromRequest(request);
-        serviceCall.setId(Long.parseLong(request.getParameter("serviceCallId")));
-        serviceCallDao.update(serviceCall);
+        updateServiceCallFromRequest(request);
     }
 
 
-    private ServiceCall getServiceCallFromRequest(HttpServletRequest request) {
-        ServiceCall serviceCall = new ServiceCall();
+    private void updateServiceCallFromRequest(HttpServletRequest request) {
+        ServiceCall serviceCall = serviceCallDao.get(Long.parseLong(request.getParameter("serviceCallId")));
+        getServiceCallFromRequest(request, serviceCall);
+    }
+
+    private ServiceCall createServiceCallFromRequest(HttpServletRequest request) {
+        return getServiceCallFromRequest(request, new ServiceCall());
+    }
+
+    private ServiceCall getServiceCallFromRequest(HttpServletRequest request, ServiceCall serviceCall) {
         serviceCall.setDescription(request.getParameter("description"));
         serviceCall.setClient(clientDao.findClientById(Long.parseLong(request.getParameter("clientId"))));
         serviceCall.setShortDescription(request.getParameter("shortDescription"));

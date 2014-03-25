@@ -1,16 +1,17 @@
 package model;
 
 import javax.persistence.*;
-import javax.persistence.Entity;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 /**
  * Created by u0090265 on 3/6/14.
  */
 @NamedQueries({
-        @NamedQuery(name = "findServiceCallsForClient", query = "from ServiceCall where client = :client")
+        @NamedQuery(name = "findServiceCallsForClient", query = "Select s from ServiceCall s where s.client = :client")
 })
 @Entity
 @Table(name = "serviceoproep")
@@ -59,8 +60,8 @@ public class ServiceCall implements persistence.Entity {
         this.description = description;
     }
 
-    @Basic
     @Column(name = "Geopend")
+    @Temporal(TemporalType.TIMESTAMP)
     public Date getOpened() {
         return opened;
     }
@@ -69,8 +70,8 @@ public class ServiceCall implements persistence.Entity {
         this.opened = opened;
     }
 
-    @Basic
     @Column(name = "Afgesloten")
+    @Temporal(TemporalType.TIMESTAMP)
     public Date getClosed() {
         return closed;
     }
