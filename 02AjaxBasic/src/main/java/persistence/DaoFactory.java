@@ -11,5 +11,5 @@ public class DaoFactory {
     public static JpaClientDao getClientDao() { return new JpaClientDao(PersistenceManager.getEntityManager()); }
     public static JpaEmployeeDao getEmployeeDao() { return new JpaEmployeeDao(PersistenceManager.getEntityManager()); }
     public static JpaServiceCallDao getServiceCallDao() { return new JpaServiceCallDao(PersistenceManager.getEntityManager()); }
-    public static JpaDaoImpl getHbnDao() { return new JpaDaoImpl(PersistenceManager.getEntityManager()); }
+    public static JpaContactTypeDao getContactTypeDao() { return new JpaContactTypeDao(PersistenceManager.getEntityManager()); }
 }

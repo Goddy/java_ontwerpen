@@ -1,0 +1,40 @@
+package persistence;
+
+import model.Client;
+import model.Employee;
+import model.ServiceCall;
+import org.junit.Test;
+
+import java.util.List;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+
+/**
+ * Created by u0090265 on 3/28/14.
+ */
+public class JpaServiceCallDaoTest {
+    ServiceCallDao serviceCallDao = TestDaoFactory.getServiceCallDao();
+    EmployeeDao employeeDao = TestDaoFactory.getEmployeeDao();
+    ClientDao clientDao = TestDaoFactory.getClientDao();
+
+    @Test
+    public void testGetServiceCallsForClient() throws Exception {
+        Client client = TestObjectFactory.getTestClient();
+        clientDao.create(client);
+        Employee employee = TestObjectFactory.getTestEmployee();
+        employeeDao.create(employee);
+        ServiceCall serviceCall1 = TestObjectFactory.createServiceCall(client, employee);
+        ServiceCall serviceCall2 = TestObjectFactory.createServiceCall(client, employee);
+        serviceCallDao.create(serviceCall1);
+        serviceCallDao.create(serviceCall2);
+
+        List<ServiceCall> serviceCallForClient = serviceCallDao.getServiceCallsForClient(client);
+        assertTrue(serviceCallForClient.contains(serviceCall1));
+        assertTrue(serviceCallForClient.contains(serviceCall2));
+        for (ServiceCall sc : serviceCallForClient) {
+            assertEquals(sc.getClient(), client);
+        }
+
+    }
+}

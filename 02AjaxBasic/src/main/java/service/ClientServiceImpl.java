@@ -4,6 +4,7 @@ import model.Address;
 import model.Client;
 import model.Contact;
 import persistence.ClientDao;
+import persistence.ContactTypeDao;
 import persistence.DaoFactory;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,10 +22,11 @@ import static utils.Constants.*;
 public class ClientServiceImpl implements ClientService {
 
     private ClientDao clientDao;
+    private ContactTypeDao contactTypeDao;
 
     public ClientServiceImpl() {
         this.setClientDao(DaoFactory.getClientDao());
-
+        this.setContactTypeDao(DaoFactory.getContactTypeDao());
     }
 
     public ClientServiceImpl(ClientDao clientDao) {
@@ -46,7 +48,7 @@ public class ClientServiceImpl implements ClientService {
         addClientToContacts(client, contacts);
 
         //register all
-        getClientDao().registerClient(client);
+        getClientDao().create(client);
     }
 
     private void addClientToContacts(Client client, List<Contact> contacts) {
@@ -60,7 +62,7 @@ public class ClientServiceImpl implements ClientService {
         switch (type) {
             case SEARCH_TYPE_ID:
                 List<Client> clients = new ArrayList<>();
-                clients.add(getClientDao().findClientById(Long.parseLong(searchTerm)));
+                clients.add(getClientDao().get(Long.parseLong(searchTerm)));
                 return clients;
             case SEARCH_TYPE_NAME:
                 return getClientDao().findClientByName(searchTerm);
@@ -71,12 +73,12 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> getAll() {
-        return getClientDao().getClients();
+        return getClientDao().getAll();
     }
 
     @Override
     public Client getClientById(String id) {
-            return getClientDao().findClientById(Long.parseLong(id));
+        return getClientDao().get(Long.parseLong(id));
     }
 
     public Client getClientFromRequest(HttpServletRequest request) {
@@ -96,7 +98,7 @@ public class ClientServiceImpl implements ClientService {
 
     public Contact getContactFromRequest(HttpServletRequest request, String type) {
         Contact contact = new Contact();
-        contact.setContactType(getClientDao().findContactTypeByName(type));
+        contact.setContactType(getContactTypeDao().findContactTypeByType(type));
         contact.setContactData(request.getParameter(type));
         return contact;
     }
@@ -119,5 +121,13 @@ public class ClientServiceImpl implements ClientService {
 
     public void setClientDao(ClientDao clientDao) {
         this.clientDao = clientDao;
+    }
+
+    public ContactTypeDao getContactTypeDao() {
+        return contactTypeDao;
+    }
+
+    public void setContactTypeDao(ContactTypeDao contactTypeDao) {
+        this.contactTypeDao = contactTypeDao;
     }
 }

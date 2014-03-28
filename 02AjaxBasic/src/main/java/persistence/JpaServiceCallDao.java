@@ -15,17 +15,7 @@ public class JpaServiceCallDao extends AbstractJpaDao<ServiceCall> implements Se
     }
 
     @Override
-     public void registerServiceCall(ServiceCall serviceCall) {
-        super.create(serviceCall);
-    }
-
-    @Override
-    public List<ServiceCall> getServiceCalls(Client client) {
+    public List<ServiceCall> getServiceCallsForClient(Client client) {
         return getMultipleResultQuery("findServiceCallsForClient", getParameterMap("client", client));
-    }
-
-    @Override
-    public ServiceCall getServiceCallById(Long id) {
-        return super.get(id);
     }
 }

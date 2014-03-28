@@ -30,7 +30,16 @@ public class ServiceCall implements persistence.Entity {
         setOpened(new Date());
     }
 
+    public ServiceCall(String shortDescription, String description, Employee employee, Client client) {
+        setClient(client);
+        setDescription(description);
+        setShortDescription(shortDescription);
+        setEmployee(employee);
+        setOpened(new Date());
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     public long getId() {
         return id;
@@ -82,7 +91,7 @@ public class ServiceCall implements persistence.Entity {
 
     @NotNull
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="M_id",insertable=true, updatable=true, nullable=false,unique=true)
+    @JoinColumn(name="M_id",insertable=true, updatable=true, nullable=false)
     public Employee getEmployee() {
         return employee;
     }
@@ -93,7 +102,7 @@ public class ServiceCall implements persistence.Entity {
 
     @NotNull
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="K_id",insertable=true, updatable=true, nullable=false,unique=true)
+    @JoinColumn(name="K_id",insertable=true, updatable=true, nullable=false)
     public Client getClient() {
         return client;
     }

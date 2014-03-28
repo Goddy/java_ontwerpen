@@ -20,7 +20,6 @@ import java.util.List;
 
 
 @NamedQueries({
-        @NamedQuery(name = "findClientById", query = "select c from Client c where c.id = :id"),
         @NamedQuery(name = "findClientByName", query = "select c from Client c where c.name like :name"),
         @NamedQuery(name = "getClients", query = "select c from Client c")
 })

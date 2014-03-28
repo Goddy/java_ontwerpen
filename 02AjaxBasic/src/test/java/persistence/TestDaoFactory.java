@@ -11,5 +11,5 @@ public class TestDaoFactory {
     public static JpaClientDao getClientDao() { return new JpaClientDao(TestPersistenceManager.getEntityManager()); }
     public static JpaEmployeeDao getEmployeeDao() { return new JpaEmployeeDao(TestPersistenceManager.getEntityManager()); }
     public static JpaServiceCallDao getServiceCallDao() { return new JpaServiceCallDao(TestPersistenceManager.getEntityManager()); }
-    public static JpaDaoImpl getHbnDao() { return new JpaDaoImpl(TestPersistenceManager.getEntityManager()); }
+    public static JpaContactTypeDao getContactTypeDao() { return new JpaContactTypeDao(TestPersistenceManager.getEntityManager()); }
 }

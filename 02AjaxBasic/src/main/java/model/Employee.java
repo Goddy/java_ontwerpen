@@ -2,9 +2,9 @@ package model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.xml.bind.annotation.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * Created by u0090265 on 3/5/14.
@@ -18,8 +18,15 @@ public class Employee {
     private long id;
     private String name;
     private String email;
-    private Address Address;
+    private Address address;
 
+    public Employee() {
+    }
+    public Employee(String name, String email, Address address) {
+        setName(name);
+        setEmail(email);
+        setAddress(address);
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -45,11 +52,11 @@ public class Employee {
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
     @JoinColumn(name="adres",insertable=true, updatable=true, nullable=false,unique=true)
     public Address getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(Address address) {
-        this.Address = address;
+        this.address = address;
     }
 
     public String getEmail() {

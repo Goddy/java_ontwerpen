@@ -17,6 +17,7 @@ public class TestPersistenceManager {
             if(ENTITY_MGR_FACT == null || !ENTITY_MGR_FACT.isOpen())
                 ENTITY_MGR_FACT = Persistence.createEntityManagerFactory("testServiceManagerPU");
             ENTITY_MGR = ENTITY_MGR_FACT.createEntityManager();
+            DatabasePopulator.populate();
         }
         return ENTITY_MGR;
     }

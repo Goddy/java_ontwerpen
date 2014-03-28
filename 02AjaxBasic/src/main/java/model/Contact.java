@@ -54,7 +54,7 @@ public class Contact {
 
     @NotNull
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="ct_id",insertable=true, updatable=true, nullable=false,unique=true)
+    @JoinColumn(name="ct_id",insertable=true, updatable=true, nullable=false)
     public ContactType getContactType() {
         return contactType;
     }

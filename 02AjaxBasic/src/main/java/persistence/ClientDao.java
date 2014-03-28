@@ -1,7 +1,6 @@
 package persistence;
 
 import model.Client;
-import model.ContactType;
 
 import java.util.List;
 
@@ -12,9 +11,5 @@ import java.util.List;
  * Remarks: none
  */
 public interface ClientDao extends Dao<Client> {
-    void registerClient(Client client);
     List<Client> findClientByName(String name);
-    Client findClientById(Long id);
-    List<Client> getClients();
-    ContactType findContactTypeByName(String type);
 }
