@@ -1,4 +1,10 @@
-package persistence;
+package factory;
+
+import manager.TestPersistenceManager;
+import persistence.JpaClientDao;
+import persistence.JpaContactTypeDao;
+import persistence.JpaEmployeeDao;
+import persistence.JpaServiceCallDao;
 
 /**
  * User: Tom De Dobbeleer

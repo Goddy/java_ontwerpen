@@ -29,8 +29,9 @@ public class ClientServiceImpl implements ClientService {
         this.setContactTypeDao(DaoFactory.getContactTypeDao());
     }
 
-    public ClientServiceImpl(ClientDao clientDao) {
+    public ClientServiceImpl(ClientDao clientDao, ContactTypeDao contactTypeDao) {
         this.setClientDao(clientDao);
+        this.setContactTypeDao(contactTypeDao);
 
     }
 

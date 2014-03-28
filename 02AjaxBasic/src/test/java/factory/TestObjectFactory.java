@@ -1,4 +1,4 @@
-package persistence;
+package factory;
 
 import model.*;
 
@@ -29,7 +29,7 @@ public class TestObjectFactory {
 
     public static List<Contact> getTestContacts(Client client, int count) {
         ArrayList<Contact> contacts = new ArrayList<>();
-        for (int i = 1; i == count; i++) {
+        for (int i = 0; i < count; i++) {
             contacts.add(new Contact(randomString(), TestDaoFactory.getContactTypeDao().get(oneOrTwo()), client));
         }
         return contacts;

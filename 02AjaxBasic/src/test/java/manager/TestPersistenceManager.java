@@ -1,4 +1,6 @@
-package persistence;
+package manager;
+
+import persistence.DatabasePopulator;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

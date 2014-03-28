@@ -1,5 +1,7 @@
 package persistence;
 
+import factory.TestObjectFactory;
+import general.AbstractTest;
 import model.Client;
 import model.Employee;
 import model.ServiceCall;
@@ -13,17 +15,12 @@ import static junit.framework.Assert.assertTrue;
 /**
  * Created by u0090265 on 3/28/14.
  */
-public class JpaServiceCallDaoTest {
-    ServiceCallDao serviceCallDao = TestDaoFactory.getServiceCallDao();
-    EmployeeDao employeeDao = TestDaoFactory.getEmployeeDao();
-    ClientDao clientDao = TestDaoFactory.getClientDao();
+public class JpaServiceCallDaoTest extends AbstractTest {
 
     @Test
     public void testGetServiceCallsForClient() throws Exception {
         Client client = TestObjectFactory.getTestClient();
-        clientDao.create(client);
         Employee employee = TestObjectFactory.getTestEmployee();
-        employeeDao.create(employee);
         ServiceCall serviceCall1 = TestObjectFactory.createServiceCall(client, employee);
         ServiceCall serviceCall2 = TestObjectFactory.createServiceCall(client, employee);
         serviceCallDao.create(serviceCall1);
