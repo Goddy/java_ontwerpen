@@ -8,19 +8,17 @@ import service.ServiceFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static utils.Constants.RESULT_ID_NOT_SPECIFIED;
+import static utils.Constants.LANDING_CLIENT_OVERVIEW;
 
 /**
  * Created by u0090265 on 3/16/14.
  */
 @WebServlet("/clientOverview")
 public class ClientOverviewServlet extends MainServlet{
-    private static final String LANDING_CLIENT_OVERVIEW = "jsp/clientOverview.jsp";
     private ClientService clientService;
     private static final Logger logger = LoggerFactory.getLogger(ClientOverviewServlet.class);
 

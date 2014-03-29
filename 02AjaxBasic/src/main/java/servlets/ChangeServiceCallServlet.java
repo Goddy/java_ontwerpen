@@ -1,10 +1,8 @@
 package servlets;
 
-import model.Client;
 import model.ServiceCall;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import service.ClientService;
 import service.EmployeeService;
 import service.ServiceCallService;
 import service.ServiceFactory;
@@ -12,7 +10,6 @@ import service.ServiceFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -25,7 +22,7 @@ import static utils.Constants.*;
 @WebServlet("/changeServiceCall")
 public class ChangeServiceCallServlet extends MainServlet {
 
-    private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
+
     private EmployeeService employeeService = ServiceFactory.getEmployeeService();
     private ServiceCallService serviceCallService = ServiceFactory.getSerViceCallService();
     private static final Logger logger = LoggerFactory.getLogger(ChangeServiceCallServlet.class);
@@ -66,7 +63,7 @@ public class ChangeServiceCallServlet extends MainServlet {
             request.setAttribute("buttonAction" , "/changeServiceCall");
 
             RequestDispatcher dispatcher;
-            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
+            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
             dispatcher.forward(request, response);
         }
     }

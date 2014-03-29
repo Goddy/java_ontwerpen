@@ -22,7 +22,6 @@ import static utils.Constants.*;
 @WebServlet("/registerServiceCall")
 public class RegisterServiceCallServlet extends MainServlet {
 
-    private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
     private ClientService clientService;
     private EmployeeService employeeService;
     private ServiceCallService serviceCallService;
@@ -42,7 +41,7 @@ public class RegisterServiceCallServlet extends MainServlet {
         }
 
         RequestDispatcher dispatcher;
-        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
+        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
         dispatcher.forward(request, response);
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -58,7 +57,7 @@ public class RegisterServiceCallServlet extends MainServlet {
             request.setAttribute("buttonAction" , "/registerServiceCall");
 
             RequestDispatcher dispatcher;
-            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
+            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
             dispatcher.forward(request, response);
         }
     }

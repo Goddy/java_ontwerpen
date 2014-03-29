@@ -21,4 +21,10 @@ public class Constants {
 
     public  static final String RESULT_UNKNOWN_ERROR = "Er is een onbekende fout opgetreden";
     public  static final String RESULT_ID_NOT_SPECIFIED = "Er is geen klantendId gevonden";
+
+    public static final String LANDING_REGISTER_SERVICECALL = "jsp/registerServiceCall.jsp";
+    public static final String LANDING_CLIENT_OVERVIEW = "jsp/clientOverview.jsp";
+    public static final String LANDING_GENERAL_ERROR_PAGE = "jsp/error.jsp";
+    public static final String LANDING_REGISTER_CLIENT = "jsp/registerClient.jsp";
+    public static final String SC_XML_RESULT = "jsp/serviceCallXml.jsp";
 }
