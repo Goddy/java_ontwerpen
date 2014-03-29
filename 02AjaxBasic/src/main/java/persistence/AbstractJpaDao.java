@@ -68,6 +68,12 @@ public abstract class AbstractJpaDao<T>
     private String getDomainClassName() {
         return getDomainClass().getName();
     }
+
+    public void createAll(List<T> tList) {
+        for (T t: tList) {
+            create(t);
+        }
+    }
     public void create(T t) {
         try {
             getEntityManager().getTransaction().begin();
@@ -124,7 +130,7 @@ public abstract class AbstractJpaDao<T>
         try {
             getEntityManager().getTransaction().begin();
             getEntityManager()
-                    .createQuery("delete x from" + getDomainClassName() + " x")
+                    .createQuery("delete from " + getDomainClassName() + " x")
                     .executeUpdate();
             getEntityManager().getTransaction().commit();
         }

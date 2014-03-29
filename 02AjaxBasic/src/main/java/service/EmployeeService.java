@@ -1,8 +1,8 @@
 package service;
 
 import model.Employee;
+import persistence.EmployeeDao;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -10,4 +10,8 @@ import java.util.List;
  */
 public interface EmployeeService {
     List<Employee> getAll();
+
+    EmployeeDao getEmployeeDao();
+
+    void setEmployeeDao(EmployeeDao employeeDao);
 }

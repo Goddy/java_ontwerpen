@@ -14,6 +14,7 @@ import java.util.Map;
 
 public interface Dao<T extends Object> {
     EntityManager getEntityManager();
+    void createAll(List <T> tList);
     void create(T t);
     T get(Serializable id);
     List<T> getAll();
