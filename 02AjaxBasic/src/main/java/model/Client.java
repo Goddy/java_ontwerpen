@@ -111,7 +111,6 @@ public class Client {
         StringBuilder stringBuilder =  new StringBuilder("Id: ").append(getId())
                      .append(" name: ").append(getName())
                      .append(" vat: ").append(getVat());
-
         return  stringBuilder.toString();
 
     }

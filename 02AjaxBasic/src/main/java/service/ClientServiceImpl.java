@@ -82,6 +82,7 @@ public class ClientServiceImpl implements ClientService {
         return getClientDao().get(Long.parseLong(id));
     }
 
+    @Override
     public Client getClientFromRequest(HttpServletRequest request) {
         Client client = new Client();
         client.setName(request.getParameter("name"));
@@ -90,6 +91,7 @@ public class ClientServiceImpl implements ClientService {
         return client;
     }
 
+    @Override
     public List<Contact> getContactListFromRequest (HttpServletRequest request) {
         List<Contact> contacts = new ArrayList<>();
         contacts.add(getContactFromRequest(request, CONTACTTYPE_EMAIL));
@@ -97,6 +99,7 @@ public class ClientServiceImpl implements ClientService {
         return contacts;
     }
 
+    @Override
     public Contact getContactFromRequest(HttpServletRequest request, String type) {
         Contact contact = new Contact();
         contact.setContactType(getContactTypeDao().findContactTypeByType(type));
@@ -104,6 +107,7 @@ public class ClientServiceImpl implements ClientService {
         return contact;
     }
 
+    @Override
     public Address getAddressFromRequest(HttpServletRequest request) {
         Address address = new Address();
         address.setCity(request.getParameter("city"));
@@ -120,6 +124,7 @@ public class ClientServiceImpl implements ClientService {
         return clientDao;
     }
 
+    @Override
     public void setClientDao(ClientDao clientDao) {
         this.clientDao = clientDao;
     }
@@ -128,6 +133,7 @@ public class ClientServiceImpl implements ClientService {
         return contactTypeDao;
     }
 
+    @Override
     public void setContactTypeDao(ContactTypeDao contactTypeDao) {
         this.contactTypeDao = contactTypeDao;
     }
