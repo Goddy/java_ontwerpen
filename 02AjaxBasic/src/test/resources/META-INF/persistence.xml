@@ -10,6 +10,7 @@
         <class>model.Employee</class>
         <class>model.ServiceCall</class>
         <class>model.Contact</class>
+        <class>model.Role</class>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>

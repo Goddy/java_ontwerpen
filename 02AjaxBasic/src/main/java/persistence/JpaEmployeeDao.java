@@ -11,4 +11,9 @@ public class JpaEmployeeDao extends AbstractJpaDao<Employee> implements Employee
     public JpaEmployeeDao(EntityManager entityManager) {
         super(entityManager);
     }
+
+    @Override
+    public Employee findEmployeeByUser(String user) {
+        return getSingleResultQuery("findEmployeeByName", getParameterMap("username", user));
+    }
 }
