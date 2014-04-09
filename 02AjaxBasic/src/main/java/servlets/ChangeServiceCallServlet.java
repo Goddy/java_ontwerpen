@@ -22,7 +22,7 @@ import static utils.Constants.*;
 @WebServlet("/changeServiceCall")
 public class ChangeServiceCallServlet extends MainServlet {
 
-    private static final String LANDING_REGISTER_REQUEST = "jsp/registerServiceCall.jsp";
+
     private EmployeeService employeeService = ServiceFactory.getEmployeeService();
     private ServiceCallService serviceCallService = ServiceFactory.getSerViceCallService();
     private static final Logger logger = LoggerFactory.getLogger(ChangeServiceCallServlet.class);
@@ -63,7 +63,7 @@ public class ChangeServiceCallServlet extends MainServlet {
             request.setAttribute("buttonAction" , "/changeServiceCall");
 
             RequestDispatcher dispatcher;
-            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_REQUEST);
+            dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
             dispatcher.forward(request, response);
         }
     }

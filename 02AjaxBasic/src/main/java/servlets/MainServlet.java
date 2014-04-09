@@ -14,12 +14,12 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
 
+import static utils.Constants.LANDING_GENERAL_ERROR_PAGE;
+
 /**
  * Created by u0090265 on 3/16/14.
  */
 public abstract class MainServlet extends HttpServlet {
-    private static final String LANDING_GENERAL_ERROR_PAGE = "jsp/error.jsp";
-
 
     protected void errorPage(HttpServletRequest request, HttpServletResponse response, String message) throws IOException, ServletException {
         request.setAttribute("error", message);

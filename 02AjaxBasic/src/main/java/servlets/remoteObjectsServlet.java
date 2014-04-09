@@ -1,6 +1,7 @@
 package servlets;
 
 //import com.google.gson.reflect.TypeToken;
+
 import model.Client;
 import model.ServiceCall;
 import org.codehaus.jackson.JsonGenerationException;
@@ -10,7 +11,6 @@ import service.ClientService;
 import service.ServiceCallService;
 import service.ServiceFactory;
 import utils.HtmlHelper;
-//import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,7 +20,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import static utils.Constants.*;
+
+import static utils.Constants.RESULT_NO_RESULTS;
+import static utils.Constants.SC_XML_RESULT;
+
+//import com.google.gson.Gson;
 
 /**
  * User: Tom De Dobbeleer
@@ -33,7 +37,6 @@ public class remoteObjectsServlet extends MainServlet {
 
     ClientService clientService = ServiceFactory.getClientService();
     ServiceCallService serviceCallService =  ServiceFactory.getSerViceCallService();
-    private static final String SC_RESULT = "jsp/serviceCallXml.jsp";
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -75,7 +78,7 @@ public class remoteObjectsServlet extends MainServlet {
             response.setContentType("text/xml");
             request.setAttribute("serviceCalls", serviceCallList);
             RequestDispatcher dispatcher;
-            dispatcher = request.getRequestDispatcher(SC_RESULT);
+            dispatcher = request.getRequestDispatcher(SC_XML_RESULT);
             dispatcher.include(request, response);
         }
     }
@@ -106,7 +109,7 @@ public class remoteObjectsServlet extends MainServlet {
             response.setContentType("text/xml");
             request.setAttribute("serviceCalls", serviceCallList);
             RequestDispatcher dispatcher;
-            dispatcher = request.getRequestDispatcher(SC_RESULT);
+            dispatcher = request.getRequestDispatcher(SC_XML_RESULT);
             dispatcher.include(request, response);
         }
     }
