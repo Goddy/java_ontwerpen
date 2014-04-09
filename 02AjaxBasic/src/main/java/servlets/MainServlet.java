@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import java.io.*;
-import java.util.ArrayList;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 
 /**
@@ -29,6 +29,16 @@ public abstract class MainServlet extends HttpServlet {
         RequestDispatcher dispatcher;
         dispatcher = request.getRequestDispatcher(landing);
         dispatcher.forward(request, response);
+    }
+
+    protected void setErrorMsg(HttpServletRequest request, String msg) {
+        request.setAttribute("resultDiv", "errorBox");
+        request.setAttribute("result", msg);
+    }
+
+    protected void setSuccessMsg (HttpServletRequest request, String msg) {
+        request.setAttribute("resultDiv", "successBox");
+        request.setAttribute("result", msg);
     }
 
     protected static String toXmlObject(List<ServiceCall> serviceCalls) {

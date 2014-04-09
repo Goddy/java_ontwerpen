@@ -48,7 +48,7 @@ public class TestObjectFactory {
     }
 
     public static Employee getTestEmployee() {
-        return new Employee(randomString(), randomString(), randomString(), randomString(), getTestAddress(), new Role("admin"));
+        return new Employee(randomString(), randomString(), randomString(), randomString(), new Role("admin"));
     }
 
 }

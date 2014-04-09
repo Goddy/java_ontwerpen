@@ -1,41 +1,10 @@
 package service;
 
-
 import model.Employee;
-import persistence.DaoFactory;
-import persistence.EmployeeDao;
-import utils.PassCrypter;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
-
-public class AuthenticationService {
-	private EmployeeDao emDao;
-	
-	public AuthenticationService(){
-		emDao = DaoFactory.getEmployeeDao();
-	}
-			
-	/**
-	 * Verify password and return employee when ok
-	 * - basic solution	
-	 * @param user
-	 * @param password
-	 * @return
-	 */
-	public Employee authenticate(String user, String password){
-		Employee result = null;
-		try {
-			Employee emp = emDao.findEmployeeByUser(user);
-			if(emp != null && PassCrypter.validatePassword(password, emp.getPassword()))
-				result = emp;
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (InvalidKeySpecException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
+/**
+ * Created by u0090265 on 4/9/14.
+ */
+public interface AuthenticationService {
+    Employee authenticate(String user, String password);
 }

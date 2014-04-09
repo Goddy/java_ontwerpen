@@ -21,4 +21,7 @@ public class Constants {
 
     public  static final String RESULT_UNKNOWN_ERROR = "Er is een onbekende fout opgetreden";
     public  static final String RESULT_ID_NOT_SPECIFIED = "Er is geen klantendId gevonden";
+
+    public static final String LANDING_LOGIN = "jsp/login.jsp";
+    public static final String LANDING_REGISTER_EMPLOYEE = "jsp/registerEmployee.jsp";
 }

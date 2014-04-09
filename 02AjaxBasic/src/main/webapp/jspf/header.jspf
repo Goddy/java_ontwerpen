@@ -38,6 +38,7 @@
                         <li><a href="../jsp/registerClient.jsp">Registreer klant</a></li>
                         <li><a href="../jsp/searchClient.jsp">Zoek klant</a></li>
                         <li><a href="../jsp/serviceCallOverview.jsp">Service Oproepen</a></li>
+                        <li><a href="../jsp/registerEmployee.jsp">Registreer medewerker</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

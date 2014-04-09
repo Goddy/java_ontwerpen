@@ -24,24 +24,22 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
     private long id;
-    private String firstName;
+    private String lastName;
     private String givenName;
     private String username;
     private String email;
     private String password;
-    private Address address;
     private Role role;
     private List serviceCalls;
 
 
     public Employee() {
     }
-    public Employee(String firstName, String lastName, String username, String email, Address address, Role role) {
+    public Employee(String firstName, String lastName, String username, String email, Role role) {
         setGivenName(lastName);
         setUsername(username);
-        setFirstName(firstName);
+        setLastName(firstName);
         setEmail(email);
-        setAddress(address);
         setRole(role);
     }
     @Id
@@ -57,23 +55,12 @@ public class Employee {
 
     @NotNull
     @Column(name="naam")
-    public String getFirstName() {
-        return firstName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setFirstName(String name) {
-        this.firstName = name;
-    }
-
-    @NotNull
-    @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-    @JoinColumn(name="adres",insertable=true, updatable=true, nullable=false,unique=true)
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setLastName(String name) {
+        this.lastName = name;
     }
 
     public String getEmail() {
@@ -87,9 +74,8 @@ public class Employee {
     @Override
     public String toString() {
         return  new StringBuilder("Id: ").append(getId())
-                .append(" name: ").append(getFirstName())
+                .append(" name: ").append(getLastName())
                 .append(" email: ").append(getEmail())
-                .append(" address: ").append(getAddress())
                 .append(" role: ").append(getRole()).toString();
     }
 
@@ -102,7 +88,8 @@ public class Employee {
         this.role = role;
     }
 
-    public List getServiceCalls() {
+    @OneToMany
+    public List<ServiceCall> getServiceCalls() {
         return serviceCalls;
     }
 
