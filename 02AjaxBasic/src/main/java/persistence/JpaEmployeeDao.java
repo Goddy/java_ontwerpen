@@ -13,7 +13,7 @@ public class JpaEmployeeDao extends AbstractJpaDao<Employee> implements Employee
     }
 
     @Override
-    public Employee findEmployeeByUser(String user) {
-        return getSingleResultQuery("findEmployeeByName", getParameterMap("username", user));
+    public Employee findEmployeeByUserName(String user) {
+        return getSingleResultQuery("findEmployeeByUsername", getParameterMap("username", user));
     }
 }

@@ -16,7 +16,7 @@ import static utils.Constants.LANDING_LOGIN;
  * Created by u0090265 on 3/31/14.
  */
 
-@WebServlet("/login")
+@WebServlet("/login.html")
 public class LoginServlet extends MainServlet {
     LoginService loginService = ServiceFactory.getLoginService();
 
@@ -27,10 +27,11 @@ public class LoginServlet extends MainServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
             loginService.login(request);
-            getPage(request, response, LANDING_LOGIN);
+            getPage(request, response, "index.jsp");
         }
         catch (WrongPasswordException e) {
             setErrorMsg(request, e.getMessage());
+            doGet(request, response);
         }
 
     }

@@ -114,7 +114,7 @@
 <c:if test="${not empty result}">
 <div class="${resultDiv}">${result}</div>
 </c:if>
-<form class="form-horizontal" role="form" id="form-register" action="/registerClient" method="post">
+<form class="form-horizontal" role="form" id="form-register" action="/registerClient.html" method="post">
     <div class="form-group">
         <label for="name" class="col-sm-2 control-label">Naam</label>
         <div class="col-sm-10">

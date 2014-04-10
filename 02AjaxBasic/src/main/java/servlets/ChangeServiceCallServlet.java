@@ -19,7 +19,7 @@ import static utils.Constants.*;
 /**
  * Created by u0090265 on 3/16/14.
  */
-@WebServlet("/changeServiceCall")
+@WebServlet("/changeServiceCall.html")
 public class ChangeServiceCallServlet extends MainServlet {
 
 
@@ -60,7 +60,7 @@ public class ChangeServiceCallServlet extends MainServlet {
             request.setAttribute("employee", serviceCall.getEmployee());
             request.setAttribute("employees", employeeService.getAll());
             request.setAttribute("clientId", serviceCall.getClient().getId());
-            request.setAttribute("buttonAction" , "/changeServiceCall");
+            request.setAttribute("buttonAction" , "/changeServiceCall.html");
 
             RequestDispatcher dispatcher;
             dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);

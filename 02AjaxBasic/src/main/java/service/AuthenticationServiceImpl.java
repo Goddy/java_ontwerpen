@@ -27,7 +27,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     public Employee authenticate(String user, String password){
 		Employee result = null;
 		try {
-			Employee emp = emDao.findEmployeeByUser(user);
+			Employee emp = emDao.findEmployeeByUserName(user);
 			if(emp != null && PassCrypter.validatePassword(password, emp.getPassword()))
 				result = emp;
 		} catch (NoSuchAlgorithmException e) {

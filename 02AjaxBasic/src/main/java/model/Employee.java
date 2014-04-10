@@ -63,6 +63,7 @@ public class Employee {
         this.lastName = name;
     }
 
+    @Column(name="email")
     public String getEmail() {
         return email;
     }
@@ -80,6 +81,7 @@ public class Employee {
     }
 
     @OneToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+    @JoinColumn(name="rol_id")
     public Role getRole() {
         return role;
     }

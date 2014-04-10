@@ -8,6 +8,7 @@ package persistence;
  */
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Query;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -36,9 +37,15 @@ public abstract class AbstractJpaDao<T>
     @Override
     @SuppressWarnings("unchecked")
     public T getSingleResultQuery(String query, Map<String, ? extends Object> parameterMap) {
-        Query q = getEntityManager().createNamedQuery(query, getDomainClass());
-        setParameters(q, parameterMap);
-        return (T)q.getSingleResult();
+        try {
+            Query q = getEntityManager().createNamedQuery(query, getDomainClass());
+            setParameters(q, parameterMap);
+            return (T)q.getSingleResult();
+        }
+        catch (NoResultException e) {
+            return null;
+        }
+
     }
 
     private void setParameters(Query q, Map<String, ? extends Object> parameterMap) {

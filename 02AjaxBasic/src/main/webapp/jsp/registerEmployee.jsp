@@ -4,11 +4,14 @@
 <ol class="breadcrumb">
     <li><a href="#">Registreer medewerker</a></li>
 </ol>
-<form class="form-horizontal" role="form" id="form-register" action="/registerEmployee" method="post">
+<c:if test="${not empty result}">
+    <div class="${resultDiv}">${result}</div>
+</c:if>
+<form class="form-horizontal" role="form" id="form-register" action="/registerEmployee.html" method="post">
     <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Naam</label>
+        <label for="lastName" class="col-sm-2 control-label">Naam</label>
         <div class="col-sm-10">
-            <input class="form-control" id="name" name="name" placeholder="Naam">
+            <input class="form-control" id="lastName" name="lastName" placeholder="Naam">
         </div>
     </div>
     <div class="form-group">

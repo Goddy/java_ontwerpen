@@ -5,8 +5,9 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
 @NamedQuery(name = "findAllRoles", query = "SELECT r FROM Role r"),
-@NamedQuery(name = "findRolByName", query = "SELECT r FROM Role r where r.roleName like :iname")
+@NamedQuery(name = "findRolByName", query = "SELECT r FROM Role r where r.roleName like :name")
 })
+@Table(name = "rol")
 public class Role {
 
 	private int id;

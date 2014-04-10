@@ -13,9 +13,9 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public void login(HttpServletRequest request) throws WrongPasswordException {
-        Employee authenticatedEmployee = authenticationService.authenticate(request.getParameter("name"), request.getParameter("password"));
+        Employee authenticatedEmployee = authenticationService.authenticate(request.getParameter("username"), request.getParameter("password"));
         if (authenticatedEmployee != null) {
-            request.setAttribute("employee", authenticatedEmployee);
+            request.getSession().setAttribute("employee", authenticatedEmployee);
         }
         else {
             throw new WrongPasswordException("Verkeerd wachtwoord");

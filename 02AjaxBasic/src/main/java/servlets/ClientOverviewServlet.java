@@ -17,7 +17,7 @@ import static utils.Constants.LANDING_CLIENT_OVERVIEW;
 /**
  * Created by u0090265 on 3/16/14.
  */
-@WebServlet("/clientOverview")
+@WebServlet("/clientOverview.html")
 public class ClientOverviewServlet extends MainServlet{
     private ClientService clientService;
     private static final Logger logger = LoggerFactory.getLogger(ClientOverviewServlet.class);

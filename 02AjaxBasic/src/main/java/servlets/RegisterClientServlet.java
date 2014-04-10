@@ -8,7 +8,6 @@ import service.ServiceFactory;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -22,12 +21,14 @@ import static utils.Constants.*;
  * Remarks: none
  */
 
-@WebServlet("/registerClient")
-public class RegisterClientServlet extends HttpServlet {
+@WebServlet("/registerClient.html")
+public class RegisterClientServlet extends MainServlet {
 
     private ClientService clientService;
     private static final Logger logger = LoggerFactory.getLogger(RegisterClientServlet.class);
-
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        getPage(request, response, LANDING_REGISTER_CLIENT);
+    }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         logger.debug(request.toString());
         try {

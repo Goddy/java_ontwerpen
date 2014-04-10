@@ -19,7 +19,7 @@ import static utils.Constants.*;
 /**
  * Created by u0090265 on 3/9/14.
  */
-@WebServlet("/registerServiceCall")
+@WebServlet("/registerServiceCall.html")
 public class RegisterServiceCallServlet extends MainServlet {
 
     private ClientService clientService;
@@ -54,7 +54,7 @@ public class RegisterServiceCallServlet extends MainServlet {
             employeeService = ServiceFactory.getEmployeeService();
             request.setAttribute("employees", employeeService.getAll());
             request.setAttribute("clientId", id);
-            request.setAttribute("buttonAction" , "/registerServiceCall");
+            request.setAttribute("buttonAction" , "/registerServiceCall.html");
 
             RequestDispatcher dispatcher;
             dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
