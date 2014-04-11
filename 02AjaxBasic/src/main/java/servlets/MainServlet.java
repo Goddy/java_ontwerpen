@@ -22,7 +22,8 @@ import static utils.Constants.LANDING_GENERAL_ERROR_PAGE;
 public abstract class MainServlet extends HttpServlet {
 
     protected void errorPage(HttpServletRequest request, HttpServletResponse response, String message) throws IOException, ServletException {
-        request.setAttribute("error", message);
+        request.setAttribute("title", "Error");
+        request.setAttribute("reason", message);
         getPage(request, response, LANDING_GENERAL_ERROR_PAGE);
     }
     protected void getPage(HttpServletRequest request, HttpServletResponse response, String landing) throws IOException, ServletException {
