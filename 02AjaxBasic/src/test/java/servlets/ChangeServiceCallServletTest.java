@@ -1,30 +1,21 @@
 package servlets;
 
-import org.junit.Before;
+import general.AbstractTest;
 import org.junit.Test;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import static org.easymock.EasyMock.*;
+import static org.easymock.EasyMock.expect;
+import static org.easymock.EasyMock.replay;
 
 /**
  * Created by u0090265 on 3/29/14.
  */
-public class ChangeServiceCallServletTest {
+public class ChangeServiceCallServletTest extends AbstractTest {
     static final ChangeServiceCallServlet changeServiceCallServlet = new ChangeServiceCallServlet();
-    HttpServletRequest httpServletRequestMock;
-    HttpServletResponse httpServletResponseMock;
 
-    @Before
-    public void setUp() {
-        httpServletRequestMock = createStrictMock(HttpServletRequest.class);
-        httpServletResponseMock = createStrictMock(HttpServletResponse.class);
-    }
 
-    @Test
     public void testDoGet() throws Exception {
         expect(httpServletRequestMock.getParameter("id")).andReturn("1");
+        httpServletRequestMock.setAttribute("serviceCallId", "1");
         replay(httpServletRequestMock);
         changeServiceCallServlet.doGet(httpServletRequestMock, httpServletResponseMock);
     }

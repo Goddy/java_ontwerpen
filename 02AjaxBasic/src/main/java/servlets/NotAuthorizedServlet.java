@@ -11,7 +11,7 @@ import static utils.Constants.LANDING_GENERAL_ERROR_PAGE;
 /**
  * Created by u0090265 on 4/11/14.
  */
-@WebServlet("/notAuhorized.html")
+@WebServlet("/notAuthorized.html")
 public class NotAuthorizedServlet extends MainServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.setAttribute("title", "Toegang geweigerd");

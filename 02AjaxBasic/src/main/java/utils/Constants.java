@@ -7,7 +7,9 @@ package utils;
  * Remarks: none
  */
 public class Constants {
-    private Constants() {}
+    private Constants() {
+    }
+
     public static final String CONTACTTYPE_EMAIL = "email";
     public static final String CONTACTTYPE_PHONE = "phone";
 
@@ -19,8 +21,8 @@ public class Constants {
     public static final String RESULT_SC_ADDED = "Service oproep succesvol toegevoegd";
     public static final String RESULT_SC_CHANGED = "Service oproep succesvol gewijzigd";
 
-    public  static final String RESULT_UNKNOWN_ERROR = "Er is een onbekende fout opgetreden";
-    public  static final String RESULT_ID_NOT_SPECIFIED = "Er is geen klantendId gevonden";
+    public static final String RESULT_UNKNOWN_ERROR = "Er is een onbekende fout opgetreden";
+    public static final String RESULT_ID_NOT_SPECIFIED = "Er is geen klantendId gevonden";
 
     public static final String LANDING_REGISTER_SERVICECALL = "jsp/registerServiceCall.jsp";
     public static final String LANDING_CLIENT_OVERVIEW = "jsp/clientOverview.jsp";
@@ -33,5 +35,6 @@ public class Constants {
     public static final String LANDING_SERVICECALL_OVERVIEW = "jsp/serviceCallOverview.jsp";
     public static final String LANDING_HTML_NOT_AUTHORIZED = "notAuthorized.html";
     public static final String LANDING_HTML_LOGIN = "login.html";
+    public static final String LANDING_LOGOUT = "jsp/logout.jsp";
 
 }

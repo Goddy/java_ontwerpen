@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../jspf/header.jspf" %>
-
+<ol class="breadcrumb">
+    <li><a href="#">Inloggen</a></li>
+</ol>
 <form role="form" id="form-login" action="/login.html" method="post">
     <div class="form-group">
         <label for="username">Username</label>
