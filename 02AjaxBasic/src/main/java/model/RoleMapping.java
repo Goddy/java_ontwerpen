@@ -20,6 +20,14 @@ public class RoleMapping {
     private String servlet;
     private RoleEnum role;
 
+    public RoleMapping(String servlet, RoleEnum role) {
+        setServlet(servlet);
+        setRole(role);
+    }
+
+    public RoleMapping() {
+    }
+
     @Id
     @Column(name = "servlet")
     public String getServlet() {

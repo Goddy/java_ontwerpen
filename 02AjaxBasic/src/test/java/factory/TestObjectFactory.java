@@ -44,11 +44,11 @@ public class TestObjectFactory {
     }
 
     private static long oneOrTwo() {
-        return (long)(Math.random() * 2) + 1;
+        return (long) (Math.random() * 2) + 1;
     }
 
-    public static Employee getTestEmployee() {
-        return new Employee(randomString(), randomString(), randomString(), randomString(), new Role(RoleEnum.ADMIN));
+    public static Employee getTestEmployee(RoleEnum role) {
+        return new Employee(randomString(), randomString(), randomString(), randomString(), new Role(role));
     }
 
 }

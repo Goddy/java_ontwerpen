@@ -31,5 +31,7 @@ public class Constants {
     public static final String LANDING_LOGIN = "jsp/login.jsp";
     public static final String LANDING_SEARCH_CLIENT = "jsp/searchClient.jsp";
     public static final String LANDING_SERVICECALL_OVERVIEW = "jsp/serviceCallOverview.jsp";
+    public static final String LANDING_HTML_NOT_AUTHORIZED = "notAuthorized.html";
+    public static final String LANDING_HTML_LOGIN = "login.html";
 
 }

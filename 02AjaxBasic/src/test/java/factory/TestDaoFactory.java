@@ -1,10 +1,7 @@
 package factory;
 
 import manager.TestPersistenceManager;
-import persistence.JpaClientDao;
-import persistence.JpaContactTypeDao;
-import persistence.JpaEmployeeDao;
-import persistence.JpaServiceCallDao;
+import persistence.*;
 
 /**
  * User: Tom De Dobbeleer
@@ -13,9 +10,27 @@ import persistence.JpaServiceCallDao;
  * Remarks: none
  */
 public class TestDaoFactory {
-    private TestDaoFactory() {}
-    public static JpaClientDao getClientDao() { return new JpaClientDao(TestPersistenceManager.getEntityManager()); }
-    public static JpaEmployeeDao getEmployeeDao() { return new JpaEmployeeDao(TestPersistenceManager.getEntityManager()); }
-    public static JpaServiceCallDao getServiceCallDao() { return new JpaServiceCallDao(TestPersistenceManager.getEntityManager()); }
-    public static JpaContactTypeDao getContactTypeDao() { return new JpaContactTypeDao(TestPersistenceManager.getEntityManager()); }
+    private TestDaoFactory() {
+    }
+
+    public static JpaClientDao getClientDao() {
+        return new JpaClientDao(TestPersistenceManager.getEntityManager());
+    }
+
+    public static JpaEmployeeDao getEmployeeDao() {
+        return new JpaEmployeeDao(TestPersistenceManager.getEntityManager());
+    }
+
+    public static JpaServiceCallDao getServiceCallDao() {
+        return new JpaServiceCallDao(TestPersistenceManager.getEntityManager());
+    }
+
+    public static JpaContactTypeDao getContactTypeDao() {
+        return new JpaContactTypeDao(TestPersistenceManager.getEntityManager());
+    }
+
+    public static JpaRoleMappingDao getRoleMappingDao() {
+        return new JpaRoleMappingDao(TestPersistenceManager.getEntityManager());
+    }
 }
+
