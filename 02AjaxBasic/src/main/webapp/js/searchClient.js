@@ -1,25 +1,27 @@
-function submitSearch(address, displayRegion, type ) {
+function submitSearch(address, displayRegion, type) {
     var name = document.getElementById("name").value;
     var id = document.getElementById("id").value;
     var data = "";
 
-    if (name != "" && id !="") {
+    if (name != "" && id != "") {
         htmlInsert(displayRegion, "Naam en id mogen niet beiden ingevuld zijn");
     }
 
-    else if (name == "" && id =="") {
+    else if (name == "" && id == "") {
         htmlInsert(displayRegion, "Geen waarden ingevuld");
     }
     else if (name != "") {
-        address += "&search=" +name +"&type=name";
+        address += "&search=" + name + "&type=name";
         //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
-        jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
+        //jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
+        getTableJquery(address, createClientDataTable, displayRegion);
     }
     else {
         if (!isNaN(id)) {
-            address +="&search="+id +"&type=id";
+            address += "&search=" + id + "&type=id";
             //jsonTableRequest(address, data, displayRegion, headings, dataFields, type );
-            jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
+            //jsonTableRequest(address, data, displayRegion, type, createClientDataTable)
+            getTableJquery(address, createClientDataTable, displayRegion);
         }
         else {
             htmlInsert(displayRegion, "id is geen getal");
@@ -28,7 +30,7 @@ function submitSearch(address, displayRegion, type ) {
 
 }
 
-function createClientDataTable (data, displayRegion) {
+function createClientDataTable(data, displayRegion) {
     var headings = new Array("Id", "Naam", "Acties");
     var dataFields = new Array("id", "name", "actions");
     var table = "<table class='table'>\n" +
@@ -38,14 +40,13 @@ function createClientDataTable (data, displayRegion) {
     htmlInsert(displayRegion, table);
 }
 
-function getClientDataTableBody(rows, fields)
-{
+function getClientDataTableBody(rows, fields) {
     var body = "";
-    for(var i=0; i<rows.length; i++) {
+    for (var i = 0; i < rows.length; i++) {
         body += "  <tr>";
         var row = rows[i];
-        for(var j=0; j<fields.length; j++) {
-            var fieldName=fields[j];
+        for (var j = 0; j < fields.length; j++) {
+            var fieldName = fields[j];
 
             if (fieldName == 'actions') {
                 body += '<td>'
@@ -64,12 +65,12 @@ function getClientDataTableBody(rows, fields)
 
 function selectChanged() {
     var myselect = document.getElementById("operationSelect");
-    var selectedValue=(myselect.options[myselect.selectedIndex].value);
+    var selectedValue = (myselect.options[myselect.selectedIndex].value);
     if (selectedValue == 1) {
         document.getElementById("searchForm").style.display = 'block';
     }
     else {
-        jsonTableRequest('/getObjects?op=allClients', '', 'result', 'get', createClientDataTable);
+        getTableJquery('/getObjects.html?op=allClients', createClientDataTable, 'result');
         document.getElementById("searchForm").style.display = 'none';
     }
 

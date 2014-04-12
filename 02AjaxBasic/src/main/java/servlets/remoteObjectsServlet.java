@@ -32,7 +32,7 @@ import static utils.Constants.SC_XML_RESULT;
  * Time: 8:09 PM
  * Remarks: none
  */
-@WebServlet("/getObjects")
+@WebServlet("/getObjects.html")
 public class remoteObjectsServlet extends MainServlet {
 
     ClientService clientService = ServiceFactory.getClientService();

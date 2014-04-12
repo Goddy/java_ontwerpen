@@ -5,8 +5,12 @@
 </ol>
 <div id="sc-xml"></div>
 <script src="../js/ajaxUtils.js" type="text/javascript"></script>
-<body onload="xmlRequest('/getObjects?op=serviceCalls', 'sc-xml', 'serviceCall', 'get');">
 <%@ include file="../jspf/footer.jspf" %>
+<script type="text/javascript">
+    $(document).ready(function () {
+        showXmlTableJquery('/getObjects.html?op=serviceCalls', 'sc-xml', 'serviceCall');
+    });
+</script>
 
 
 

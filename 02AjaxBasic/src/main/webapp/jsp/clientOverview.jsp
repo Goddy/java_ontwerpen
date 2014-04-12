@@ -49,7 +49,16 @@
         </td>
     </tr>
 </table>
-<button type="button" class="btn button-primary"  onclick="xmlRequest('/getObjects?op=serviceCallsForClient&clientId=${client.id}', 'sc-xml', 'serviceCall', 'get')">Service Oproepen</button><br><br>
+<button type="button" id="submit" class="btn button-primary">Service Oproepen</button>
+<br><br>
+
 <div id="sc-xml"></div>
 <script src="../js/ajaxUtils.js" type="text/javascript"></script>
 <%@ include file="../jspf/footer.jspf" %>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#submit').click(function () {
+            showXmlTableJquery('/getObjects.html?op=serviceCallsForClient&clientId=${client.id}', 'sc-xml', 'serviceCall');
+        })
+    });
+</script>

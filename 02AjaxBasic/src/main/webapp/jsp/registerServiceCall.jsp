@@ -36,7 +36,7 @@
         <div class="col-sm-10">
             <select class="form-control" id="employeeId" name="employeeId" placeholder="Verantwoordelijke">
                 <c:forEach var="singleEmployee" items="${employees}">
-                    <option value="${singleEmployee.id}" ${singleEmployee.id == employee.id ? 'selected' : ''}>${singleEmployee.name}</option>
+                    <option value="${singleEmployee.id}" ${singleEmployee.id == employee.id ? 'selected' : ''}>${singleEmployee.givenName} ${singleEmployee.lastName}</option>
                 </c:forEach>
             </select>
         </div>

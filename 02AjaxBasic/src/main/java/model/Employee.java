@@ -35,10 +35,11 @@ public class Employee {
 
     public Employee() {
     }
-    public Employee(String firstName, String lastName, String username, String email, Role role) {
-        setGivenName(lastName);
+
+    public Employee(String name, String firstName, String username, String email, Role role) {
+        setGivenName(firstName);
         setUsername(username);
-        setLastName(firstName);
+        setLastName(name);
         setEmail(email);
         setRole(role);
     }

@@ -1,7 +1,16 @@
 // Get the browser-specific request object, either for
 // Firefox, Safari, Opera, Mozilla, Netscape, IE 8, or IE 7 (top entry);
 // or for Internet Explorer 5 and 6 (bottom entry).
-
+function getTableJquery(url, tablefunction, resultRegion) {
+    $.ajax({
+        url: url,
+        dataType: 'json',
+        cache: false,
+        success: function (json) {
+            tablefunction(json, resultRegion);
+        }
+    });
+}
 //****************Request functions**************************************************************************************************************
 function getRequestObject() {
     if (window.XMLHttpRequest) {
@@ -73,6 +82,20 @@ function showJsonTable(request, resultRegion, tableFunction)
 }
 
 //****************XML functions***************************************************************************************************************
+function showXmlTableJquery(url, resultRegion, content) {
+    $.ajax({
+        url: url,
+        dataType: 'xml',
+        cache: false,
+        success: function (xml) {
+            var xmlDocument = xml;
+            var headings = getXmlValues(xmlDocument, "heading");
+            var rows = getXmlValues2(xmlDocument, content);
+            createXmlTable(headings, rows, resultRegion);
+        }
+    });
+}
+
 function showXmlTable(request, resultRegion, content)
 {
     if ((request.readyState == 4) &&
