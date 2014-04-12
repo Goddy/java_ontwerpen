@@ -18,9 +18,9 @@ import javax.persistence.*;
 @Table(name = "rolmap")
 public class RoleMapping {
     private String servlet;
-    private RoleEnum role;
+    private Role role;
 
-    public RoleMapping(String servlet, RoleEnum role) {
+    public RoleMapping(String servlet, Role role) {
         setServlet(servlet);
         setRole(role);
     }
@@ -38,13 +38,13 @@ public class RoleMapping {
         this.servlet = servlet;
     }
 
-    @Column(name = "rol")
-    @Enumerated(EnumType.STRING)
-    public RoleEnum getRole() {
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "rol")
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(RoleEnum role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 }

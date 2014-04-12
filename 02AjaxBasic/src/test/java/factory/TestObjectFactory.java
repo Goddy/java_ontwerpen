@@ -47,8 +47,8 @@ public class TestObjectFactory {
         return (long) (Math.random() * 2) + 1;
     }
 
-    public static Employee getTestEmployee(RoleEnum role) {
-        return new Employee(randomString(), randomString(), randomString(), randomString(), new Role(role));
+    public static Employee getTestEmployee(String role) {
+        return new Employee(randomString(), randomString(), randomString(), randomString(), TestDaoFactory.getRoleDao().getRoleByName(role));
     }
 
 }

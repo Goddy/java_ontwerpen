@@ -21,6 +21,7 @@ public abstract class AbstractTest {
     protected static ClientDao clientDao;
     protected static ContactTypeDao contactTypeDao;
     protected static RoleMappingDao roleMappingDao;
+    protected static RoleDao roleDao;
     protected HttpServletRequest httpServletRequestMock = createStrictMock(HttpServletRequest.class);
     protected HttpServletResponse httpServletResponseMock = createStrictMock(HttpServletResponse.class);
 
@@ -40,5 +41,6 @@ public abstract class AbstractTest {
         clientDao = TestDaoFactory.getClientDao();
         contactTypeDao = TestDaoFactory.getContactTypeDao();
         roleMappingDao = TestDaoFactory.getRoleMappingDao();
+        roleDao = TestDaoFactory.getRoleDao();
     }
 }

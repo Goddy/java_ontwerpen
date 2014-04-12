@@ -2,6 +2,7 @@ package service;
 
 import model.Employee;
 import persistence.EmployeeDao;
+import persistence.RoleDao;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.NoSuchAlgorithmException;
@@ -19,4 +20,8 @@ public interface EmployeeService {
     void setEmployeeDao(EmployeeDao employeeDao);
 
     Employee registerEmployee(HttpServletRequest request) throws InvalidKeySpecException, NoSuchAlgorithmException;
+
+    RoleDao getRoleDao();
+
+    void setRoleDao(RoleDao roleDao);
 }

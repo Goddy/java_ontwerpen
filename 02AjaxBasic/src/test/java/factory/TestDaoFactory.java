@@ -32,5 +32,9 @@ public class TestDaoFactory {
     public static JpaRoleMappingDao getRoleMappingDao() {
         return new JpaRoleMappingDao(TestPersistenceManager.getEntityManager());
     }
+
+    public static RoleDao getRoleDao() {
+        return new JpaRoleDao(TestPersistenceManager.getEntityManager());
+    }
 }
 

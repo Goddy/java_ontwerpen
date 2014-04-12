@@ -3,15 +3,13 @@ package filter;
 import factory.TestObjectFactory;
 import general.AbstractTest;
 import model.Employee;
-import model.RoleEnum;
 import org.junit.Test;
 
 import javax.servlet.FilterChain;
 import javax.servlet.http.HttpSession;
 
 import static org.easymock.EasyMock.*;
-import static utils.Constants.LANDING_HTML_LOGIN;
-import static utils.Constants.LANDING_HTML_NOT_AUTHORIZED;
+import static utils.Constants.*;
 
 /**
  * Created by u0090265 on 4/11/14.
@@ -22,7 +20,7 @@ public class LoginInterceptorFilterTest extends AbstractTest {
 
     @Test
     public void testDoFilterAdminPageAsAdmin() throws Exception {
-        setUpTest("/admin.html", RoleEnum.ADMIN, true, true);
+        setUpTest("/admin.html", ROLETYPE_ADMIN, true, true);
         chainMock.doFilter(httpServletRequestMock, httpServletResponseMock);
         expectLastCall();
         replayAll();
@@ -32,7 +30,7 @@ public class LoginInterceptorFilterTest extends AbstractTest {
 
     @Test
     public void testDoFilterAdminPageAsNormal() throws Exception {
-        setUpTest("/admin.html", RoleEnum.NORMAL, true, true);
+        setUpTest("/admin.html", ROLETYPE_NORMAL, true, true);
         httpServletResponseMock.sendRedirect(LANDING_HTML_NOT_AUTHORIZED);
         replayAll();
         doFilter();
@@ -78,7 +76,7 @@ public class LoginInterceptorFilterTest extends AbstractTest {
     }
 
 
-    private void setUpTest(String uri, RoleEnum employeeRole, boolean setSession, boolean employeeSet) {
+    private void setUpTest(String uri, String employeeRole, boolean setSession, boolean employeeSet) {
         Employee employee = TestObjectFactory.getTestEmployee(employeeRole);
         sessionMock = createNiceMock(HttpSession.class);
         chainMock = createNiceMock(FilterChain.class);
@@ -95,6 +93,7 @@ public class LoginInterceptorFilterTest extends AbstractTest {
     private void doFilter() throws Exception {
         LoginInterceptorFilter filter = new LoginInterceptorFilter();
         filter.setRoleMappingDao(roleMappingDao);
+        filter.setRoleDao(roleDao);
         filter.doFilter(httpServletRequestMock, httpServletResponseMock, chainMock);
     }
 

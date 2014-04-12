@@ -1,9 +1,10 @@
 package filter;
 
 import model.Employee;
-import model.RoleEnum;
+import model.Role;
 import model.RoleMapping;
 import persistence.DaoFactory;
+import persistence.RoleDao;
 import persistence.RoleMappingDao;
 
 import javax.servlet.*;
@@ -14,14 +15,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static utils.Constants.LANDING_HTML_LOGIN;
-import static utils.Constants.LANDING_HTML_NOT_AUTHORIZED;
+import static utils.Constants.*;
 
 /**
  * Created by u0090265 on 4/9/14.
  */
 public class LoginInterceptorFilter implements Filter {
     private RoleMappingDao roleMappingDao = DaoFactory.getRoleMappingDao();
+    private RoleDao roleDao = DaoFactory.getRoleDao();
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -37,19 +38,17 @@ public class LoginInterceptorFilter implements Filter {
         HttpSession session = getSession(req);
 
         if (!getWhiteListMapping().contains(uri)) {
-            if(session != null) {
+            if (session != null) {
                 Employee employee = (Employee) session.getAttribute("employee");
                 if (employee == null)
                     res.sendRedirect(LANDING_HTML_LOGIN);
                 else
                     checkRoleAndRedirect(req, res, employee, uri, chain);
 
-            }
-            else {
+            } else {
                 res.sendRedirect(LANDING_HTML_LOGIN);
             }
-        }
-        else{
+        } else {
             // pass the request along the filter chain
             chain.doFilter(request, response);
         }
@@ -62,8 +61,8 @@ public class LoginInterceptorFilter implements Filter {
 
     private void checkRoleAndRedirect(HttpServletRequest request, HttpServletResponse response, Employee employee, String uri, FilterChain chain) throws IOException, ServletException {
         RoleMapping roleMapping = getRoleMappingDao().getRole(uri);
-        if (roleMapping != null && roleMapping.getRole() == RoleEnum.ADMIN) {
-            if (employee.getRole().getRoleName() == RoleEnum.ADMIN) {
+        if (roleMapping != null && roleMapping.getRole().getRoleName() == ROLETYPE_ADMIN) {
+            if (employee.getRole().getRoleName() == ROLETYPE_ADMIN) {
                 chain.doFilter(request, response);
             } else {
                 response.sendRedirect(LANDING_HTML_NOT_AUTHORIZED);
@@ -79,7 +78,8 @@ public class LoginInterceptorFilter implements Filter {
 
     private List getWhiteListMapping() {
         ArrayList whiteList = new ArrayList<String>();
-        for (RoleMapping rm : getRoleMappingDao().getServlets(RoleEnum.PUBLIC)) {
+        Role role = getRoleDao().getRoleByName(ROLETYPE_PUBLIC);
+        for (RoleMapping rm : getRoleMappingDao().getServlets(role)) {
             whiteList.add(rm.getServlet());
         }
         return whiteList;
@@ -91,5 +91,13 @@ public class LoginInterceptorFilter implements Filter {
 
     public void setRoleMappingDao(RoleMappingDao roleMappingDao) {
         this.roleMappingDao = roleMappingDao;
+    }
+
+    public RoleDao getRoleDao() {
+        return roleDao;
+    }
+
+    public void setRoleDao(RoleDao roleDao) {
+        this.roleDao = roleDao;
     }
 }

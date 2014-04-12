@@ -1,7 +1,6 @@
 package servlets;
 
 import model.Employee;
-import model.RoleEnum;
 import service.EmployeeService;
 import service.ServiceFactory;
 
@@ -13,8 +12,7 @@ import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
-import static utils.Constants.LANDING_REGISTER_EMPLOYEE;
-import static utils.Constants.RESULT_UNKNOWN_ERROR;
+import static utils.Constants.*;
 
 /**
  * Created by u0090265 on 4/9/14.
@@ -38,8 +36,9 @@ public class RegisterEmployeeServlet extends MainServlet {
         doGet(request, response);
 
     }
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.setAttribute("roles", RoleEnum.values());
+        request.setAttribute("roles", new String[]{ROLETYPE_ADMIN, ROLETYPE_NORMAL});
         getPage(request, response, LANDING_REGISTER_EMPLOYEE);
     }
 }

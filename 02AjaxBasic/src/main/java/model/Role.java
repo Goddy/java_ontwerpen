@@ -11,12 +11,12 @@ import javax.persistence.*;
 public class Role {
 
     private int id;
-    private RoleEnum roleName;
+    private String roleName;
 
     public Role() {
     }
 
-    public Role(RoleEnum name) {
+    public Role(String name) {
         this.roleName = name;
     }
 
@@ -30,14 +30,13 @@ public class Role {
         this.id = id;
     }
 
-    @Column(name = "rolname", nullable = false)
-    @Enumerated(EnumType.STRING)
-    public RoleEnum getRoleName() {
+    @Column(name = "rolnaam", nullable = false)
+    public String getRoleName() {
         return roleName;
     }
 
-    public void setRoleName(RoleEnum rolname) {
-        this.roleName = rolname;
+    public void setRoleName(String rolName) {
+        this.roleName = rolName;
     }
 
 }

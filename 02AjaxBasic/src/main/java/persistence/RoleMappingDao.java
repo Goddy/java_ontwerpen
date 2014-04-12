@@ -1,6 +1,6 @@
 package persistence;
 
-import model.RoleEnum;
+import model.Role;
 import model.RoleMapping;
 
 import java.util.List;
@@ -11,5 +11,5 @@ import java.util.List;
 public interface RoleMappingDao extends Dao<RoleMapping> {
     RoleMapping getRole(String servlet);
 
-    List<RoleMapping> getServlets(RoleEnum role);
+    List<RoleMapping> getServlets(Role role);
 }

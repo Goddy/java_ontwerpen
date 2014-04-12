@@ -1,6 +1,6 @@
 package persistence;
 
-import model.RoleEnum;
+import model.Role;
 import model.RoleMapping;
 
 import javax.persistence.EntityManager;
@@ -20,7 +20,7 @@ public class JpaRoleMappingDao extends AbstractJpaDao<RoleMapping> implements Ro
     }
 
     @Override
-    public List<RoleMapping> getServlets(RoleEnum role) {
+    public List<RoleMapping> getServlets(Role role) {
         return getMultipleResultQuery("getServletsByRole", getParameterMap("role", role));
     }
 }

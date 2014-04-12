@@ -75,10 +75,12 @@ public class EmployeeServiceImpl implements  EmployeeService {
         return employee.getUsername() == null;
     }
 
+    @Override
     public RoleDao getRoleDao() {
         return roleDao;
     }
 
+    @Override
     public void setRoleDao(RoleDao roleDao) {
         this.roleDao = roleDao;
     }

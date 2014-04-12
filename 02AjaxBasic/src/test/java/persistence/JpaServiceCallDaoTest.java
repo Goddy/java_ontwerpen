@@ -4,9 +4,9 @@ import factory.TestObjectFactory;
 import general.AbstractTest;
 import model.Client;
 import model.Employee;
-import model.RoleEnum;
 import model.ServiceCall;
 import org.junit.Test;
+import utils.Constants;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class JpaServiceCallDaoTest extends AbstractTest {
     @Test
     public void testGetServiceCallsForClient() throws Exception {
         Client client = TestObjectFactory.getTestClient();
-        Employee employee = TestObjectFactory.getTestEmployee(RoleEnum.NORMAL);
+        Employee employee = TestObjectFactory.getTestEmployee(Constants.ROLETYPE_NORMAL);
         ServiceCall serviceCall1 = TestObjectFactory.createServiceCall(client, employee);
         ServiceCall serviceCall2 = TestObjectFactory.createServiceCall(client, employee);
         serviceCallDao.create(serviceCall1);
