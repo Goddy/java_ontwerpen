@@ -20,7 +20,8 @@
                 Geen einddatum
             </c:if>
         </closed>
-        <actions>&lt;a class="glyphicon glyphicon-list" href="/changeServiceCall?id=${sc.id}"&gt;&lt;/a&gt;</actions>
+        <actions>&lt;a class="glyphicon glyphicon-list"
+            href="/changeServiceCall.html?id=${sc.id}"&gt;&lt;/a&gt;</actions>
     </serviceCall>
     </c:forEach>
 </serviceCalls>

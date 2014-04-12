@@ -35,7 +35,6 @@ public class EmployeeServiceImplTest extends AbstractTest {
             employees.add(TestObjectFactory.getTestEmployee(Constants.ROLETYPE_ADMIN));
 
         }
-        //truncate table before equals
         employeeDao.createAll(employees);
         List<Employee> employeeResultList = employeeService.getAll();
 

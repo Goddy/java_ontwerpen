@@ -61,8 +61,9 @@ public class LoginInterceptorFilter implements Filter {
 
     private void checkRoleAndRedirect(HttpServletRequest request, HttpServletResponse response, Employee employee, String uri, FilterChain chain) throws IOException, ServletException {
         RoleMapping roleMapping = getRoleMappingDao().getRole(uri);
-        if (roleMapping != null && roleMapping.getRole().getRoleName() == ROLETYPE_ADMIN) {
-            if (employee.getRole().getRoleName() == ROLETYPE_ADMIN) {
+
+        if (roleMapping != null && roleMapping.getRole().getRoleName().equals(ROLETYPE_ADMIN)) {
+            if (employee.getRole().getRoleName().equals(ROLETYPE_ADMIN)) {
                 chain.doFilter(request, response);
             } else {
                 response.sendRedirect(LANDING_HTML_NOT_AUTHORIZED);

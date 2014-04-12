@@ -49,8 +49,8 @@ function getClientDataTableBody(rows, fields)
 
             if (fieldName == 'actions') {
                 body += '<td>'
-                body +='<a href="/registerServiceCall?clientId='+ row['id'] + '" class="glyphicon glyphicon-phone-alt padding3"/>';
-                body +='<a href="/clientOverview?id='+ row['id'] + '" class="glyphicon glyphicon-th-list padding3"/></td>';
+                body += '<a href="/registerServiceCall.html?clientId=' + row['id'] + '" class="glyphicon glyphicon-phone-alt padding3"/>';
+                body += '<a href="/clientOverview.html?id=' + row['id'] + '" class="glyphicon glyphicon-th-list padding3"/></td>';
             }
 
             else {
