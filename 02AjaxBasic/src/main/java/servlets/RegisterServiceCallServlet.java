@@ -32,17 +32,12 @@ public class RegisterServiceCallServlet extends MainServlet {
         try {
             serviceCallService = ServiceFactory.getSerViceCallService();
             serviceCallService.registerServiceCall(request);
-            request.setAttribute("resultDiv", "successBox");
-            request.setAttribute("result", RESULT_SC_ADDED);
+            setSuccessMsg(request, RESULT_SC_ADDED);
         }
         catch (Exception e) {
-            request.setAttribute("resultDiv", "errorBox");
-            request.setAttribute("result", RESULT_UNKNOWN_ERROR );
+            setErrorMsg(request, RESULT_UNKNOWN_ERROR);
         }
-
-        RequestDispatcher dispatcher;
-        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_SERVICECALL);
-        dispatcher.forward(request, response);
+        doGet(request, response);
     }
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String id = request.getParameter("clientId");

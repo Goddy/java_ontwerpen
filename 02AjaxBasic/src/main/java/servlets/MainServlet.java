@@ -33,12 +33,17 @@ public abstract class MainServlet extends HttpServlet {
     }
 
     protected void setErrorMsg(HttpServletRequest request, String msg) {
-        request.setAttribute("resultDiv", "errorBox");
+        request.setAttribute("resultDiv", "alert alert-danger");
         request.setAttribute("result", msg);
     }
 
     protected void setSuccessMsg (HttpServletRequest request, String msg) {
-        request.setAttribute("resultDiv", "successBox");
+        request.setAttribute("resultDiv", "alert alert-success");
+        request.setAttribute("result", msg);
+    }
+
+    protected void setWarningMsg(HttpServletRequest request, String msg) {
+        request.setAttribute("resultDiv", "alert alert-warning");
         request.setAttribute("result", msg);
     }
 

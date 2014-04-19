@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import service.ClientService;
 import service.ServiceFactory;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,17 +33,12 @@ public class RegisterClientServlet extends MainServlet {
         try {
             clientService = ServiceFactory.getClientService();
             clientService.registerClient(request);
-            request.setAttribute("resultDiv", "successBox");
-            request.setAttribute("result", RESULT_CLIENT_ADDED );
+            setSuccessMsg(request, RESULT_CLIENT_ADDED);
         }
         //todo: Specific exception handling
         catch (Exception e) {
-            request.setAttribute("resultDiv", "errorBox");
-            request.setAttribute("result", RESULT_UNKNOWN_ERROR );
+            setErrorMsg(request, RESULT_UNKNOWN_ERROR);
         }
-
-        RequestDispatcher dispatcher;
-        dispatcher = request.getRequestDispatcher(LANDING_REGISTER_CLIENT);
-        dispatcher.forward(request, response);
+        doGet(request, response);
     }
 }

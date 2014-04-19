@@ -1,6 +1,6 @@
 package servlets;
 
-import exceptions.WrongPasswordException;
+import exceptions.WrongPasswordOrUserNameException;
 import service.LoginService;
 import service.ServiceFactory;
 
@@ -21,16 +21,15 @@ public class LoginServlet extends MainServlet {
     LoginService loginService = ServiceFactory.getLoginService();
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-         getPage(request, response, LANDING_LOGIN);
+        getPage(request, response, LANDING_LOGIN);
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         try {
             loginService.login(request);
             getPage(request, response, "index.jsp");
-        }
-        catch (WrongPasswordException e) {
-            setErrorMsg(request, e.getMessage());
+        } catch (WrongPasswordOrUserNameException e) {
+            setWarningMsg(request, e.getMessage());
             doGet(request, response);
         }
 

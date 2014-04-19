@@ -36,13 +36,11 @@ public class ChangeServiceCallServlet extends MainServlet {
         logger.debug(request.toString());
         try {
             serviceCallService.changeServiceCall(request);
-            request.setAttribute("resultDiv", "successBox");
-            request.setAttribute("result", RESULT_SC_CHANGED);
+            setSuccessMsg(request, RESULT_SC_CHANGED);
 
         }
         catch (Exception e) {
-            request.setAttribute("resultDiv", "errorBox");
-            request.setAttribute("result", RESULT_UNKNOWN_ERROR );
+            setErrorMsg(request, RESULT_UNKNOWN_ERROR);
         }
 
         getForm(request.getParameter("serviceCallId"), request, response);

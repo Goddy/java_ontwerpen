@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- corrected tests, js&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/model/Employee.java" />
+    <list default="true" id="7a80b702-0be6-43f2-b73e-f95f7ec2fd88" name="Default" comment="- refactored to jquery (partly)&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/exceptions/WrongPasswordOrUserNameException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerServiceCall.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/exceptions/WrongPasswordException.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/service/LoginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/LoginServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/LoginServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" afterPath="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java" afterPath="$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="02AjaxBasic.iws" />
@@ -70,22 +79,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" line="47" class="servlets.MainServlet" package="servlets">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" line="42" class="servlets.RegisterClientServlet" package="servlets">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" line="52" class="servlets.MainServlet" package="servlets">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -115,7 +109,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" line="47" class="servlets.RegisterServiceCallServlet" package="servlets">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" line="42" class="servlets.RegisterServiceCallServlet" package="servlets">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -275,73 +269,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="registerServiceCall.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp">
+      <file leaf-file-name="MainServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="133" selection-start="1824" selection-end="1824" vertical-scroll-proportion="-9.444445" vertical-offset="429" max-vertical-offset="1062">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1926">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajaxUtils.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="27" selection-start="3049" selection-end="3067" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="5256">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serviceCallOverview.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="396">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchClient.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="24" selection-start="757" selection-end="757" vertical-scroll-proportion="0.1313673" vertical-offset="275" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serviceCallXml.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/serviceCallXml.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="41" selection-start="862" selection-end="862" vertical-scroll-proportion="-9.0" vertical-offset="171" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clientOverview.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1813" selection-end="2061" vertical-scroll-proportion="-7.0740743" vertical-offset="799" max-vertical-offset="1224">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="remoteObjectsServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="29" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2502">
+            <state line="35" column="61" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1116">
               <folding />
             </state>
           </provider>
@@ -350,7 +281,79 @@
       <file leaf-file-name="registerEmployee.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="14" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1530">
+            <state line="39" column="17" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1512">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterServiceCallServlet.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="42" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.6022099" vertical-offset="304" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchClientServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceCallOverViewServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ServiceCallOverViewServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientOverviewServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ClientOverviewServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="558">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="remoteObjectsServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="28" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="376" max-vertical-offset="2502">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangeServiceCallServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="37" selection-start="1762" selection-end="1762" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterEmployeeServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterEmployeeServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterClientServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="31" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="684">
               <folding />
             </state>
           </provider>
@@ -369,25 +372,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/persistence/AbstractJpaDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/LoginServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ClientOverviewServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ServiceCallOverViewServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/filter/BlockingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerEmployee.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/persistence/DaoFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/RoleEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" />
         <option value="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jspf/footer.jspf" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/logout.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/logoutServlet.java" />
@@ -414,12 +404,25 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jspf/header.jspf" />
         <option value="$PROJECT_DIR$/src/main/java/model/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/searchClient.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerClient.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerServiceCall.js" />
+        <option value="$PROJECT_DIR$/src/main/java/service/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/MainServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java" />
       </list>
     </option>
   </component>
@@ -885,6 +888,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02AjaxBasic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="02AjaxBasic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1099,8 +1128,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1555,6 +1584,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -1572,12 +1607,6 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="TestServer" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.12" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
@@ -1763,7 +1792,8 @@
       <workItem from="1397229554068" duration="7915000" />
       <workItem from="1397297388487" duration="13287000" />
       <workItem from="1397311120687" duration="5403000" />
-      <workItem from="1397316615834" duration="3361000" />
+      <workItem from="1397316615834" duration="3404000" />
+      <workItem from="1397860701753" duration="9092000" />
     </task>
     <task id="LOCAL-00001" summary="- Added classes, form, dao">
       <created>1391675591794</created>
@@ -1885,11 +1915,15 @@
       <created>1397315714845</created>
       <updated>1397315714845</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="- refactored to jquery (partly)&#10;">
+      <created>1397321224183</created>
+      <updated>1397321224183</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326525000" />
+    <option name="totallyTimeSpent" value="335660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1537" height="905" extended-state="6" />
@@ -1909,7 +1943,7 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23237072" sideWeight="0.62589926" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23169912" sideWeight="0.62589926" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39575034" sideWeight="0.8945601" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33801296" sideWeight="0.4990712" order="7" side_tool="false" content_ui="tabs" />
@@ -1935,14 +1969,14 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20521173" sideWeight="0.36188436" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39819586" sideWeight="0.18175896" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970026" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1962,8 +1996,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28994846" sideWeight="0.49967426" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23517916" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1979,7 +2013,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="- fixed registerClient&#10;" />
     <MESSAGE value="- added dumps, fixed mobile compat bug" />
     <MESSAGE value="- changed DB to required formats" />
     <MESSAGE value="- added employee&#10;" />
@@ -2004,7 +2037,8 @@
     <MESSAGE value="- added log out servlet&#10;" />
     <MESSAGE value="- added tests&#10;" />
     <MESSAGE value="- corrected tests, js&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- corrected tests, js&#10;" />
+    <MESSAGE value="- refactored to jquery (partly)&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- refactored to jquery (partly)&#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2021,125 +2055,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="29" selection-start="1112" selection-end="1112" vertical-scroll-proportion="-14.518518" vertical-offset="274" max-vertical-offset="3330" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="225" selection-end="225" vertical-scroll-proportion="-2.0" vertical-offset="18" max-vertical-offset="468" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/logout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="42" selection-start="255" selection-end="255" vertical-scroll-proportion="-4.0" vertical-offset="18" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/logoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="486">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="204" selection-end="204" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="252" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/NotAuthorizedServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="38" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.0" vertical-offset="662" max-vertical-offset="1116">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/servlets/ChangeServiceCallServletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/service/ClientServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="2574">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/PassCrypter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="309" selection-end="309" vertical-scroll-proportion="0.33333334" vertical-offset="1" max-vertical-offset="2880">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/manager/TestPersistenceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" vertical-offset="227" max-vertical-offset="612" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/internal/runners/statements/RunBefores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/easymock/easymock/3.2/easymock-3.2-sources.jar!/org/easymock/EasyMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="537" column="0" selection-start="19866" selection-end="19866" vertical-scroll-proportion="0.0" vertical-offset="9232" max-vertical-offset="39312" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.3/commons-lang-2.3-sources.jar!/org/apache/commons/lang/RandomStringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.0" vertical-offset="1386" max-vertical-offset="5688" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/factory/TestDaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="792">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="56" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/JpaRoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="11" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/persistence/RoleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/persistence/JpaServiceCallDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="76" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="594">
@@ -2244,11 +2159,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="3528">
-          <folding>
-            <element signature="e#1501#1502#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="46" column="0" selection-start="1434" selection-end="1434" vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="3528" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/filter/LoginInterceptorFilter.java">
@@ -2265,13 +2176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterEmployeeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jspf/header.jspf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="20" selection-start="783" selection-end="783" vertical-scroll-proportion="-7.9259257" vertical-offset="164" max-vertical-offset="1260">
@@ -2281,77 +2185,223 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/serviceCallOverview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="337">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="133" selection-start="1824" selection-end="1824" vertical-scroll-proportion="-9.444445" vertical-offset="429" max-vertical-offset="1062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="29" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="2502">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="337" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/serviceCallOverview.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="421" selection-end="421" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="396">
+        <state line="10" column="29" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="396">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/serviceCallXml.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="862" selection-end="862" vertical-scroll-proportion="-9.0" vertical-offset="171" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="14" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="27" selection-start="3049" selection-end="3067" vertical-scroll-proportion="0.0" vertical-offset="1404" max-vertical-offset="5256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1813" selection-end="2061" vertical-scroll-proportion="-7.0740743" vertical-offset="799" max-vertical-offset="1224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="9" selection-start="2302" selection-end="2302" vertical-scroll-proportion="0.3314917" vertical-offset="1068" max-vertical-offset="1512">
+        <state line="23" column="41" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="16" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1926">
+        <state line="38" column="16" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="1944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/clientOverview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="24" selection-start="1948" selection-end="1948" vertical-scroll-proportion="-8.185185" vertical-offset="859" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/searchClient.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="24" selection-start="757" selection-end="757" vertical-scroll-proportion="0.1313673" vertical-offset="275" max-vertical-offset="720">
+        <state line="33" column="0" selection-start="1265" selection-end="1265" vertical-scroll-proportion="-7.5555553" vertical-offset="390" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/searchClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="0" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.0" vertical-offset="1494" max-vertical-offset="1980">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ajaxUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2484">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerServiceCall.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="39" selection-start="697" selection-end="705" vertical-scroll-proportion="-5.3333335" vertical-offset="198" max-vertical-offset="1062">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/AuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="19" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/AuthenticationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="5" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerEmployee.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="254" selection-end="341" vertical-scroll-proportion="-2.0" vertical-offset="54" max-vertical-offset="1188">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="102" selection-start="838" selection-end="838" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerServiceCall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="38" selection-start="0" selection-end="1354" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="1044">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/registerClient.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="3058" selection-end="3158" vertical-scroll-proportion="-8.148149" vertical-offset="1220" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="38" selection-start="959" selection-end="959" vertical-scroll-proportion="-12.222222" vertical-offset="102" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="22" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="26" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/registerEmployee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="17" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="1512">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/MainServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="61" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterEmployeeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="485" selection-end="485" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ClientOverviewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ServiceCallOverViewServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/SearchClientServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/remoteObjectsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="28" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0" vertical-offset="376" max-vertical-offset="2502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/ChangeServiceCallServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="37" selection-start="1762" selection-end="1762" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterClientServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="31" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlets/RegisterServiceCallServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="42" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.6022099" vertical-offset="304" max-vertical-offset="918">
           <folding />
         </state>
       </provider>

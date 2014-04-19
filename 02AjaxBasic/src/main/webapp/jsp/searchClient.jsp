@@ -3,10 +3,11 @@
 <ol class="breadcrumb">
     <li><a href="#">Zoek klant</a></li>
 </ol>
-<select class="form-control" id="operationSelect" onChange="selectChanged()">
+<select class="form-control" id="operationSelect">
     <option value="1">Zoek klant</option>
     <option value="2">Alle klanten</option>
 </select><br>
+
 <form role="form" id="searchForm" style="display:none;">
     <div class="form-group">
         <label for="id">Zoek op id</label>
@@ -20,15 +21,23 @@
     <img id="loader" src="../images/loading.gif" height="20" width="20" style="display: none;">
 </form>
 <div id="result">
-<%@ include file="../jspf/footer.jspf" %>
-<script src="../js/searchClient.js"></script>
-<script src="../js/ajaxUtils.js" type="text/javascript"></script>
+    <%@ include file="../jspf/footer.jspf" %>
+    <script src="../js/searchClient.js"></script>
+    <script src="../js/ajaxUtils.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            selectChanged();
+        (function ($, search) {
+            $(document).ready(function () {
+                search.selectChanged();
 
-            $('#submit').click(function () {
-                submitSearch("/getObjects.html?op=searchClients", "result");
+                $('#operationSelect').change(function () {
+                    search.selectChanged();
+                });
+
+                $('#submit').click(function () {
+                    search.submitSearch("/getObjects.html?op=searchClients", "result");
+                })
             })
-        });
+        })(jQuery, search.searchClient);
+
+
     </script>

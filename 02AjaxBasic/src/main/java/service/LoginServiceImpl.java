@@ -1,6 +1,6 @@
 package service;
 
-import exceptions.WrongPasswordException;
+import exceptions.WrongPasswordOrUserNameException;
 import model.Employee;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,13 +12,12 @@ public class LoginServiceImpl implements LoginService {
     AuthenticationService authenticationService = ServiceFactory.getAuthenticationService();
 
     @Override
-    public void login(HttpServletRequest request) throws WrongPasswordException {
+    public void login(HttpServletRequest request) throws WrongPasswordOrUserNameException {
         Employee authenticatedEmployee = authenticationService.authenticate(request.getParameter("username"), request.getParameter("password"));
         if (authenticatedEmployee != null) {
             request.getSession().setAttribute("employee", authenticatedEmployee);
-        }
-        else {
-            throw new WrongPasswordException("Verkeerd wachtwoord");
+        } else {
+            throw new WrongPasswordOrUserNameException("Verkeerde gebruikersnaam/wachtwoord combinatie");
         }
     }
 }

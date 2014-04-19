@@ -5,7 +5,7 @@
 //
 //	Free for your use -- No warranties, no guarantees!
 //
-$(document).ready(function(){
+$(document).ready(function ($) {
 
     $('#form-register').validate({
 
@@ -48,40 +48,40 @@ $(document).ready(function(){
             }
 
         },
-        messages:{
-            name:{
+        messages: {
+            name: {
                 required: "Gelieve een naam in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            email:{
+            email: {
                 required: "Gelieve een email adres in te vullen",
                 email: "Het email adres is niet volgens de standaard"
             },
-            phone:{
+            phone: {
                 required: "Gelieve een telefoonnummer in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            vat:{
+            vat: {
                 required: "Gelieve het BTW nummer in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            street:{
+            street: {
                 required: "Gelieve een straat in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            number:{
+            number: {
                 required: "Gelieve een nummer in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            postalCode:{
+            postalCode: {
                 required: "Gelieve een postcode in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            city:{
+            city: {
                 required: "Gelieve een stad in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
-            country:{
+            country: {
                 required: "Gelieve een land in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             }
@@ -89,16 +89,16 @@ $(document).ready(function(){
         },
 
         //Todo: fix bug (label not removed)
-        highlight: function(element) {
-            element
+        highlight: function (element) {
+            $(element)
                 .closest('.form-group').addClass('error');
         },
-        success: function(element) {
-            element
+        success: function (element) {
+            $(element)
                 .addClass('valid')
                 .closest('.form-group').removeClass('error');
         }
     });
 
-}); // end document.ready
+})(jQuery); // end document.ready
 

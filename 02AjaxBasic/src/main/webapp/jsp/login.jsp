@@ -4,6 +4,9 @@
 <ol class="breadcrumb">
     <li><a href="#">Inloggen</a></li>
 </ol>
+<c:if test="${not empty result}">
+    <div class="${resultDiv}">${result}</div>
+</c:if>
 <form role="form" id="form-login" action="/login.html" method="post">
     <div class="form-group">
         <label for="username">Username</label>
@@ -18,3 +21,5 @@
 </form>
 
 <%@ include file="../jspf/footer.jspf" %>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/login.js"></script>

@@ -14,7 +14,7 @@ $(document).ready(function(){
                 maxlength: 50,
                 required: true
             },
-            name: {
+            lastName: {
                 maxlength: 50,
                 required: true
             },
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
         },
         messages:{
-            name:{
+            lastName:{
                 required: "Gelieve een naam in te vullen",
                 maxlength: "Gelieve maximaal {0} karakters te gebruiken"
             },
@@ -63,7 +63,6 @@ $(document).ready(function(){
 
         },
 
-        //Todo: fix bug (label not removed)
         highlight: function(element) {
             $(element)
                 .closest('.form-group').addClass('error');
