@@ -16,7 +16,7 @@ public class BlockingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletResponse res = (HttpServletResponse) response;
-        res.sendRedirect("/login.html");
+        res.sendRedirect("/notAuthorized.html");
     }
 
     @Override

@@ -4,6 +4,7 @@
     <ol class="breadcrumb">
         <li><a href="#">${title}</a></li>
     </ol>
-${reason}
+    <h2>${title}</h2>
+    ${reason}
 </div>
 <%@ include file="../jspf/footer.jspf" %>
