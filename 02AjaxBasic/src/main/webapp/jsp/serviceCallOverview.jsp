@@ -4,7 +4,7 @@
     <li><a href="#">Overzicht service oproepen</a></li>
 </ol>
 <div id="sc-xml"></div>
-<script src="../js/ajaxUtils.js" type="text/javascript"></script>
+<script src="../js/utils.js" type="text/javascript"></script>
 <%@ include file="../jspf/footer.jspf" %>
 <script type="text/javascript">
     $(document).ready(function () {

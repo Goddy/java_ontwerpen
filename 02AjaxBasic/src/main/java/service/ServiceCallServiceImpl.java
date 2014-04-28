@@ -24,6 +24,14 @@ public class ServiceCallServiceImpl implements ServiceCallService {
         employeeDao = DaoFactory.getEmployeeDao();
 
     }
+
+    public ServiceCallServiceImpl(ServiceCallDao serviceCallDao, ClientDao clientDao, EmployeeDao employeeDao) {
+        this.serviceCallDao = serviceCallDao;
+        this.clientDao = clientDao;
+        this.employeeDao = employeeDao;
+
+    }
+
     @Override
     public ServiceCall getServiceCallById(String id) {
         return serviceCallDao.get(Long.parseLong(id));

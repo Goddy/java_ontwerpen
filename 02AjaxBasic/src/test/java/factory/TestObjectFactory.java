@@ -1,6 +1,7 @@
 package factory;
 
 import model.*;
+import utils.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,14 @@ public class TestObjectFactory {
 
     public static ServiceCall createServiceCall(Client client, Employee employee) {
         return new ServiceCall(randomString(), randomString(), employee, client);
+    }
+
+    public static List<ServiceCall> createServiceCallList(int count) {
+        ArrayList<ServiceCall> serviceCalls = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            serviceCalls.add(createServiceCall(getTestClient(), getTestEmployee(Constants.ROLETYPE_NORMAL)));
+        }
+        return serviceCalls;
     }
 
     public static Address getTestAddress() {

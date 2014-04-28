@@ -23,7 +23,7 @@
 <div id="result">
     <%@ include file="../jspf/footer.jspf" %>
     <script src="../js/searchClient.js"></script>
-    <script src="../js/ajaxUtils.js" type="text/javascript"></script>
+    <script src="../js/utils.js" type="text/javascript"></script>
     <script type="text/javascript">
         (function ($, search) {
             $(document).ready(function () {

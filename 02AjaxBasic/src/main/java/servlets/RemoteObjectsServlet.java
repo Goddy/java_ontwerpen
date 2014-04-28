@@ -11,14 +11,19 @@ import service.ClientService;
 import service.ServiceCallService;
 import service.ServiceFactory;
 import utils.HtmlHelper;
+import utils.ServiceCallXmlWrapper;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.List;
 
 import static utils.Constants.RESULT_NO_RESULTS;
@@ -33,16 +38,15 @@ import static utils.Constants.SC_XML_RESULT;
  * Remarks: none
  */
 @WebServlet("/getObjects.html")
-public class remoteObjectsServlet extends MainServlet {
+public class RemoteObjectsServlet extends MainServlet {
 
-    ClientService clientService = ServiceFactory.getClientService();
-    ServiceCallService serviceCallService =  ServiceFactory.getSerViceCallService();
+    private ClientService clientService = ServiceFactory.getClientService();
+    private ServiceCallService serviceCallService = ServiceFactory.getSerViceCallService();
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setHeader("Cache-Control", "no-cache");
         response.setHeader("Pragma", "no-cache");
-        String op = request.getParameter("op");
         switch (request.getParameter("op")) {
             case "searchClients":
                 returnClients(request, response);
@@ -62,7 +66,7 @@ public class remoteObjectsServlet extends MainServlet {
     }
 
     private void returnAllClients(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<Client> clientList = clientService.getAll();
+        List<Client> clientList = getClientService().getAll();
 
         if (clientList != null && !clientList.isEmpty()) {
             print(response, toJsonObject(clientList));
@@ -73,13 +77,14 @@ public class remoteObjectsServlet extends MainServlet {
     }
 
     private void returnAllServiceCalls(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        List<ServiceCall> serviceCallList = serviceCallService.getAllServiceCalls();
+        List<ServiceCall> serviceCallList = getServiceCallService().getAllServiceCalls();
         if (serviceCallList != null && !serviceCallList.isEmpty()) {
-            response.setContentType("text/xml");
+            //response.setContentType("text/xml");
             request.setAttribute("serviceCalls", serviceCallList);
             RequestDispatcher dispatcher;
             dispatcher = request.getRequestDispatcher(SC_XML_RESULT);
             dispatcher.include(request, response);
+            //print(response, toXmlObject(serviceCallList));
         }
     }
 
@@ -91,7 +96,7 @@ public class remoteObjectsServlet extends MainServlet {
     private void returnClients(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String type = request.getParameter("type");
         String search = request.getParameter("search");
-        List<Client> clientList = clientService.searchForClients(search, type);
+        List<Client> clientList = getClientService().searchForClients(search, type);
 
         if (clientList != null && !clientList.isEmpty()) {
             print(response, toJsonObject(clientList));
@@ -103,8 +108,8 @@ public class remoteObjectsServlet extends MainServlet {
 
     private void returnServiceCall(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String id = request.getParameter("clientId");
-        Client client = clientService.getClientById(id);
-        List<ServiceCall> serviceCallList = serviceCallService.getServiceCallForClient(client);
+        Client client = getClientService().getClientById(id);
+        List<ServiceCall> serviceCallList = getServiceCallService().getServiceCallForClient(client);
         if (serviceCallList != null && !serviceCallList.isEmpty()) {
             response.setContentType("text/xml");
             request.setAttribute("serviceCalls", serviceCallList);
@@ -150,4 +155,39 @@ public class remoteObjectsServlet extends MainServlet {
         return HtmlHelper.ClientListToTable(clientList);
     }
 
+    private static String toXmlObject(List<ServiceCall> serviceCalls) {
+
+        try {
+            ServiceCallXmlWrapper wrapper = new ServiceCallXmlWrapper(serviceCalls);
+            StringWriter sw = new StringWriter();
+            JAXBContext context = JAXBContext.newInstance(ServiceCall.class, ServiceCallXmlWrapper.class);
+            Marshaller m = context.createMarshaller();
+
+            //for pretty-print XML in JAXB
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+            // Write to File
+            m.marshal(wrapper, sw);
+
+            return sw.toString();
+        } catch (JAXBException e) {
+            e.printStackTrace();
+            return "Error";
+        }
+    }
+
+    public ClientService getClientService() {
+        return clientService;
+    }
+
+    public void setClientService(ClientService clientService) {
+        this.clientService = clientService;
+    }
+
+    public ServiceCallService getServiceCallService() {
+        return serviceCallService;
+    }
+
+    public void setServiceCallService(ServiceCallService serviceCallService) {
+        this.serviceCallService = serviceCallService;
+    }
 }
