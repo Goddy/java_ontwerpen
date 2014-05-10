@@ -16,8 +16,9 @@ slider.showValue = function (event, ui) {
     $("#slider-progress").progressbar("option", "value", total / 3);
 };
 
-$(function ($) {
+$(document).ready(function () {
     $(".slider").slider({ min: 0, max: 100, slide: slider.showValue });
     $("#slider-progress").progressbar();
 
-})(jQuery);
+});
+

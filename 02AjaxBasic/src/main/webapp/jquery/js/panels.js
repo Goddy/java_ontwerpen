@@ -5,8 +5,7 @@ var panels = {};
 panels.styleButtons = function () {
     $("#button-div .style-test").button();
 };
-$(function ($) {
-    $("#accordion-panel").accordion({ animated: "fadeIn" });
+$(document).ready(function () {
+    $("#accordion-panel").accordion({ animated: "fadeIn", collapsible: true });
     $("#button-styler-button").click(panels.styleButtons);
-    $('#switcher').themeswitcher();
-})(jQuery);
+})

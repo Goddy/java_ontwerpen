@@ -20,7 +20,7 @@ general.login = (function (dialog, username, password, date, resultDiv) {
     }
 });
 
-$(function ($) {
+$(document).ready(function () {
     $("#login-dialog").dialog({
         height: 320,
         modal: true,
@@ -39,4 +39,4 @@ $(function ($) {
 
     //create tabbed menu
     $('#menu').tabs();
-})(jQuery);
+});
