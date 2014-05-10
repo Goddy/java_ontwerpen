@@ -37,7 +37,7 @@ public class LoginInterceptorFilter implements Filter {
         String uri = req.getRequestURI();
         HttpSession session = getSession(req);
 
-        if (!getWhiteListMapping().contains(uri)) {
+        if (!getWhiteListMapping().contains(uri) && !excludeFromFilter(uri)) {
             if (session != null) {
                 Employee employee = (Employee) session.getAttribute("employee");
                 if (employee == null)
@@ -84,6 +84,11 @@ public class LoginInterceptorFilter implements Filter {
             whiteList.add(rm.getServlet());
         }
         return whiteList;
+    }
+
+    private boolean excludeFromFilter(String path) {
+        if (path.startsWith(FILTER_JQUERY)) return true; // excludes /jquery from filter
+        else return false;
     }
 
     public RoleMappingDao getRoleMappingDao() {
