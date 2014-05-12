@@ -22,7 +22,7 @@ general.login = (function (dialog, username, password, date, resultDiv) {
 
 $(document).ready(function () {
     $("#login-dialog").dialog({
-        height: 320,
+        height: 340,
         modal: true,
         open: function (event, ui) {
             $(this).closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
