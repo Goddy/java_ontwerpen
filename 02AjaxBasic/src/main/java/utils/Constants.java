@@ -14,6 +14,8 @@ public class Constants {
     public static final String ROLETYPE_PUBLIC = "PUBLIC";
     public static final String ROLETYPE_NORMAL = "NORMAL";
 
+    public static final String FILTER_JQUERY = "/jquery";
+
     public static final String CONTACTTYPE_EMAIL = "email";
     public static final String CONTACTTYPE_PHONE = "phone";
 

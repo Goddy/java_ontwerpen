@@ -57,3 +57,12 @@ label.valid {
 .padding3 {
     padding: 3px;
 }
+
+/** Jquery **/
+.slider, .progressbar {
+    margin: 10px;
+}
+
+.slider-result {
+    text-align: center;
+}
